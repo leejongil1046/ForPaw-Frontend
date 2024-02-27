@@ -31,6 +31,7 @@ export const ForPawImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+  margin-bottom: 8px;
 `;
 
 export const InfoContainer = styled.div`
@@ -56,6 +57,6 @@ export const ProfileIconContainer = styled.div`
 export const HeaderLogo = styled.div`
   width: 100%;
   height: 40px;
-  padding-left: 18px;
-  padding-top: 10px;
+  padding-left: 19px;
+  padding-top: 8px;
 `;
