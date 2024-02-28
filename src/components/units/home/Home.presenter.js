@@ -1,7 +1,6 @@
-import * as S from "./HomeContents.styles";
-import Image from "next/image";
+import * as S from "./Home.styles";
 
-export default function HomeContentsUI() {
+export default function HomeUI() {
   return (
     <S.WrapperHomeContents>
       <S.HomeContent></S.HomeContent>

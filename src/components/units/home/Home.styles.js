@@ -9,7 +9,8 @@ export const WrapperHomeContents = styled.div`
   align-items: center;
   margin: 0 auto;
   overflow-y: auto;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {
@@ -21,7 +22,7 @@ export const WrapperHomeContents = styled.div`
 export const HomeContent = styled.div`
   width: 300px;
   height: 120px;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.1);
   margin: 10px;
   flex-shrink: 0;
 `;
