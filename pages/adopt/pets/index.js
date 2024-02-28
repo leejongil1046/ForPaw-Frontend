@@ -1,13 +1,9 @@
-import ContentsUI from "../../../src/components/units/contents/Contents.presenter";
-import HeadersUI from "../../../src/components/units/headers/Headers.presenter";
-import Navigation from "../../../src/components/units/navigation/Navigation.container";
+import AdpotPets from "../../..//src/components/units/adopt/pets/AdoptPets.container";
 
 export default function AdpotPetsPage() {
   return (
     <>
-      <HeadersUI />
-      <ContentsUI />
-      <Navigation />
+      <AdpotPets />
     </>
   );
 }

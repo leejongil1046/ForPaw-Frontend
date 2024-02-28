@@ -1,26 +1,8 @@
-import { useRouter } from "next/router";
+// Headers.presenter.js
 import * as S from "./Headers.styles";
 import Image from "next/image";
 
-export default function HeadersUI() {
-  const router = useRouter();
-
-  // 경로에 따른 타이틀 설정
-  let title = "";
-  const paths = {
-    "/adopt/pets": "입양/임시보호",
-    "/volunteer/recommend": "봉사활동",
-    "/community/adoption": "커뮤니티",
-    "/chatting": "채팅",
-  };
-
-  // 현재 경로에 맞는 타이틀 찾기
-  Object.keys(paths).forEach((path) => {
-    if (router.pathname === path) {
-      title = paths[path];
-    }
-  });
-
+export default function HeadersUI(props) {
   return (
     <S.WrapperHeader>
       <S.Header>
@@ -31,7 +13,7 @@ export default function HeadersUI() {
             width={15}
             height={25}
           />
-          <S.Title>{title}</S.Title>
+          <S.Title>{props.title}</S.Title>
         </S.LeftArrowTitleContainer>
         <S.InfoContainer>
           <S.InfoIconContainer>
