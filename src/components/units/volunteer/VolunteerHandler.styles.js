@@ -30,9 +30,12 @@ export const VolunteerMenu = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 10px;
   color: ${(props) => (props.active ? "black" : "#bdbdbd")};
   font-weight: ${(props) => (props.active ? 600 : "normal")};
   border-bottom: ${(props) => (props.active ? "3px solid #ff6636" : "none")};
   padding-bottom: ${(props) => (props.active ? "9px" : "12px")};
+
+  :hover {
+    cursor: pointer;
+  }
 `;

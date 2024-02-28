@@ -1,13 +1,9 @@
-import ContentsUI from "../../src/components/units/contents/Contents.presenter";
-import HeadersUI from "../../src/components/units/headers/Headers.presenter";
-import Navigation from "../../src/components/units/navigation/Navigation.container";
+import Chatting from "../../src/components/units/chatting/Chatting.container";
 
 export default function ChattingPage() {
   return (
     <>
-      <HeadersUI />
-      <ContentsUI />
-      <Navigation />
+      <Chatting />
     </>
   );
 }

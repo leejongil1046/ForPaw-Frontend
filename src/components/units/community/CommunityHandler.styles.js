@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
-export const WrapperAdoptHandler = styled.div`
+export const WrapperCommunityHandler = styled.div`
   width: 390px;
-  height: 170px;
+  height: 52px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,24 +12,9 @@ export const WrapperAdoptHandler = styled.div`
   border-right: 1px solid black;
 `;
 
-export const AdoptTextContainer = styled.div`
-  width: 270px;
-  height: 88px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 70px;
-  margin-bottom: 5px;
-`;
-
-export const AdoptText = styled.h1`
-  font-size: 30px;
-  font-weight: 700;
-`;
-
-export const AdoptMenuContainer = styled.div`
+export const CommunityMenuContainer = styled.div`
   width: 390px;
-  height: 50px;
+  height: 52px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -37,9 +22,9 @@ export const AdoptMenuContainer = styled.div`
   border-bottom: 1px solid #bdbdbd;
 `;
 
-export const AdoptMenu = styled.div`
+export const CommunityMenu = styled.div`
   width: 104px;
-  height: 50px;
+  height: 52px;
   font-size: 20px;
   display: flex;
   flex-direction: row;

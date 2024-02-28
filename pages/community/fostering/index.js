@@ -1,13 +1,9 @@
-import ContentsUI from "../../../src/components/units/contents/Contents.presenter";
-import HeadersUI from "../../../src/components/units/headers/Headers.presenter";
-import Navigation from "../../../src/components/units/navigation/Navigation.container";
+import CommunityFostering from "../../../src/components/units/community/fostering/CommunityFostering.container";
 
 export default function CommunityFosteringPage() {
   return (
     <>
-      <HeadersUI />
-      <ContentsUI />
-      <Navigation />
+      <CommunityFostering />
     </>
   );
 }
