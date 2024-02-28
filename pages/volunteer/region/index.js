@@ -1,13 +1,9 @@
-import ContentsUI from "../../../src/components/units/contents/Contents.presenter";
-import HeadersUI from "../../../src/components/units/headers/Headers.presenter";
-import Navigation from "../../../src/components/units/navigation/Navigation.container";
+import VolunteerRegion from "../../../src/components/units/volunteer/region/VolunteerRegion.container";
 
 export default function VolunteerRegionPage() {
   return (
     <>
-      <HeadersUI />
-      <ContentsUI />
-      <Navigation />
+      <VolunteerRegion />
     </>
   );
 }

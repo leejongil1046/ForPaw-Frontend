@@ -1,13 +1,9 @@
-import ContentsUI from "../../../src/components/units/contents/Contents.presenter";
-import HeadersUI from "../../../src/components/units/headers/Headers.presenter";
-import Navigation from "../../../src/components/units/navigation/Navigation.container";
+import VolunteerJoined from "../../../src/components/units/volunteer/joined/VolunteerJoined.container";
 
-export default function VolunteerJoinedPage() {
+export default function VolunteerRecommendPage() {
   return (
     <>
-      <HeadersUI />
-      <ContentsUI />
-      <Navigation />
+      <VolunteerJoined />
     </>
   );
 }
