@@ -22,7 +22,7 @@ export default function HomeHeaderUI(props) {
               height={44}
             />
           </S.InfoIconContainer>
-          <S.InfoIconContainer>
+          <S.InfoIconContainer onClick={props.navigateTo("alarm")}>
             <Image
               src="/images/header/alarm_icon.png"
               alt="alarm_icon"

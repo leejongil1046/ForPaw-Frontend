@@ -41,16 +41,6 @@ export const Title = styled.h1`
   margin-left: 10px;
 `;
 
-export const ProfileIconContainer = styled.div`
-  width: 44px;
-  height: 44px;
-  margin-left: 10px;
-
-  :hover {
-    cursor: pointer;
-  }
-`;
-
 export const WrapperSearch = styled.div`
   width: 390px;
   height: calc(100vh - 95px);
