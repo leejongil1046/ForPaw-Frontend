@@ -9,6 +9,7 @@ export const WrapperHeader = styled.div`
   align-items: center;
   margin: 0 auto;
   z-index: 1;
+  background-color: white;
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
@@ -48,12 +49,20 @@ export const InfoContainer = styled.div`
 export const InfoIconContainer = styled.div`
   width: 44px;
   height: 44px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const ProfileIconContainer = styled.div`
   width: 44px;
   height: 44px;
   margin-left: 10px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const HeaderLogo = styled.div`

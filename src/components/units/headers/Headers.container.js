@@ -21,7 +21,15 @@ export default function Headers() {
 
   const title = getTitleByPath(router.pathname);
 
-  console.log(title);
+  // 페이지 이동을 처리하는 함수
+  const navigateTo = (iconName) => () => router.push(paths[iconName]);
 
-  return <HeadersUI title={title} />;
+  // 각 아이콘에 해당하는 경로
+  const paths = {
+    search: "/info/search",
+    alarm: "/info/alarm",
+    profile: "/info/profile",
+  };
+
+  return <HeadersUI title={title} navigateTo={navigateTo} />;
 }

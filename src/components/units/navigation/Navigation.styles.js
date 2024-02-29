@@ -11,6 +11,7 @@ export const WrapperNavigation = styled.div`
   z-index: 1;
   border: 1px solid black;
   border-top: 1px solid #dbdbdb;
+  background-color: white;
   /* opacity: 0; */
 `;
 

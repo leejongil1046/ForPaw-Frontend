@@ -1,7 +1,7 @@
 import * as S from "./HomeHeader.styles";
 import Image from "next/image";
 
-export default function HomeHeaderUI() {
+export default function HomeHeaderUI(props) {
   return (
     <S.WrapperHeader>
       <S.Header>
@@ -14,7 +14,7 @@ export default function HomeHeaderUI() {
           />
         </S.ForPawImageContainer>
         <S.InfoContainer>
-          <S.InfoIconContainer>
+          <S.InfoIconContainer onClick={props.navigateTo("search")}>
             <Image
               src="/images/header/search_icon.png"
               alt="search_icon"

@@ -1,11 +1,11 @@
+import HomeHeader from "../headers/HomeHeader.container";
 import Navigation from "../navigation/Navigation.container";
-import HomeHeaderUI from "../headers/HomeHeader.presenter";
 import HomeUI from "./Home.presenter";
 
 export default function CommunityQuestions() {
   return (
     <>
-      <HomeHeaderUI />
+      <HomeHeader />
       <HomeUI />
       <Navigation />
     </>

@@ -16,7 +16,7 @@ export default function HeadersUI(props) {
           <S.Title>{props.title}</S.Title>
         </S.LeftArrowTitleContainer>
         <S.InfoContainer>
-          <S.InfoIconContainer>
+          <S.InfoIconContainer onClick={props.navigateTo("search")}>
             <Image
               src="/images/header/search_icon.png"
               alt="search_icon"

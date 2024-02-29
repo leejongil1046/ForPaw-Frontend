@@ -9,6 +9,7 @@ export const WrapperHomeContents = styled.div`
   align-items: center;
   margin: 0 auto;
   overflow-y: auto;
+  background-color: white;
   border-left: 1px solid black;
   border-right: 1px solid black;
 

@@ -8,6 +8,7 @@ export const WrapperVolunteerHandler = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  background-color: white;
   border-left: 1px solid black;
   border-right: 1px solid black;
 `;
