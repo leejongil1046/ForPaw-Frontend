@@ -34,12 +34,6 @@ export const LeftArrowTitleContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 5px;
-
-  img {
-    &:hover {
-      cursor: pointer;
-    }
-  }
 `;
 
 export const Title = styled.h1`
@@ -47,30 +41,16 @@ export const Title = styled.h1`
   margin-left: 10px;
 `;
 
-export const InfoContainer = styled.div`
-  width: 200px;
-  height: 50px;
+export const WrapperProfile = styled.div`
+  width: 390px;
+  height: calc(100vh - 95px);
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0;
-`;
-
-export const InfoIconContainer = styled.div`
-  width: 44px;
-  height: 44px;
-
-  :hover {
-    cursor: pointer;
-  }
-`;
-
-export const ProfileIconContainer = styled.div`
-  width: 44px;
-  height: 44px;
-  margin-left: 10px;
-
-  :hover {
-    cursor: pointer;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 `;

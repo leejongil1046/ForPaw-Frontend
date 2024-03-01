@@ -26,6 +26,7 @@ export default function Headers() {
 
   // 각 아이콘에 해당하는 경로
   const paths = {
+    home: "/home",
     search: "/info/search",
     alarm: "/info/alarm",
     profile: "/info/profile",

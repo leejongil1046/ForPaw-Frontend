@@ -30,7 +30,7 @@ export default function HomeHeaderUI(props) {
               height={44}
             />
           </S.InfoIconContainer>
-          <S.ProfileIconContainer>
+          <S.ProfileIconContainer onClick={props.navigateTo("profile")}>
             <Image
               src="/images/header/profile_icon.png"
               alt="profile_icon"

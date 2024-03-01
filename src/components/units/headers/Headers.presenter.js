@@ -6,7 +6,7 @@ export default function HeadersUI(props) {
   return (
     <S.WrapperHeader>
       <S.Header>
-        <S.LeftArrowTitleContainer>
+        <S.LeftArrowTitleContainer onClick={props.navigateTo("home")}>
           <Image
             src="/images/header/left_arrow_icon.png"
             alt="left_arrow_icon"
@@ -32,7 +32,7 @@ export default function HeadersUI(props) {
               height={44}
             />
           </S.InfoIconContainer>
-          <S.ProfileIconContainer>
+          <S.ProfileIconContainer onClick={props.navigateTo("profile")}>
             <Image
               src="/images/header/profile_icon.png"
               alt="profile_icon"
