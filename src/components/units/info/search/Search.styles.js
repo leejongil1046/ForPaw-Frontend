@@ -34,6 +34,12 @@ export const LeftArrowTitleContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 5px;
+
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const Title = styled.h1`

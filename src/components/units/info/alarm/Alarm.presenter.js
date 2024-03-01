@@ -1,7 +1,7 @@
 import * as S from "./Alarm.styles";
 import Image from "next/image";
 
-export default function AlarmUI() {
+export default function AlarmUI(props) {
   return (
     <>
       <S.WrapperHeader>
@@ -12,6 +12,7 @@ export default function AlarmUI() {
               alt="left_arrow_icon"
               width={15}
               height={25}
+              onClick={props.navigateBack}
             />
             <S.Title>알림</S.Title>
           </S.LeftArrowTitleContainer>

@@ -6,12 +6,13 @@ export default function HeadersUI(props) {
   return (
     <S.WrapperHeader>
       <S.Header>
-        <S.LeftArrowTitleContainer onClick={props.navigateTo("home")}>
+        <S.LeftArrowTitleContainer>
           <Image
             src="/images/header/left_arrow_icon.png"
             alt="left_arrow_icon"
             width={15}
             height={25}
+            onClick={props.navigateTo("home")}
           />
           <S.Title>{props.title}</S.Title>
         </S.LeftArrowTitleContainer>

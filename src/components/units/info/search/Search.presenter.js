@@ -12,6 +12,7 @@ export default function SearchUI() {
               alt="left_arrow_icon"
               width={15}
               height={25}
+              onClick={props.navigateBack}
             />
             <S.Title>검색하기</S.Title>
           </S.LeftArrowTitleContainer>
