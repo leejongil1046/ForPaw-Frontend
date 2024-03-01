@@ -88,6 +88,18 @@ body {
   background-color: #f5f5f5;
 }
 
+h1 {
+  font-weight: 600;
+}
+
+button {
+  width: 344px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 /*
 body {
   color: rgb(var(--foreground-rgb));

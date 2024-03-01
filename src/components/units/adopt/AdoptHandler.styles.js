@@ -25,7 +25,6 @@ export const AdoptTextContainer = styled.div`
 
 export const AdoptText = styled.h1`
   font-size: 30px;
-  font-weight: 700;
 `;
 
 export const AdoptMenuContainer = styled.div`

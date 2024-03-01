@@ -103,13 +103,12 @@ export const SearchImageContainer = styled.div`
 
 export const SearchButton = styled.button`
   width: 73px;
-  /* height: 44px; */
+  height: 44px;
   line-height: 44px;
   background-color: #240d05;
   border: none;
   border-radius: 22px;
   font-size: 20px;
-  font-weight: 600;
   color: white;
 
   :hover {

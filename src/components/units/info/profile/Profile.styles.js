@@ -95,33 +95,31 @@ export const ProfileInfoContainer = styled.div`
 
 export const ProfileNickname = styled.h1`
   font-size: 24px;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 5px;
 `;
 
 export const ProfileInfo = styled.div`
   font-size: 16px;
   font-weight: 400;
-  margin: 2px 0;
 `;
 
 export const ProfileEditButton = styled.button`
   width: 342px;
-  /* height: 44px; */
+  height: 44px;
   line-height: 44px;
   color: white;
   font-size: 20px;
-  font-weight: 700;
   background-color: #240d05;
   border: none;
   border-radius: 30px;
+  margin-top: 5px;
   margin-bottom: 20px;
 `;
 
 export const InfoWrapper = styled.div`
   width: 342px;
-  margin: 20px 0;
+  margin: 18px 0;
 `;
 
 export const InfoTitle = styled.h1`

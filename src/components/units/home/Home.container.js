@@ -1,5 +1,5 @@
-import HomeHeader from "../headers/HomeHeader.container";
-import Navigation from "../navigation/Navigation.container";
+import HomeHeader from "../../commons/headers/HomeHeader.container";
+import Navigation from "../../commons/navigation/Navigation.container";
 import HomeUI from "./Home.presenter";
 
 export default function CommunityQuestions() {
