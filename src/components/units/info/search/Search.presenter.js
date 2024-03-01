@@ -1,7 +1,7 @@
 import * as S from "./Search.styles";
 import Image from "next/image";
 
-export default function SearchUI() {
+export default function SearchUI(props) {
   return (
     <>
       <S.WrapperHeader>
