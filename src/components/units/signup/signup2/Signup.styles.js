@@ -16,19 +16,17 @@ export const ProgressBarBlock = styled.div`
 `;
 
 export const ProgressBar = styled.div`
-  width: 20%;
+  width: 40%;
   height: 3px;
   background-color: #FF6636;
   animation: progress 1s linear;
 
   @keyframes progress{
     0% {
-      width: 0;
+      width: 20%;
     }
     100%{
-      width: 20%;
+      width: 40%;
     }
   }
 `;
-
-
