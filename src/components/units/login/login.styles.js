@@ -52,9 +52,17 @@ export const IdAndPassWordInput = styled.input`
   width: 342px;
   height: 60px;
   background-color: #FEF8F2;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
+
+  :focus{
+    border: 3px solid #F1C598;
+    outline: none;
+  }
+  ::placeholder{
+    color: #F1C598
+  }
 `;
 
 export const LoginButton = styled.button`
