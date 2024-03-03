@@ -32,8 +32,8 @@ export default function LogInUI() {
         </S.WraaperLogoAndImage>
         <S.WraperLoginContents>
           <S.LoginContainer>
-            <S.IdAndPassWordInput placeholder="아이디" />
-            <S.IdAndPassWordInput placeholder="비밀번호" />
+            <S.IdAndPassWordInput placeholder="아이디" type="text"/>
+            <S.IdAndPassWordInput placeholder="비밀번호" type="text"/>
           </S.LoginContainer>
           <S.LoginContainer>
             <S.LoginButton>
