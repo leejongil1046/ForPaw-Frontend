@@ -16,26 +16,25 @@ export const Container = styled.div`
 export const ProgressBarBlock = styled.div`
   width: 100%;
   height: 3px;
-  background-color: #DBDBDB;
+  background: #DBDBDB;
   display: flex;
   flex-direction: column;
 `;
 
-export const ProgressBar = styled.div`
-  width: 20%;
-  height: 3px;
-  background-color: #FF6636;
-  animation: progress 1s linear;
+export const ProgressBar = styled.progress`
+    width: 20%;
+    height: 3px;
+    appearance: none;
+    
+    &::-webkit-progress-bar {
+      background-color: #DBDBDB; 
+    }
 
-  @keyframes progress{
-    0% {
-      width: 0;
+    &::-webkit-progress-value {
+      background-color: #FF6636; 
     }
-    100%{
-      width: 20%;
-    }
-  }
 `;
+
 
 export const InfoContainer = styled.div`
   width: 100%;
@@ -44,11 +43,11 @@ export const InfoContainer = styled.div`
 
 export const InfoBlock = styled.div`
   width: 100%;
-  height: 565px;
+  height: 530px;
 `;
 
 export const InfoTitleItem = styled.div`
-  width: 390px;
+  width: 100%;
   height: 29px;
   font-size: 24px;
   font-weight: bold;

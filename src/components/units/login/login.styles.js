@@ -63,7 +63,7 @@ export const IdAndPassWordInput = styled.input`
     outline: none;
   }
   ::placeholder{
-    color: #F1C598
+    color: #BEA597
   }
 `;
 
