@@ -8,6 +8,14 @@ export const WrapperLoading = styled.div`
   position: relative;
 `;
 
+export const BlurryElement = styled.div`
+  width: 390px;
+  height: 100vh;
+  background-color: ##FF6636;
+  filter: blur(${props => props.blurred ? '5px' : '0'}); 
+  transition: filter 1s ease; 
+`;
+
 export const WrapperImage = styled.div`
   width: 124px;
   height: 138px;
