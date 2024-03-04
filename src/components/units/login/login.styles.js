@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const WrapperContainer = styled.div`
-  width: 390px;
-  height: 100vh;
+  max-width: 27%;
+  height: 100%;
   margin: 0 auto;
   background-color: white;
 `;
@@ -33,9 +33,6 @@ export const WraperLoginContents = styled.div`
   margin-top: 40px;
   width: 100%;
   height: 580px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 export const LoginContainer = styled.div`

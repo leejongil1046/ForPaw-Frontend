@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function LogInUI() {
   const router = useRouter();
 
-  const MovePage = () => {
-    router.push("./login/signup");
+  const MoveSignupPage = () => {
+    router.push("./login/signup/1");
   };
 
   return (
@@ -39,7 +39,7 @@ export default function LogInUI() {
             <S.LoginButton>
               로그인
             </S.LoginButton>
-            <S.SignUpButton>
+            <S.SignUpButton onClick={MoveSignupPage}>
               회원가입
             </S.SignUpButton>
           </S.LoginContainer>
