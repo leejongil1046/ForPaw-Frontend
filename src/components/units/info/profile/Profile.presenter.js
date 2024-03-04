@@ -34,7 +34,9 @@ export default function ProfileUI(props) {
             <S.ProfileInfo>박영빈</S.ProfileInfo>
           </S.ProfileInfoContainer>
         </S.ProfileCard>
-        <S.ProfileEditButton>프로필 수정</S.ProfileEditButton>
+        <S.ProfileEditButton onClick={props.navigateTo("/info/profile/edit")}>
+          프로필 수정
+        </S.ProfileEditButton>
         <S.InfoWrapper>
           <S.InfoTitle>계정 정보</S.InfoTitle>
           <S.InfoContainer>
