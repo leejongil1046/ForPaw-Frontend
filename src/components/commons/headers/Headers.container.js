@@ -14,6 +14,12 @@ export default function Headers() {
       return "커뮤니티";
     } else if (pathname === "/chatting") {
       return "채팅";
+    } else if (pathname === "/home/faq") {
+      return "자주하는 질문";
+    } else if (pathname === "/home/dogs") {
+      return "강아지 키우기";
+    } else if (pathname === "/home/cats") {
+      return "고양이 키우기";
     } else {
       return ""; // 기본값 혹은 다른 경로에 대한 타이틀 설정
     }
