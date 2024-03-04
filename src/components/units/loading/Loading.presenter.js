@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import * as S from "./Loading.styles";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function LoadingUI() {
   const router = useRouter();
@@ -15,16 +15,28 @@ export default function LoadingUI() {
     return () => clearTimeout(timer);
   }, []);
 
+  const [blurred, setBlurred] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBlurred(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <S.WrapperLoading>
-      <S.WrapperImage>
-        <Image
-          src="/images/loading/loading_paw.png"
-          alt="loading_paw"
-          width={124}
-          height={138}
-        />
-      </S.WrapperImage>
+      <S.BlurryElement blurred={blurred}>
+        <S.WrapperImage>
+          <Image
+            src="/images/loading/loading_paw.png"
+            alt="loading_paw"
+            width={124}
+            height={138}
+          />
+        </S.WrapperImage>
+      </S.BlurryElement>
     </S.WrapperLoading>
   )
 }
