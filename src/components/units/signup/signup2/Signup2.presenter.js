@@ -1,4 +1,4 @@
-import * as S from "./Signup.styles";
+import * as S from "./Signup2.styles";
 import SignupHeaderUI from "../SignupHeader.presenter";
 
 export default function SignUpUI(){

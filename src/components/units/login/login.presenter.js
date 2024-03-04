@@ -6,7 +6,7 @@ export default function LogInUI() {
   const router = useRouter();
 
   const MoveSignupPage = () => {
-    router.push("./login/signup/1");
+    router.push('/login/signup/1');
   };
 
   return (
