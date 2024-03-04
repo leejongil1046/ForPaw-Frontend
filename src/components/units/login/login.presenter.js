@@ -37,7 +37,7 @@ export default function LogInUI() {
               <S.IdAndPassWordInput placeholder="비밀번호" type="password" />
             </S.LoginContainer>
             <S.LoginContainer>
-              <S.LoginButton>
+              <S.LoginButton type="submit">
                 로그인
               </S.LoginButton>
               <S.SignUpButton onClick={MoveSignupPage}>

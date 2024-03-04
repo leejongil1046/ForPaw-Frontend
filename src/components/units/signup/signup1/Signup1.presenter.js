@@ -1,13 +1,28 @@
 import * as S from "./Signup1.styles";
-import SignupHeaderUI from "../SignupHeader.presenter";
+import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
 import { useRouter } from "next/router";
+import { useEffect, useState } from 'react';
 
 export default function SignUpUI() {
   const router = useRouter();
 
   const MoveSignup2Page = () => {
-    router.push('/login/signup/2')
+    router.push('/login/signup/2');
   }
+
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (progress < 100) {
+        setProgress(prevProgress => prevProgress + 1);
+      } else {
+        clearInterval(interval); // 프로그레스가 100에 도달하면 interval 제거
+      }
+    }, 10); // 100ms 간격으로 호출
+
+    return () => clearInterval(interval); // 컴포넌트 언마운트 시 interval 제거
+  }, [progress]);
 
   return (
     <>
@@ -15,14 +30,14 @@ export default function SignUpUI() {
         <S.Container>
           <SignupHeaderUI />
           <S.ProgressBarBlock>
-            <S.ProgressBar />
+            <S.ProgressBar value={progress} max={20} />
           </S.ProgressBarBlock>
           <S.InfoContainer>
             <S.InfoBlock>
               <S.InfoTitleItem>
                 이름을 입력해주세요
               </S.InfoTitleItem>
-              <S.InfoNameItem type="text" placeholder="홍길동"/>
+              <S.InfoNameItem type="text" placeholder="홍길동" />
             </S.InfoBlock>
             <S.NextButtonBlock>
               <S.NextButtonItem onClick={MoveSignup2Page}>
