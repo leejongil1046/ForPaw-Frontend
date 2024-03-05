@@ -10,5 +10,16 @@ export default function Profile() {
     router.back();
   };
 
-  return <ProfileUI navigateTo={navigateTo} navigateBack={navigateBack} />;
+  const paths = {
+    edit: "/info/profile/edit",
+    pw: "/info/profile/pw",
+  };
+
+  return (
+    <ProfileUI
+      navigateTo={navigateTo}
+      navigateBack={navigateBack}
+      paths={paths}
+    />
+  );
 }

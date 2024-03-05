@@ -34,7 +34,7 @@ export default function ProfileUI(props) {
             <S.ProfileInfo>박영빈</S.ProfileInfo>
           </S.ProfileInfoContainer>
         </S.ProfileCard>
-        <S.ProfileEditButton onClick={props.navigateTo("/info/profile/edit")}>
+        <S.ProfileEditButton onClick={props.navigateTo(props.paths.edit)}>
           프로필 수정
         </S.ProfileEditButton>
         <S.InfoWrapper>
@@ -44,7 +44,9 @@ export default function ProfileUI(props) {
               <S.InfoItem>아이디</S.InfoItem>
               <S.InfoItemAdded>dudqls256</S.InfoItemAdded>
             </S.InfoItemBlock>
-            <S.InfoItem>비밀번호 변경</S.InfoItem>
+            <S.InfoItem onClick={props.navigateTo(props.paths.pw)}>
+              비밀번호 변경
+            </S.InfoItem>
             <S.InfoItem>입양 문의 내역</S.InfoItem>
           </S.InfoContainer>
         </S.InfoWrapper>
