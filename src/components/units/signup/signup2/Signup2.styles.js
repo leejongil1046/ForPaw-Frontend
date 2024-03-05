@@ -58,7 +58,7 @@ export const EmailTitle = styled.div`
     width: 100%;
     height: 21px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 20px;
     margin-left: 20px;
 `;
@@ -138,6 +138,7 @@ export const AvailableEmail = styled.p`
   height: 17px;
   font-size: 12px;
   color: #C6C6C6;
+  visibility: hidden;
 `;
 
 export const CheckEmailBtn = styled.button`
@@ -158,7 +159,7 @@ export const VerificationCodeTitle = styled.div`
   width: 100%;
   height: 21px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 30px;
   margin-left: 20px;
 `;
@@ -221,6 +222,7 @@ export const RetryVerification = styled.div`
   color: #C6C6C6;
   margin-top: 20px;
   margin-left: 20px;
+  cursor: pointer;
 `;
 
 export const NextButtonBlock = styled.div`

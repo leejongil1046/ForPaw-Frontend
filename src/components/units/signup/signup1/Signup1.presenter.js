@@ -1,7 +1,7 @@
 import * as S from "./Signup1.styles";
 import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
 import { useRouter } from "next/router";
-import { useEffect, useState } from 'react';
+import Progress from "../component/Progress";
 
 export default function SignUpUI() {
   const router = useRouter();
@@ -10,27 +10,13 @@ export default function SignUpUI() {
     router.push('/login/signup/2');
   };
 
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (progress < 20) {
-        setProgress(prevProgress => prevProgress + 1);
-      } else {
-        clearInterval(interval); // 프로그레스가 100에 도달하면 interval 제거
-      }
-    }, 10); // 100ms 간격으로 호출
-
-    return () => clearInterval(interval); // 컴포넌트 언마운트 시 interval 제거
-  }, []);
-
   return (
     <>
       <S.WrapperContainer>
         <S.Container>
           <SignupHeaderUI />
           <S.ProgressBarBlock>
-            <S.ProgressBar value={progress} max={20} />
+            <S.ProgressBar value={Progress({ startValue: 0, max: 20, interval: 10})} max={20} />
           </S.ProgressBarBlock>
           <S.InfoContainer>
             <S.InfoBlock>
