@@ -44,13 +44,54 @@ export default function ProfileEditUI(props) {
             <S.EditTitle>프로필 정보</S.EditTitle>
           </S.EditTextBlock>
           <S.EditTextBlock>
-            <S.NickNameLabel>닉네임</S.NickNameLabel>
+            <S.ProfileInfoLabel>닉네임</S.ProfileInfoLabel>
           </S.EditTextBlock>
           <S.NickNameEditBlock>
             <S.NickNameInput type="text" placeholder="기존 닉네임" />
             <S.NickNameEditButton>변경</S.NickNameEditButton>
           </S.NickNameEditBlock>
+          <S.AreaSelectContainer>
+            <S.EditTextBlock>
+              <S.ProfileInfoLabel>활동 지역</S.ProfileInfoLabel>
+            </S.EditTextBlock>
+            <S.ProvinceCitySelect>
+              <option>시/도 선택</option>
+            </S.ProvinceCitySelect>
+            <S.ProvinceArrowBlock>
+              <Image
+                src="/images/info/select_arrow_icon.png"
+                alt="left_arrow_icon"
+                width={22}
+                height={12}
+              />
+            </S.ProvinceArrowBlock>
+            <S.DistrictSelectBlock>
+              <S.DistrictSelect>
+                <option>구/군/시</option>
+              </S.DistrictSelect>
+              <S.DistrictArrowBlock>
+                <Image
+                  src="/images/info/select_arrow_icon.png"
+                  alt="left_arrow_icon"
+                  width={22}
+                  height={12}
+                />
+              </S.DistrictArrowBlock>
+              <S.SubdistrictSelect>
+                <option>동/읍/면</option>
+              </S.SubdistrictSelect>
+              <S.SubdistrictArrowBlock>
+                <Image
+                  src="/images/info/select_arrow_icon.png"
+                  alt="left_arrow_icon"
+                  width={22}
+                  height={12}
+                />
+              </S.SubdistrictArrowBlock>
+            </S.DistrictSelectBlock>
+          </S.AreaSelectContainer>
         </S.ProfileEditContainer>
+        <S.ProfileEditButton>프로필 수정</S.ProfileEditButton>
       </S.WrapperProfileEdit>
     </>
   );

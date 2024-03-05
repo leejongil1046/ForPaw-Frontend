@@ -119,7 +119,7 @@ export const EditTitle = styled.h1`
   margin-left: 5px;
 `;
 
-export const NickNameLabel = styled.div`
+export const ProfileInfoLabel = styled.div`
   font-size: 20px;
   font-weight: 600;
   margin-left: 5px;
@@ -127,7 +127,7 @@ export const NickNameLabel = styled.div`
 `;
 
 export const NickNameEditBlock = styled.div`
-  width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -172,4 +172,132 @@ export const NickNameEditButton = styled.button`
   :hover {
     cursor: pointer;
   }
+`;
+
+export const AreaSelectContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+`;
+
+export const ProvinceCitySelect = styled.select`
+  width: 342px;
+  height: 60px;
+  background-color: #fef8f2;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 12px;
+  margin-top: 10px;
+  color: #bea597;
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+
+  :focus {
+    border: 2px solid #bea597;
+    color: #bea597;
+  }
+`;
+
+export const ProvinceArrowBlock = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 83px;
+  left: 305px;
+`;
+
+export const DistrictSelectBlock = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+`;
+
+export const DistrictSelect = styled.select`
+  width: 164px;
+  height: 60px;
+  background-color: #fef8f2;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 12px;
+  margin-top: 10px;
+  margin-right: 4px;
+  color: #bea597;
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+
+  :focus {
+    border: 2px solid #bea597;
+    color: #bea597;
+  }
+`;
+
+export const DistrictArrowBlock = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 28px;
+  left: 128px;
+`;
+
+export const SubdistrictSelect = styled.select`
+  width: 164px;
+  height: 60px;
+  background-color: #fef8f2;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 12px;
+  margin-top: 10px;
+  margin-left: 4px;
+  color: #bea597;
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+
+  :focus {
+    border: 2px solid #bea597;
+    color: #bea597;
+  }
+`;
+
+export const SubdistrictArrowBlock = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 28px;
+  left: 305px;
+`;
+
+export const ProfileEditButton = styled.button`
+  background-color: #ff6636;
+  color: white;
+  margin-top: 120px;
 `;
