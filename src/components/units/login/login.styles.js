@@ -118,6 +118,7 @@ export const NaverButton = styled.button`
 `
 
 export const AccoutAndInfoContainer = styled.div`
+  margin-top:20px;
   width: 100%;
   height: 80px;
   display: flex;
@@ -128,18 +129,18 @@ export const AccoutAndInfoContainer = styled.div`
 `;
 
 export const AccoutFind = styled.div`
-  width: 140px;
+  width: 132px;
   height: 17px;
   color: #A1A1A1;
   border-bottom: 1px solid #A1A1A1; 
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
 `;
 
 export const InfoPaw= styled.div`
-  width: 167px;
+  width: 158px;
   height: 17px;
   color: #A1A1A1;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
 `;

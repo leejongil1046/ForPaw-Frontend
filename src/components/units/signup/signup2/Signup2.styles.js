@@ -136,7 +136,7 @@ export const CheckEmailBlock = styled.div`
 export const AvailableEmail = styled.p`
   width: 139px;
   height: 17px;
-  font-size: 13px;
+  font-size: 12px;
   color: #C6C6C6;
 `;
 
@@ -217,7 +217,7 @@ export const timerItem = styled.div`
 export const RetryVerification = styled.div`
   width: 139px;
   height: 17px;
-  font-size: 13px;
+  font-size: 12px;
   color: #C6C6C6;
   margin-top: 20px;
   margin-left: 20px;

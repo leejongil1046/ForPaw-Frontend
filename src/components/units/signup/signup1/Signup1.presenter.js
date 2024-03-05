@@ -8,13 +8,13 @@ export default function SignUpUI() {
 
   const MoveSignup2Page = () => {
     router.push('/login/signup/2');
-  }
+  };
 
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (progress < 100) {
+      if (progress < 20) {
         setProgress(prevProgress => prevProgress + 1);
       } else {
         clearInterval(interval); // 프로그레스가 100에 도달하면 interval 제거
@@ -22,7 +22,7 @@ export default function SignUpUI() {
     }, 10); // 100ms 간격으로 호출
 
     return () => clearInterval(interval); // 컴포넌트 언마운트 시 interval 제거
-  }, [progress]);
+  }, []);
 
   return (
     <>

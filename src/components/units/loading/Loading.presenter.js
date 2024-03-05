@@ -20,7 +20,7 @@ export default function LoadingUI() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setBlurred(false);
-    }, 500);
+    }, 200);
 
     return () => clearTimeout(timer);
   }, []);
