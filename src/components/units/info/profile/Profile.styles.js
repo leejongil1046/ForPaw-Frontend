@@ -152,6 +152,11 @@ export const InfoItem = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  :hover {
+    cursor: pointer;
+    color: #898684;
+  }
 `;
 
 export const InfoItemAdded = styled.div`

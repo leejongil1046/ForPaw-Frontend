@@ -13,8 +13,8 @@ export default function NavigationUI(props) {
           <Image
             src={props.getIconSrc(iconName)}
             alt={`${iconName}_icon`}
-            width={40}
-            height={40}
+            width={44}
+            height={44}
           />
         </S.NavigationIconContainer>
       ))}
