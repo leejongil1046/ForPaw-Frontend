@@ -7,7 +7,7 @@ export default function HomeHeaderUI(props) {
       <S.Header>
         <S.ForPawImageContainer>
           <Image
-            src="/images/header/forpaw_icon.png"
+            src="/images/header/forpaw_icon.svg"
             alt="forpaw_icon"
             width={52}
             height={42}
@@ -16,7 +16,7 @@ export default function HomeHeaderUI(props) {
         <S.InfoContainer>
           <S.InfoIconContainer onClick={props.navigateTo("search")}>
             <Image
-              src="/images/header/search_icon.png"
+              src="/images/header/search_icon.svg"
               alt="search_icon"
               width={44}
               height={44}
@@ -24,7 +24,7 @@ export default function HomeHeaderUI(props) {
           </S.InfoIconContainer>
           <S.InfoIconContainer onClick={props.navigateTo("alarm")}>
             <Image
-              src="/images/header/alarm_icon.png"
+              src="/images/header/alarm_icon.svg"
               alt="alarm_icon"
               width={44}
               height={44}
@@ -32,7 +32,7 @@ export default function HomeHeaderUI(props) {
           </S.InfoIconContainer>
           <S.ProfileIconContainer onClick={props.navigateTo("profile")}>
             <Image
-              src="/images/header/profile_icon.png"
+              src="/images/header/profile_icon.svg"
               alt="profile_icon"
               width={44}
               height={44}
@@ -42,7 +42,7 @@ export default function HomeHeaderUI(props) {
       </S.Header>
       <S.HeaderLogo>
         <Image
-          src="/images/header/forpaw_logo.png"
+          src="/images/header/forpaw_logo.svg"
           alt="forpaw_logo"
           width={77}
           height={20}

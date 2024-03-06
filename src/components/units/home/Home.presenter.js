@@ -8,7 +8,7 @@ export default function HomeUI() {
         <S.HomeIntroTitle>포포는 무슨 일을 하나요?</S.HomeIntroTitle>
         <S.PawImageSmallBlock>
           <Image
-            src="/images/home/paw_small.png"
+            src="/images/home/paw_small.svg"
             alt="paw_small"
             width={38}
             height={38}
@@ -16,7 +16,7 @@ export default function HomeUI() {
         </S.PawImageSmallBlock>
         <S.PawImageBigBlock>
           <Image
-            src="/images/home/paw_big.png"
+            src="/images/home/paw_big.svg"
             alt="paw_big"
             width={60}
             height={60}
@@ -30,13 +30,65 @@ export default function HomeUI() {
         </S.HomeIntroTextLower>
         <S.HomeIntroArrowBlock>
           <Image
-            src="/images/home/arrow_right.png"
+            src="/images/home/arrow_right.svg"
             alt="paw_big"
             width={15}
             height={15}
           />
         </S.HomeIntroArrowBlock>
       </S.HomeIntroContainer>
+      <S.HomeIconContainer>
+        <S.HomeIconBlock>
+          <S.HomeIcon>
+            <Image
+              src="/images/home/faq_icon.svg"
+              alt="paw_big"
+              width={84}
+              height={84}
+            />
+          </S.HomeIcon>
+          <S.HomeIconText>자주 하는 질문</S.HomeIconText>
+        </S.HomeIconBlock>
+        <S.HomeIconBlock>
+          <S.HomeDogsCatsIcon>
+            <Image
+              src="/images/home/dogs_icon.svg"
+              alt="paw_big"
+              width={100}
+              height={100}
+            />
+          </S.HomeDogsCatsIcon>
+          <S.HomeIconText>강아지 키우기</S.HomeIconText>
+        </S.HomeIconBlock>
+        <S.HomeIconBlock>
+          <S.HomeDogsCatsIcon>
+            <Image
+              src="/images/home/cats_icon.svg"
+              alt="paw_big"
+              width={92}
+              height={92}
+            />
+          </S.HomeDogsCatsIcon>
+          <S.HomeIconText>고양이 키우기</S.HomeIconText>
+        </S.HomeIconBlock>
+      </S.HomeIconContainer>
+      <S.HomeAdoptContainer>
+        <S.HomeAdoptTitleBlock>
+          <S.HomeAdoptTitle>입양/임시보호</S.HomeAdoptTitle>
+          <Image
+            src="/images/commons/arrow_right_icon.svg"
+            alt="paw_big"
+            width={15}
+            height={25}
+          />
+        </S.HomeAdoptTitleBlock>
+        <S.HomeAdoptItemBlock>
+          <S.HomeAdoptItem></S.HomeAdoptItem>
+          <S.HomeAdoptItem></S.HomeAdoptItem>
+          <S.HomeAdoptItem></S.HomeAdoptItem>
+          <S.HomeAdoptItemArrow></S.HomeAdoptItemArrow>
+        </S.HomeAdoptItemBlock>
+      </S.HomeAdoptContainer>
     </S.WrapperHomeContents>
   );
 }

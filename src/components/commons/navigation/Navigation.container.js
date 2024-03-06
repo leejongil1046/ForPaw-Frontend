@@ -16,7 +16,7 @@ export default function Navigation() {
 
     return `/images/navigation/${iconName}_icon${
       isActive ? "_active" : ""
-    }.png`;
+    }.svg`;
   };
 
   // 각 아이콘에 해당하는 경로

@@ -8,7 +8,7 @@ export default function HeadersUI(props) {
       <S.Header>
         <S.LeftArrowTitleContainer>
           <Image
-            src="/images/header/left_arrow_icon.png"
+            src="/images/header/arrow_left_icon.svg"
             alt="left_arrow_icon"
             width={15}
             height={25}
@@ -19,7 +19,7 @@ export default function HeadersUI(props) {
         <S.InfoContainer>
           <S.InfoIconContainer onClick={props.navigateTo("search")}>
             <Image
-              src="/images/header/search_icon.png"
+              src="/images/header/search_icon.svg"
               alt="search_icon"
               width={44}
               height={44}
@@ -27,7 +27,7 @@ export default function HeadersUI(props) {
           </S.InfoIconContainer>
           <S.InfoIconContainer onClick={props.navigateTo("alarm")}>
             <Image
-              src="/images/header/alarm_icon.png"
+              src="/images/header/alarm_icon.svg"
               alt="alarm_icon"
               width={44}
               height={44}
@@ -35,7 +35,7 @@ export default function HeadersUI(props) {
           </S.InfoIconContainer>
           <S.ProfileIconContainer onClick={props.navigateTo("profile")}>
             <Image
-              src="/images/header/profile_icon.png"
+              src="/images/header/profile_icon.svg"
               alt="profile_icon"
               width={44}
               height={44}

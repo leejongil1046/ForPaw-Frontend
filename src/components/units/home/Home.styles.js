@@ -86,3 +86,117 @@ export const HomeIntroArrowBlock = styled.div`
   top: 90px;
   left: 270px;
 `;
+
+export const HomeIconContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const HomeIconBlock = styled.div`
+  width: 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+export const HomeIcon = styled.div`
+  width: 104px;
+  height: 104px;
+  background-color: #efefef;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const HomeDogsCatsIcon = styled.div`
+  width: 104px;
+  height: 104px;
+  background-color: #efefef;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+export const HomeIconText = styled.div`
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+`;
+
+export const HomeAdoptContainer = styled.div`
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 40px;
+`;
+
+export const HomeAdoptTitleBlock = styled.div`
+  width: 344px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const HomeAdoptTitle = styled.h1`
+  font-size: 24px;
+`;
+
+export const HomeAdoptArrow = styled.div`
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const HomeAdoptItemBlock = styled.div`
+  width: 390px;
+  /* max-width: 390px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  overflow-x: auto;
+
+  /* 스크롤 바 숨기기 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none; /* Firefox */
+`;
+
+export const HomeAdoptItem = styled.div`
+  width: 254px;
+  height: 254px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-right: 20px;
+  flex-shrink: 0;
+`;
+
+export const HomeAdoptItemArrow = styled.div`
+  width: 254px;
+  height: 254px;
+  background-color: #ff6636;
+  border-radius: 20px;
+  flex-shrink: 0;
+`;
