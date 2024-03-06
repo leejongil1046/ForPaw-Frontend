@@ -22,7 +22,7 @@ export const ProgressBarBlock = styled.div`
 `;
 
 export const ProgressBar = styled.progress`
-    width: 80%;
+    width: 75%;
     height: 3px;
     appearance: none;
     

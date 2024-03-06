@@ -22,7 +22,7 @@ export const ProgressBarBlock = styled.div`
 `;
 
 export const ProgressBar = styled.progress`
-    width: 40%;
+    width: 50%;
     height: 3px;
     appearance: none;
     
@@ -220,7 +220,7 @@ export const RetryVerification = styled.div`
   height: 17px;
   font-size: 12px;
   color: #C6C6C6;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
   cursor: pointer;
 `;
