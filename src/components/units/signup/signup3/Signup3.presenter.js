@@ -2,16 +2,32 @@ import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
 import * as S from "./Signup3.styles";
 import { useEffect, useState } from 'react';
 import Progress from "../component/Progress";
+import { useRouter } from "next/router";
 
 
 export default function SignUpUI() {
 
-  ///// select의 값을 찾아내는 함수
-  // const [selectedOption, setSelectedOption] = useState("");
+  const router = useRouter();
 
-  // const handleChange = (e) => {
-  //   setSelectedOption(e.target.value);
-  // };
+  const MoveSignup4Page = () => {
+    router.push('/login/signup')
+  }
+
+  const [password, setPassword] = useState(""); // 비밀번호 상태 추가
+  const [confirmPassword, setConfirmPassword] = useState(""); // 비밀번호 확인 상태 추가
+  const [isPasswordMatch, setIsPasswordMatch] = useState(false); // 비밀번호 일치 여부 상태 추가
+
+  // 비밀번호 입력 시 상태 업데이트
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    const confirmPasswordValue = e.target.value;
+    setConfirmPassword(confirmPasswordValue);
+    setIsPasswordMatch(confirmPasswordValue === password); // 비밀번호 확인 값과 비밀번호 값 비교하여 일치 여부 업데이트
+  };
+
 
   return (
     <>
@@ -31,24 +47,36 @@ export default function SignUpUI() {
             </S.InfoContentsBlock>
             <S.InfoContentsBlock>
               <S.InfoTitlePassWord>비밀번호</S.InfoTitlePassWord>
-              <S.SetPassWord placeholder="비밀번호" />
+              <S.SetPassWord
+                type="password"
+                value={password}
+                onChange={handlePasswordChange}
+                placeholder="비밀번호"
+              />
             </S.InfoContentsBlock>
             <S.InfoFormPassWord>
               특수문자를 포함한 10자리를 입력해주세요
             </S.InfoFormPassWord>
             <S.InfoContentsBlock>
               <S.CheckPassWordTitle>비밀번호 확인</S.CheckPassWordTitle>
-              <S.CheckPassWord placeholder="비밀번호 확인"/>
+              <S.CheckPassWord
+                type="password"
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+                placeholder="비밀번호 확인"
+              />
             </S.InfoContentsBlock>
-            <S.PassWordCorrect>
-              비밀번호가 일치합니다.
-            </S.PassWordCorrect>
+            {isPasswordMatch ? (
+              <S.PassWordCorrect>비밀번호가 일치합니다.</S.PassWordCorrect>
+            ) : (
+              <S.PassWordCorrect style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
+            )}
           </S.InfoBlock>
           <S.NextButtonBlock>
-              <S.NextButtonItem>
-                다음
-              </S.NextButtonItem>
-            </S.NextButtonBlock>
+            <S.NextButtonItem>
+              다음
+            </S.NextButtonItem>
+          </S.NextButtonBlock>
         </S.Container>
       </S.WrapperContainer>
     </>

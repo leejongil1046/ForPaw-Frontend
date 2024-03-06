@@ -134,7 +134,7 @@ export const CheckEmailBlock = styled.div`
 `;
 
 export const AvailableEmail = styled.p`
-  width: 139px;
+  width: 167px;
   height: 17px;
   font-size: 12px;
   color: #C6C6C6;
@@ -168,7 +168,7 @@ export const VerificationCodeBlock = styled.div`
   width: 342px;
   height: 60px;
   background-color: #FEF8F2;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
   margin-top: 10px;
@@ -181,7 +181,7 @@ export const VerificationCodeBlock = styled.div`
 
 export const VerificationCodeItem = styled.input`
   width: 150px;
-  height: 60px;
+  height: 50px;
   background-color: #FEF8F2;
   border: 1px solid transparent;
   border-radius: 10px;
@@ -205,7 +205,7 @@ export const VerificationCodeItem = styled.input`
 
 export const timerItem = styled.div`
   width: 40px;
-  height: 60px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
