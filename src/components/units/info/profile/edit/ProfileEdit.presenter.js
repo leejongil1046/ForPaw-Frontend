@@ -8,8 +8,8 @@ export default function ProfileEditUI(props) {
         <S.Header>
           <S.LeftArrowTitleContainer>
             <Image
-              src="/images/header/left_arrow_icon.png"
-              alt="left_arrow_icon"
+              src="/images/header/arrow_left_icon.svg"
+              alt="arrow_left_icon"
               width={15}
               height={25}
               onClick={props.navigateBack}
@@ -22,16 +22,16 @@ export default function ProfileEditUI(props) {
         <S.ProfileEditPhotoContainer>
           <S.ProfileEditPhoto>
             <Image
-              src="/images/info/profile_photo_icon.png"
-              alt="left_arrow_icon"
+              src="/images/info/profile_photo_icon.svg"
+              alt="profile_photo_icon"
               width={103}
               height={103}
             />
           </S.ProfileEditPhoto>
           <S.ProfileEditPhoto>
             <Image
-              src="/images/info/profile_photo_edit_icon.png"
-              alt="left_arrow_icon"
+              src="/images/info/profile_photo_edit_icon.svg"
+              alt="profile_photo_edit_icon"
               width={103}
               height={103}
             />
@@ -59,8 +59,8 @@ export default function ProfileEditUI(props) {
             </S.ProvinceCitySelect>
             <S.ProvinceArrowBlock>
               <Image
-                src="/images/info/select_arrow_icon.png"
-                alt="left_arrow_icon"
+                src="/images/info/select_arrow_icon.svg"
+                alt="select_arrow_icon"
                 width={22}
                 height={12}
               />
@@ -71,8 +71,8 @@ export default function ProfileEditUI(props) {
               </S.DistrictSelect>
               <S.DistrictArrowBlock>
                 <Image
-                  src="/images/info/select_arrow_icon.png"
-                  alt="left_arrow_icon"
+                  src="/images/info/select_arrow_icon.svg"
+                  alt="select_arrow_icon"
                   width={22}
                   height={12}
                 />
@@ -82,8 +82,8 @@ export default function ProfileEditUI(props) {
               </S.SubdistrictSelect>
               <S.SubdistrictArrowBlock>
                 <Image
-                  src="/images/info/select_arrow_icon.png"
-                  alt="left_arrow_icon"
+                  src="/images/info/select_arrow_icon.svg"
+                  alt="select_arrow_icon"
                   width={22}
                   height={12}
                 />

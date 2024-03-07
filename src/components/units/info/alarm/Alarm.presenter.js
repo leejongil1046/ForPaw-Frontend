@@ -8,8 +8,8 @@ export default function AlarmUI(props) {
         <S.Header>
           <S.LeftArrowTitleContainer>
             <Image
-              src="/images/header/left_arrow_icon.png"
-              alt="left_arrow_icon"
+              src="/images/header/arrow_left_icon.svg"
+              alt="arrow_left_icon"
               width={15}
               height={25}
               onClick={props.navigateBack}

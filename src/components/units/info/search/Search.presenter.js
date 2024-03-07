@@ -8,8 +8,8 @@ export default function SearchUI(props) {
         <S.Header>
           <S.LeftArrowTitleContainer>
             <Image
-              src="/images/header/left_arrow_icon.png"
-              alt="left_arrow_icon"
+              src="/images/header/arrow_left_icon.svg"
+              alt="arrow_left_icon"
               width={15}
               height={25}
               onClick={props.navigateBack}
@@ -23,7 +23,7 @@ export default function SearchUI(props) {
           <S.SearchWindow type="text" placeholder="검색어를 입력해주세요" />
           <S.SearchImageContainer>
             <Image
-              src="/images/info/search_icon_info.png"
+              src="/images/info/search_icon_info.svg"
               alt="search_icon"
               width={31.36}
               height={31.36}
