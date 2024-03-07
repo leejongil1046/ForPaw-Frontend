@@ -19,3 +19,115 @@ export const WrapperContents = styled.div`
   }
   scrollbar-width: none; /* Firefox */
 `;
+
+export const VolunteerBlock = styled.div`
+  width: 344px;
+  height: 354px;
+  background-color: #fef8f2;
+  border: 1px solid #f6f2ee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+  flex-shrink: 0;
+`;
+
+export const VolunteerImg = styled.div`
+  width: 324px;
+  height: 183px;
+  border-radius: 10px;
+  margin-top: 8px;
+  position: relative;
+`;
+
+export const VolunteerLikeBlock = styled.div`
+  width: 66px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 4px;
+  top: 145px;
+  left: 8px;
+`;
+
+export const VolunteerTitle = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 145px;
+  margin-top: 15px;
+`;
+
+export const VolunteerText = styled.div`
+  width: 310px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-right: 10px;
+`;
+
+export const VolunteerInfoBlock = styled.div`
+  width: 288px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  margin-right: 35px;
+`;
+
+export const VolunteerNumberOfMember = styled.div`
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ff6636;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+`;
+
+export const VolunteerCategory = styled.div`
+  width: 106px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+`;
+
+export const VolunteerRegion = styled.div`
+  width: 86px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+`;
+
+export const VolunteerAddIcon = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: #ff6636;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 12%;
+  right: calc(50% - 172px);
+`;
