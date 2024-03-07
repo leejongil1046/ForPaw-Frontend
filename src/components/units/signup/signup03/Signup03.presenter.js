@@ -1,5 +1,5 @@
-import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
 import * as S from "./Signup03.styles";
+import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
 // import PropTypes from 'prop-types';
 import Progress from "../component/Progress";
 
@@ -42,13 +42,13 @@ export default function SignUpUI03(props) {
               />
             </S.InfoContentsBlock>
             {props.isPasswordMatch ? (
-              <S.PassWordCorrect>비밀번호가 일치합니다.</S.PassWordCorrect>
+              <S.PassWordCorrect style={{visibility: props.isVisible ? 'visible' : 'hidden'}}>비밀번호가 일치합니다.</S.PassWordCorrect>
             ) : (
-              <S.PassWordCorrect style={{ color: '#FF9A9A' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
+              <S.PassWordCorrect style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
             )}
           </S.InfoBlock>
           <S.NextButtonBlock>
-            <S.NextButtonItem onClick={props.navigateTo("/login/signup/04")}>
+            <S.NextButtonItem onClick={props.navigateTo('/login/signup/04')}>
               다음
             </S.NextButtonItem>
           </S.NextButtonBlock>

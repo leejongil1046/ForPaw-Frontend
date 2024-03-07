@@ -34,7 +34,7 @@ export default function SignUpUI02(props) {
                     사용가능한 이메일입니다.
                   </S.AvailableEmail>
                 ) : (
-                  <S.AvailableEmail style={{ color: 'red', visibility: props.isVisible ? 'visible' : 'hidden' }}>사용 불가능한 이메일입니다.</S.AvailableEmail>
+                  <S.AvailableEmail style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>사용 불가능한 이메일입니다.</S.AvailableEmail>
                 )}
 
                 <S.CheckEmailBtn type="button" onClick={props.handleCheckEmailAndStartTimer}>
