@@ -83,16 +83,16 @@ export default function HomeUI(props) {
             onClick={props.navigateTo(props.paths.adopt)}
           />
         </S.HomeTitleBlock>
-        <S.AdoptItemBlock>
-          <S.AdoptItem>
+        <S.AdoptPetBlock>
+          <S.AdoptPet>
             <Image
               src="/images/pets/dog_1.svg"
               alt="dog_1"
               width={254}
               height={254}
             />
-            <S.AdoptItemInfoBlock>
-              <S.AdoptItemNameGender>
+            <S.AdoptInfoBlock>
+              <S.AdoptNameGender>
                 유기동물 이름
                 <Image
                   src="/images/pets/male_icon.svg"
@@ -100,29 +100,27 @@ export default function HomeUI(props) {
                   width={17}
                   height={17}
                 />
-              </S.AdoptItemNameGender>
-              <S.AdoptItemBirthAddress>
-                2019년생 부산 금정구
-              </S.AdoptItemBirthAddress>
-              <S.AdoptItemLikeBlock>
-                <S.AdoptItemLike></S.AdoptItemLike>
+              </S.AdoptNameGender>
+              <S.AdoptBirthAddress>2019년생 부산 금정구</S.AdoptBirthAddress>
+              <S.AdoptLikeBlock>
+                <S.AdoptLike></S.AdoptLike>
                 12
-              </S.AdoptItemLikeBlock>
-              <S.AdoptItemViewBlock>
-                <S.AdoptItemView></S.AdoptItemView>
+              </S.AdoptLikeBlock>
+              <S.AdoptViewBlock>
+                <S.AdoptView></S.AdoptView>
                 25
-              </S.AdoptItemViewBlock>
-            </S.AdoptItemInfoBlock>
-          </S.AdoptItem>
-          <S.AdoptItem>
+              </S.AdoptViewBlock>
+            </S.AdoptInfoBlock>
+          </S.AdoptPet>
+          <S.AdoptPet>
             <Image
               src="/images/pets/cat_1.svg"
               alt="cat_1"
               width={254}
               height={254}
             />
-            <S.AdoptItemInfoBlock>
-              <S.AdoptItemNameGender>
+            <S.AdoptInfoBlock>
+              <S.AdoptNameGender>
                 유기동물 이름
                 <Image
                   src="/images/pets/male_icon.svg"
@@ -130,29 +128,27 @@ export default function HomeUI(props) {
                   width={17}
                   height={17}
                 />
-              </S.AdoptItemNameGender>
-              <S.AdoptItemBirthAddress>
-                2019년생 부산 금정구
-              </S.AdoptItemBirthAddress>
-              <S.AdoptItemLikeBlock>
-                <S.AdoptItemLike></S.AdoptItemLike>
+              </S.AdoptNameGender>
+              <S.AdoptBirthAddress>2019년생 부산 금정구</S.AdoptBirthAddress>
+              <S.AdoptLikeBlock>
+                <S.AdoptLike></S.AdoptLike>
                 12
-              </S.AdoptItemLikeBlock>
-              <S.AdoptItemViewBlock>
-                <S.AdoptItemView></S.AdoptItemView>
+              </S.AdoptLikeBlock>
+              <S.AdoptViewBlock>
+                <S.AdoptView></S.AdoptView>
                 25
-              </S.AdoptItemViewBlock>
-            </S.AdoptItemInfoBlock>
-          </S.AdoptItem>
-          <S.AdoptItem>
+              </S.AdoptViewBlock>
+            </S.AdoptInfoBlock>
+          </S.AdoptPet>
+          <S.AdoptPet>
             <Image
               src="/images/pets/dog_1.svg"
               alt="dog_1"
               width={254}
               height={254}
             />
-            <S.AdoptItemInfoBlock>
-              <S.AdoptItemNameGender>
+            <S.AdoptInfoBlock>
+              <S.AdoptNameGender>
                 유기동물 이름
                 <Image
                   src="/images/pets/male_icon.svg"
@@ -160,29 +156,27 @@ export default function HomeUI(props) {
                   width={17}
                   height={17}
                 />
-              </S.AdoptItemNameGender>
-              <S.AdoptItemBirthAddress>
-                2019년생 부산 금정구
-              </S.AdoptItemBirthAddress>
-              <S.AdoptItemLikeBlock>
-                <S.AdoptItemLike></S.AdoptItemLike>
+              </S.AdoptNameGender>
+              <S.AdoptBirthAddress>2019년생 부산 금정구</S.AdoptBirthAddress>
+              <S.AdoptLikeBlock>
+                <S.AdoptLike></S.AdoptLike>
                 12
-              </S.AdoptItemLikeBlock>
-              <S.AdoptItemViewBlock>
-                <S.AdoptItemView></S.AdoptItemView>
+              </S.AdoptLikeBlock>
+              <S.AdoptViewBlock>
+                <S.AdoptView></S.AdoptView>
                 25
-              </S.AdoptItemViewBlock>
-            </S.AdoptItemInfoBlock>
-          </S.AdoptItem>
-          <S.HomeAdoptItemArrow onClick={props.navigateTo(props.paths.adopt)}>
+              </S.AdoptViewBlock>
+            </S.AdoptInfoBlock>
+          </S.AdoptPet>
+          <S.AdoptArrow onClick={props.navigateTo(props.paths.adopt)}>
             <Image
               src="/images/home/arrow_right_adopt.svg"
               alt="arrow_right_adopt"
               width={87.51}
               height={63.46}
             />
-          </S.HomeAdoptItemArrow>
-        </S.AdoptItemBlock>
+          </S.AdoptArrow>
+        </S.AdoptPetBlock>
       </S.HomeContentsContainer>
       <S.HomeContentsContainer>
         <S.HomeTitleBlock>
@@ -282,6 +276,18 @@ export default function HomeUI(props) {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
+      </S.HomeContentsContainer>
+      <S.HomeContentsContainer>
+        <S.HomeTitleBlock>
+          <S.HomeTitle>인기글</S.HomeTitle>
+          <Image
+            src="/images/commons/arrow_right_icon.svg"
+            alt="arrow_right_icon"
+            width={15}
+            height={25}
+            onClick={props.navigateTo(props.paths.community)}
+          />
+        </S.HomeTitleBlock>
       </S.HomeContentsContainer>
     </S.WrapperHomeContents>
   );

@@ -161,7 +161,7 @@ export const HomeTitle = styled.h1`
   font-size: 24px;
 `;
 
-export const AdoptItemBlock = styled.div`
+export const AdoptPetBlock = styled.div`
   width: 390px;
   /* max-width: 390px; */
   display: flex;
@@ -179,7 +179,7 @@ export const AdoptItemBlock = styled.div`
   scrollbar-width: none; /* Firefox */
 `;
 
-export const AdoptItem = styled.div`
+export const AdoptPet = styled.div`
   width: 254px;
   height: 254px;
   border-radius: 20px;
@@ -192,7 +192,7 @@ export const AdoptItem = styled.div`
   position: relative;
 `;
 
-export const AdoptItemInfoBlock = styled.div`
+export const AdoptInfoBlock = styled.div`
   width: 238px;
   height: 79px;
   border-radius: 12px;
@@ -202,7 +202,7 @@ export const AdoptItemInfoBlock = styled.div`
   margin-bottom: 10px;
 `;
 
-export const AdoptItemNameGender = styled.div`
+export const AdoptNameGender = styled.div`
   font-size: 16px;
   font-weight: 600;
   display: flex;
@@ -214,7 +214,7 @@ export const AdoptItemNameGender = styled.div`
   left: 10px;
 `;
 
-export const AdoptItemBirthAddress = styled.div`
+export const AdoptBirthAddress = styled.div`
   font-size: 12px;
   color: #4e4e48;
   position: absolute;
@@ -222,7 +222,7 @@ export const AdoptItemBirthAddress = styled.div`
   left: 10px;
 `;
 
-export const AdoptItemLikeBlock = styled.div`
+export const AdoptLikeBlock = styled.div`
   font-size: 12px;
   font-weight: 300;
   position: absolute;
@@ -235,14 +235,14 @@ export const AdoptItemLikeBlock = styled.div`
   left: 150px;
 `;
 
-export const AdoptItemLike = styled.div`
+export const AdoptLike = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #ff7272;
 `;
 
-export const AdoptItemViewBlock = styled.div`
+export const AdoptViewBlock = styled.div`
   font-size: 12px;
   font-weight: 300;
   position: absolute;
@@ -255,14 +255,14 @@ export const AdoptItemViewBlock = styled.div`
   left: 190px;
 `;
 
-export const AdoptItemView = styled.div`
+export const AdoptView = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: #a7a7a7;
 `;
 
-export const HomeAdoptItemArrow = styled.div`
+export const AdoptArrow = styled.div`
   width: 254px;
   height: 254px;
   background-color: #ff6636;
