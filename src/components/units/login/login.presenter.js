@@ -1,18 +1,7 @@
-import { useRouter } from "next/router";
 import * as S from "./login.styles";
 import Image from "next/image";
 
-export default function LogInUI() {
-  const router = useRouter();
-
-  const MoveHomePage = () => {
-    router.push('/home');
-  }
-
-  const MoveSignupPage = () => {
-    router.push('/login/signup/1');
-  };
-
+export default function LogInUI(props) {
   return (
     <>
       <S.WrapperContainer>
@@ -41,12 +30,14 @@ export default function LogInUI() {
               <S.IdAndPassWordInput placeholder="비밀번호" type="password" />
             </S.LoginContainer>
             <S.LoginContainer>
-              <S.LoginButton type="submit" onClick={MoveHomePage}>
+              <S.LoginButton type="submit">
                 로그인
               </S.LoginButton>
-              <S.SignUpButton onClick={MoveSignupPage}>
+              <S.SignUpBtn
+                onClick={props.navigateTo("/login/signup/01")}
+              >
                 회원가입
-              </S.SignUpButton>
+              </S.SignUpBtn>
             </S.LoginContainer>
             <S.OrContainer>
               or

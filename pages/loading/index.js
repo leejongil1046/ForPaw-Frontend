@@ -1,9 +1,9 @@
-import LoadingUI from "../../src/components/units/loading/Loading.presenter";
+import Loading from "../../src/components/units/loading/Loading.container";
 
-export default function Loading(){
+export default function LoadingPage(){
   return(
     <>
-      <LoadingUI />
+      <Loading />
     </>
   )
 }

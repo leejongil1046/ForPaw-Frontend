@@ -1,9 +1,9 @@
-import LogInUI from "../../src/components/units/login/login.presenter";
+import LogIn from "../../src/components/units/login/login.container";
 
-export default function LogIn() {
+export default function LogInPage() {
   return (
     <>
-      <LogInUI />
+      <LogIn />
     </>
   )
 }

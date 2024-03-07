@@ -1,41 +1,16 @@
 import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
-import * as S from "./Signup3.styles";
-import { useEffect, useState } from 'react';
+import * as S from "./Signup03.styles";
+// import PropTypes from 'prop-types';
 import Progress from "../component/Progress";
-import { useRouter } from "next/router";
 
-
-export default function SignUpUI() {
-
-  const router = useRouter();
-
-  const MoveSignup4Page = () => {
-    router.push('/login/signup')
-  }
-
-  const [password, setPassword] = useState(""); // 비밀번호 상태 추가
-  const [confirmPassword, setConfirmPassword] = useState(""); // 비밀번호 확인 상태 추가
-  const [isPasswordMatch, setIsPasswordMatch] = useState(false); // 비밀번호 일치 여부 상태 추가
-
-  // 비밀번호 입력 시 상태 업데이트
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    const confirmPasswordValue = e.target.value;
-    setConfirmPassword(confirmPasswordValue);
-    setIsPasswordMatch(confirmPasswordValue === password); // 비밀번호 확인 값과 비밀번호 값 비교하여 일치 여부 업데이트
-  };
-
-
+export default function SignUpUI03(props) {
   return (
     <>
       <S.WrapperContainer>
         <S.Container>
           <SignupHeaderUI />
           <S.ProgressBarBlock>
-            <S.ProgressBar value={Progress({ startValue: 40, max: 80, interval: 10 })} max={80} />
+            <S.ProgressBar value={Progress({ startValue: 50, max: 75, interval: 10 })} max={75} />
           </S.ProgressBarBlock>
           <S.InfoBlock>
             <S.InfoTitleItem>비밀번호를 설정해주세요</S.InfoTitleItem>
@@ -49,8 +24,8 @@ export default function SignUpUI() {
               <S.InfoTitlePassWord>비밀번호</S.InfoTitlePassWord>
               <S.SetPassWord
                 type="password"
-                value={password}
-                onChange={handlePasswordChange}
+                value={props.password}
+                onChange={props.handlePasswordChange}
                 placeholder="비밀번호"
               />
             </S.InfoContentsBlock>
@@ -61,19 +36,19 @@ export default function SignUpUI() {
               <S.CheckPassWordTitle>비밀번호 확인</S.CheckPassWordTitle>
               <S.CheckPassWord
                 type="password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
+                value={props.confirmPassword}
+                onChange={props.handleConfirmPasswordChange}
                 placeholder="비밀번호 확인"
               />
             </S.InfoContentsBlock>
-            {isPasswordMatch ? (
+            {props.isPasswordMatch ? (
               <S.PassWordCorrect>비밀번호가 일치합니다.</S.PassWordCorrect>
             ) : (
-              <S.PassWordCorrect style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
+              <S.PassWordCorrect style={{ color: '#FF9A9A' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
             )}
           </S.InfoBlock>
           <S.NextButtonBlock>
-            <S.NextButtonItem>
+            <S.NextButtonItem onClick={props.navigateTo("/login/signup/04")}>
               다음
             </S.NextButtonItem>
           </S.NextButtonBlock>
@@ -82,3 +57,12 @@ export default function SignUpUI() {
     </>
   )
 }
+
+// SignUpUI03.propTypes = {
+//   password: PropTypes.string.isRequired,
+//   confirmPassword: PropTypes.string.isRequired,
+//   isPasswordMatch: PropTypes.bool.isRequired,
+//   handlePasswordChange: PropTypes.func.isRequired,
+//   handleConfirmPasswordChange: PropTypes.func.isRequired,
+//   navigateTo: PropTypes.func.isRequired,
+// };

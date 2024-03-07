@@ -1,15 +1,8 @@
-import * as S from "./Signup1.styles";
+import * as S from "./Signup01.styles";
 import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
-import { useRouter } from "next/router";
 import Progress from "../component/Progress";
 
-export default function SignUpUI() {
-  const router = useRouter();
-
-  const MoveSignup2Page = () => {
-    router.push('/login/signup/2');
-  };
-
+export default function SignUpUI01(props) {
   return (
     <>
       <S.WrapperContainer>
@@ -26,7 +19,7 @@ export default function SignUpUI() {
               <S.InfoNameItem type="text" placeholder="홍길동" />
             </S.InfoBlock>
             <S.NextButtonBlock>
-              <S.NextButtonItem onClick={MoveSignup2Page}>
+              <S.NextButtonItem onClick={props.navigateTo("/login/signup/02")}>
                 다음
               </S.NextButtonItem>
             </S.NextButtonBlock>

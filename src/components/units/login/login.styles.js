@@ -75,7 +75,7 @@ export const LoginButton = styled.button`
   cursor: pointer;
 `;
 
-export const SignUpButton = styled.button`
+export const SignUpBtn = styled.button`
   background-color: white;
   border: 2px solid #FF6636;
   border-radius: 30px;
