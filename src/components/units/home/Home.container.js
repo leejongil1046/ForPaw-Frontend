@@ -10,6 +10,10 @@ export default function CommunityQuestions() {
   const paths = {
     adopt: "/adopt/pets",
     volunteer: "/volunteer/recommend",
+    community: "/community/adoption",
+    faq: "/home/faq",
+    dogs: "home/dogs",
+    cats: "home/cats",
   };
 
   return (

@@ -136,7 +136,7 @@ export const HomeIconText = styled.div`
   margin-top: 10px;
 `;
 
-export const HomeAdoptContainer = styled.div`
+export const HomeContentsContainer = styled.div`
   width: 390px;
   display: flex;
   flex-direction: column;
@@ -145,28 +145,23 @@ export const HomeAdoptContainer = styled.div`
   margin-top: 40px;
 `;
 
-export const HomeAdoptTitleBlock = styled.div`
+export const HomeTitleBlock = styled.div`
   width: 344px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  img {
+    cursor: pointer;
+  }
 `;
 
-export const HomeAdoptTitle = styled.h1`
+export const HomeTitle = styled.h1`
   font-size: 24px;
 `;
 
-export const HomeAdoptArrow = styled.div`
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const HomeAdoptItemBlock = styled.div`
+export const AdoptItemBlock = styled.div`
   width: 390px;
   /* max-width: 390px; */
   display: flex;
@@ -184,13 +179,87 @@ export const HomeAdoptItemBlock = styled.div`
   scrollbar-width: none; /* Firefox */
 `;
 
-export const HomeAdoptItem = styled.div`
+export const AdoptItem = styled.div`
   width: 254px;
   height: 254px;
-  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
   margin-right: 20px;
   flex-shrink: 0;
+  position: relative;
+`;
+
+export const AdoptItemInfoBlock = styled.div`
+  width: 238px;
+  height: 79px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  margin-bottom: 10px;
+`;
+
+export const AdoptItemNameGender = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  position: absolute;
+  top: 18px;
+  left: 10px;
+`;
+
+export const AdoptItemBirthAddress = styled.div`
+  font-size: 12px;
+  color: #4e4e48;
+  position: absolute;
+  top: 48px;
+  left: 10px;
+`;
+
+export const AdoptItemLikeBlock = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  top: 47px;
+  left: 150px;
+`;
+
+export const AdoptItemLike = styled.div`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ff7272;
+`;
+
+export const AdoptItemViewBlock = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  top: 47px;
+  left: 190px;
+`;
+
+export const AdoptItemView = styled.div`
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #a7a7a7;
 `;
 
 export const HomeAdoptItemArrow = styled.div`
@@ -198,5 +267,110 @@ export const HomeAdoptItemArrow = styled.div`
   height: 254px;
   background-color: #ff6636;
   border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
+
+  :hoevr {
+    cursor: pointer;
+  }
+`;
+
+export const VolunteerBlock = styled.div`
+  width: 344px;
+  height: 354px;
+  background-color: #fef8f2;
+  border: 1px solid #f6f2ee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+`;
+
+export const VolunteerImg = styled.div`
+  width: 324px;
+  height: 183px;
+  border-radius: 10px;
+  margin-top: 8px;
+  position: relative;
+`;
+
+export const VolunteerLikeBlock = styled.div`
+  width: 66px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 4px;
+  top: 145px;
+  left: 8px;
+`;
+
+export const VolunteerTitle = styled.div`
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 145px;
+  margin-top: 15px;
+`;
+
+export const VolunteerText = styled.div`
+  width: 310px;
+  height: 34px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 8px;
+  margin-right: 10px;
+`;
+
+export const VolunteerInfoBlock = styled.div`
+  width: 288px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  margin-right: 35px;
+`;
+
+export const VolunteerNumberOfMember = styled.div`
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ff6636;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+`;
+
+export const VolunteerCategory = styled.div`
+  width: 106px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+`;
+
+export const VolunteerRegion = styled.div`
+  width: 86px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
 `;
