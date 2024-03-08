@@ -9,7 +9,7 @@ export default function LogInUI(props) {
           <S.WraaperLogoAndImage>
             <S.WrapperImage>
               <Image
-                src="/images/header/forpaw_icon.png"
+                src="/images/header/forpaw_icon.svg"
                 alt="paw"
                 width={59}
                 height={47}
@@ -17,7 +17,7 @@ export default function LogInUI(props) {
             </S.WrapperImage>
             <S.WrapperLogo>
               <Image
-                src="/images/header/forpaw_logo.png"
+                src="/images/header/forpaw_logo.svg"
                 alt="paw_log"
                 width={73}
                 height={22}
@@ -45,7 +45,7 @@ export default function LogInUI(props) {
             <S.LoginContainer>
               <S.KakaoButton>
                 <Image
-                  src="/images/login/kakao.png"
+                  src="/images/login/kakao.svg"
                   alt="kakao"
                   width={27}
                   height={24}
@@ -54,7 +54,7 @@ export default function LogInUI(props) {
               </S.KakaoButton>
               <S.NaverButton>
                 <Image
-                  src="/images/login/naver.png"
+                  src="/images/login/naver.svg"
                   alt="naver"
                   width={13}
                   height={17}

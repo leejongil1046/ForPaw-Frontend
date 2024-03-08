@@ -54,16 +54,16 @@ export const IdAndPassWordInput = styled.input`
   width: 342px;
   height: 60px;
   background-color: #FEF8F2;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
 
   :focus{
-    border: 3px solid #F1C598;
+    border: 2px solid #BEA597;
     outline: none;
   }
   ::placeholder{
-    color: #BEA597
+    color: #BEA597;
   }
 `;
 

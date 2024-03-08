@@ -7,7 +7,7 @@ export default function LoadingUI(props) {
       <S.BlurryElement blurred={props.blurred}>
         <S.WrapperImage>
           <Image
-            src="/images/loading/loading_paw.png"
+            src="/images/loading/loading_paw.svg"
             alt="loading_paw"
             width={124}
             height={138}

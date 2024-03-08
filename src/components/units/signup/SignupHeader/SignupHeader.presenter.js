@@ -16,7 +16,7 @@ export default function SignupHeaderUI() {
         <S.ImgContainer>
           <S.ImgBlock>
             <Image
-              src="/images/header/forpaw_icon.png"
+              src="/images/header/forpaw_icon.svg"
               alt="forpaw_icon"
               width={57}
               height={47}
@@ -26,7 +26,7 @@ export default function SignupHeaderUI() {
         <S.LogoContainer>
           <S.LogoBlock>
             <Image
-              src="/images/header/forpaw_logo.png"
+              src="/images/header/forpaw_logo.svg"
               alt="forpaw_logo"
               width={73}
               height={20}
@@ -36,7 +36,7 @@ export default function SignupHeaderUI() {
         <S.LeftArrowContainer>
           <S.LeftArrowBlock>
             <Image onClick={PrevPage}
-              src="/images/header/left_arrow_icon.png"
+              src="/images/header/arrow_left_icon.svg"
               alt="left_arrow"
               width={15}
               height={25}
