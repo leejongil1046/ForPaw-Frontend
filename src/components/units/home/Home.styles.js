@@ -283,7 +283,7 @@ export const VolunteerBlock = styled.div`
   height: 354px;
   background-color: #fef8f2;
   border: 1px solid #f6f2ee;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -373,4 +373,98 @@ export const VolunteerRegion = styled.div`
   border-radius: 15px;
   font-size: 12px;
   text-align: center;
+`;
+
+export const CommunityBlock = styled.div`
+  width: 344px;
+  height: 143px;
+  background-color: #fef8f2;
+  border: 1px solid #f6f2ee;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+`;
+
+export const CommunityImg = styled.div`
+  width: 115px;
+  height: 117px;
+  border-radius: 7px;
+  margin-left: 15px;
+  margin-right: 20px;
+`;
+
+export const CommunityInfoBlock = styled.div`
+  width: 210px;
+  height: 117px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+`;
+
+export const CommunityTitle = styled.div`
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+`;
+
+export const CommunityText = styled.div`
+  font-size: 16px;
+  font-weight: 300;
+  width: 162px;
+  margin-top: 10px;
+`;
+
+export const CommunityCategory = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  color: #434240;
+  margin-top: 15px;
+`;
+
+export const CommunityLikeBlock = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  top: 89px;
+  left: 103px;
+`;
+
+export const CommunityLike = styled.div`
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const CommunityViewBlock = styled.div`
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 89px;
+  left: 147px;
+`;
+
+export const CommunityView = styled.div`
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;

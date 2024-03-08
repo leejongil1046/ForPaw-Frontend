@@ -25,7 +25,7 @@ export const VolunteerBlock = styled.div`
   height: 354px;
   background-color: #fef8f2;
   border: 1px solid #f6f2ee;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

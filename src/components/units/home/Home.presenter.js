@@ -288,6 +288,123 @@ export default function HomeUI(props) {
             onClick={props.navigateTo(props.paths.community)}
           />
         </S.HomeTitleBlock>
+        <S.CommunityBlock>
+          <S.CommunityImg>
+            <Image
+              src="/images/community/community_1.svg"
+              alt="community_1"
+              width={115}
+              height={117}
+            />
+          </S.CommunityImg>
+          <S.CommunityInfoBlock>
+            <S.CommunityTitle>커뮤니티 제목</S.CommunityTitle>
+            <S.CommunityText>
+              소년은 개울가에서 소녀를 보자 곧 윤 초시네 증손녀
+            </S.CommunityText>
+            <S.CommunityCategory>봉사활동 카테고리</S.CommunityCategory>
+            <S.CommunityLikeBlock>
+              <S.CommunityLike>
+                <Image
+                  src="/images/community/like_icon_active.svg"
+                  alt="active_icon"
+                  width={20}
+                  height={20}
+                />
+              </S.CommunityLike>
+              12
+            </S.CommunityLikeBlock>
+            <S.CommunityViewBlock>
+              <S.CommunityView>
+                <Image
+                  src="/images/community/comment_icon.svg"
+                  alt="comment_icon"
+                  width={16}
+                  height={16}
+                />
+              </S.CommunityView>
+              25
+            </S.CommunityViewBlock>
+          </S.CommunityInfoBlock>
+        </S.CommunityBlock>
+        <S.CommunityBlock>
+          <S.CommunityImg>
+            <Image
+              src="/images/community/community_2.svg"
+              alt="community_2"
+              width={115}
+              height={117}
+            />
+          </S.CommunityImg>
+          <S.CommunityInfoBlock>
+            <S.CommunityTitle>커뮤니티 제목</S.CommunityTitle>
+            <S.CommunityText>
+              소년은 개울가에서 소녀를 보자 곧 윤 초시네 증손녀
+            </S.CommunityText>
+            <S.CommunityCategory>봉사활동 카테고리</S.CommunityCategory>
+            <S.CommunityLikeBlock>
+              <S.CommunityLike>
+                <Image
+                  src="/images/community/like_icon_active.svg"
+                  alt="active_icon"
+                  width={20}
+                  height={20}
+                />
+              </S.CommunityLike>
+              12
+            </S.CommunityLikeBlock>
+            <S.CommunityViewBlock>
+              <S.CommunityView>
+                <Image
+                  src="/images/community/comment_icon.svg"
+                  alt="comment_icon"
+                  width={16}
+                  height={16}
+                />
+              </S.CommunityView>
+              25
+            </S.CommunityViewBlock>
+          </S.CommunityInfoBlock>
+        </S.CommunityBlock>
+        <S.CommunityBlock>
+          <S.CommunityImg>
+            <Image
+              src="/images/community/community_3.svg"
+              alt="community_3"
+              width={115}
+              height={117}
+            />
+          </S.CommunityImg>
+          <S.CommunityInfoBlock>
+            <S.CommunityTitle>커뮤니티 제목</S.CommunityTitle>
+            <S.CommunityText>
+              소년은 개울가에서 소녀를 보자 곧 윤 초시네 증손녀
+            </S.CommunityText>
+            <S.CommunityCategory>봉사활동 카테고리</S.CommunityCategory>
+            <S.CommunityLikeBlock>
+              <S.CommunityLike>
+                <Image
+                  src="/images/community/like_icon_active.svg"
+                  alt="active_icon"
+                  width={20}
+                  height={20}
+                />
+              </S.CommunityLike>
+              12
+            </S.CommunityLikeBlock>
+            <S.CommunityViewBlock>
+              <S.CommunityView>
+                <Image
+                  src="/images/community/comment_icon.svg"
+                  alt="comment_icon"
+                  width={16}
+                  height={16}
+                />
+              </S.CommunityView>
+              25
+            </S.CommunityViewBlock>
+          </S.CommunityInfoBlock>
+        </S.CommunityBlock>
       </S.HomeContentsContainer>
     </S.WrapperHomeContents>
   );
