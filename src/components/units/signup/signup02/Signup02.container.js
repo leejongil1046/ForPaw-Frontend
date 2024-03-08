@@ -7,13 +7,18 @@ export default function SignUp02(){
 
   const navigateTo = (path) => () => router.push(path);
 
-  const [selectedOption, setSelectedOption] = useState(""); ///// select의 값을 찾아내는 함수
+  const [emailIdValue, setEmailIdValue] = useState(""); //이메일 id입력을 받을 값
+  const [selectedOption, setSelectedOption] = useState(""); // select의 값을 찾아내는 함수
   const [isEmailAvailable, setIsEmailAvailable] = useState(false);  //이메일 사용가능 여부
   const [isVisible, setIsvisible] = useState(false);
   const [timer, setTimer] = useState(90); // 타이머 초 초기값
   const [timerId, setTimerId] = useState(null); // 타이머 인터벌 ID
 
-  const handleChange = (e) => {
+  const handleEmailIdValueChange = (e) => {
+    setEmailIdValue(e.target.value);
+  }
+
+  const handleSelectOptionChange = (e) => {
     setSelectedOption(e.target.value);
   };
 
@@ -40,8 +45,10 @@ export default function SignUp02(){
     <>
       <SignUpUI02
         navigateTo={navigateTo}
+        emailIdValue = {emailIdValue}
+        handleEmailIdValueChange = {handleEmailIdValueChange}
         selectedOption={selectedOption}
-        handleChange={handleChange}
+        handleSelectOptionChange={handleSelectOptionChange}
         isEmailAvailable={isEmailAvailable}
         isVisible={isVisible}
         timer={timer}

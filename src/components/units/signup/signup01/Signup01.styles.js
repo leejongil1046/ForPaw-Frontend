@@ -59,18 +59,18 @@ export const InfoNameItem = styled.input`
   width: 342px;
   height: 60px;
   background-color: #FEF8F2;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
   margin-top: 25px;
   margin-left: 20px;
 
   :focus{
-    border: 3px solid #F1C598;
+    border: 2px solid #BEA597;
     outline: none;
   }
   ::placeholder{
-    color: #F1C598  
+    color: #BEA597;
   }
 `;
 

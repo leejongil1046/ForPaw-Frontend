@@ -78,16 +78,16 @@ export const EmailItem = styled.input`
     width: 144px;
     height: 60px;
     background-color: #FEF8F2;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding-left: 15px;
 
     :focus{
-      border: 3px solid #F1C598;
+      border: 2px solid #BEA597;
       outline: none;
     }
     ::placeholder{
-      color: #BEA597
+      color: #BEA597;
     }
 `;
 
@@ -96,20 +96,24 @@ export const address = styled.span`
     height: 60px;
     font-size: 30px;
     font-weight: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const SelectAddress = styled.select`
   width: 144px;
   height: 60px;
   background-color: #FEF8F2;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
   color: #BEA597;
   cursor: pointer;
 
   :focus{
-    border: 3px solid #F1C598;
+    border: 2px solid #BEA597;
     outline: none;
   }
   ::placeholder{
@@ -118,7 +122,7 @@ export const SelectAddress = styled.select`
 
   option {
     background-color: #FEF8F2;
-    color: black;
+    color: #BEA597;
   }
 `;
 
