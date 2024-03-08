@@ -10,6 +10,7 @@ export const WrapperContents = styled.div`
   margin: 0 auto;
   overflow-y: auto;
   background-color: white;
+  padding-bottom: 10px;
   border-left: 1px solid black;
   border-right: 1px solid black;
 

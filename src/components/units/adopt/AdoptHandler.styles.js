@@ -35,6 +35,7 @@ export const AdoptMenuContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid #bdbdbd;
+  padding: 0 12px;
 `;
 
 export const AdoptMenu = styled.div`

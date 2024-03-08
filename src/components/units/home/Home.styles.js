@@ -10,6 +10,7 @@ export const WrapperHomeContents = styled.div`
   margin: 0 auto;
   overflow-y: auto;
   background-color: white;
+  padding-bottom: 10px;
   border-left: 1px solid black;
   border-right: 1px solid black;
 
@@ -151,6 +152,7 @@ export const HomeTitleBlock = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
 
   img {
     cursor: pointer;
@@ -168,7 +170,7 @@ export const AdoptPetBlock = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 0 20px;
   overflow-x: auto;
 
@@ -386,6 +388,7 @@ export const CommunityBlock = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 12px;
+  flex-shrink: 0;
 `;
 
 export const CommunityImg = styled.div`

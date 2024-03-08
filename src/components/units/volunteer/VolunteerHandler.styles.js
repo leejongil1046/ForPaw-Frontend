@@ -21,6 +21,7 @@ export const VolunteerMenuContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid #bdbdbd;
+  padding: 0 10px;
 `;
 
 export const VolunteerMenu = styled.div`

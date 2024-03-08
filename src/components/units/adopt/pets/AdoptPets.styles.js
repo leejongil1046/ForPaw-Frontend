@@ -10,6 +10,7 @@ export const WrapperContents = styled.div`
   margin: 0 auto;
   overflow-y: auto;
   background-color: white;
+  padding-bottom: 10px;
   border-left: 1px solid black;
   border-right: 1px solid black;
 
@@ -32,7 +33,7 @@ export const AdoptPetMenuBlock = styled.div`
   text-align: center;
   margin-top: 8px;
   margin-right: 100px;
-  margin-bottom: 16px;
+  margin-bottom: 3px;
 `;
 
 export const AdoptPetMenuDate = styled.div`
@@ -60,23 +61,6 @@ export const AdoptPetMenuCats = styled.div`
   border-radius: 22px;
 `;
 
-export const AdoptPetBlock = styled.div`
-  width: 390px;
-  /* max-width: 390px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  overflow-x: auto;
-
-  /* 스크롤 바 숨기기 */
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  scrollbar-width: none; /* Firefox */
-`;
-
 export const AdoptPet = styled.div`
   width: 344px;
   height: 344px;
@@ -87,7 +71,7 @@ export const AdoptPet = styled.div`
   align-items: flex-end;
   flex-shrink: 0;
   position: relative;
-  margin-bottom: 10px;
+  margin-top: 12px;
 `;
 
 export const AdoptLikeToggle = styled.div`

@@ -18,7 +18,7 @@ export const CommunityMenuContainer = styled.div`
   height: 52px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   border-bottom: 1px solid #bdbdbd;
 `;
