@@ -15,43 +15,65 @@ export const Container = styled.div`
 
 export const WraaperLogoAndImage = styled.div`
   width: 100%;
-  height: 134px;
+  height: 223px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const LogoAndImageBlock = styled.div`
+  width: 73px;
+  height: 87.67px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const WrapperImage = styled.div`
-  width: 100%;
-  height: 90px;
+  width: 58.19px;
+  height: 47px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 `;
 
 export const WrapperLogo = styled.div`
-  width: 100%;
-  height: 40px;
+  width: 73px;
+  height: 31px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  margin-top: 9.67px;
 `;
 
-export const WraperLoginContents = styled.div`
-  margin-top: 40px;
+export const WrapperLoginContents = styled.div`
   width: 100%;
+  height: 621px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
-export const LoginContainer = styled.div`
-  width: 100%;
-  height: 150px;
+export const LoginContentsBlock = styled.div`
+  width: 344px;
+  height: 552px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap:10px
+  align-items: flex-start;
 `;
 
-export const IdAndPassWordInput = styled.input`
+export const IdAndPassWordContainer = styled.div`
   width: 342px;
+  height: 128px;
+`;
+
+export const IdInput = styled.input`
+  width: 344px;
   height: 60px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
@@ -64,7 +86,33 @@ export const IdAndPassWordInput = styled.input`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
+`;
+
+export const PassWordInput = styled.input`
+  width: 344px;
+  height: 60px;
+  background-color: #FEF8F2;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding-left: 15px;
+  margin-top: 8px;
+
+  :focus{
+    border: 2px solid #BEA597;
+    outline: none;
+  }
+  ::placeholder{
+    color: #BEA597;
+    font-size: 16px;
+  }
+`;
+
+export const LoginContainer = styled.div`
+  width: 344px;
+  height: 128px;
+  margin-top: 16px;
 `;
 
 export const LoginButton = styled.button`
@@ -82,15 +130,23 @@ export const SignUpBtn = styled.button`
   font-size: 20px;
   color: black;
   cursor: pointer;
+  margin-top: 8px;
 `;
 
 export const OrContainer = styled.div`
   width: 100%;
-  height:50px;
+  height:19px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 24px;
+`;
+
+export const KakaoAndNaverBlock = styled.div`
+  width: 344px;
+  height: 128px;
+  margin-top: 24px;
 `;
 
 export const KakaoButton = styled.button`
@@ -100,7 +156,7 @@ export const KakaoButton = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
   font-size: 20px;
   cursor: pointer;
 `
@@ -111,29 +167,34 @@ export const NaverButton = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 12px;
   font-size: 20px;
   color: white;
   cursor: pointer;
+  margin-top: 8px;
 `
 
 export const AccoutAndInfoContainer = styled.div`
-  margin-top:20px;
   width: 100%;
   height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:10px
+  margin-top: 16px;
 `;
 
 export const AccoutFind = styled.div`
-  width: 132px;
-  height: 17px;
+  width: 138px;
+  height: 20px;
   color: #A1A1A1;
   border-bottom: 1px solid #A1A1A1; 
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -141,6 +202,12 @@ export const InfoPaw= styled.div`
   width: 158px;
   height: 17px;
   color: #A1A1A1;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  margin-top: 27px;
 `;

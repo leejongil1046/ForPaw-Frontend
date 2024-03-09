@@ -38,12 +38,20 @@ export const ProgressBar = styled.progress`
 
 export const InfoContainer = styled.div`
   width: 100%;
-  height: 625px;
+  height: 651px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 export const InfoBlock = styled.div`
-  width: 100%;
-  height: 530px;
+  width: 344px;
+  height: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 export const InfoTitleItem = styled.div`
@@ -51,19 +59,16 @@ export const InfoTitleItem = styled.div`
   height: 29px;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: 20px;
 `;
 
 export const InfoNameItem = styled.input`
-  width: 342px;
+  width: 344px;
   height: 60px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
-  margin-top: 25px;
-  margin-left: 20px;
+  margin-top: 12px;
 
   :focus{
     border: 2px solid #BEA597;
@@ -71,6 +76,7 @@ export const InfoNameItem = styled.input`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 `;
 
@@ -81,6 +87,7 @@ export const NextButtonBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 422px;
 `;
 
 export const NextButtonItem = styled.button`

@@ -37,12 +37,20 @@ export const ProgressBar = styled.progress`
 
 export const InfoContainer = styled.div`
   width: 100%;
-  height: 625px;
+  height: 651px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const InfoBlock = styled.div`
-  width: 100%;
-  height: 530px;
+  width: 344px;
+  height: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const InfoTitleItem = styled.div`
@@ -50,8 +58,6 @@ export const InfoTitleItem = styled.div`
   height: 29px;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: 20px;
 `;
 
 export const EmailTitle = styled.div`
@@ -59,8 +65,8 @@ export const EmailTitle = styled.div`
     height: 21px;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 24px;
+    letter-spacing: -3%;
 `;
 
 export const EmailBlock = styled.div`
@@ -70,8 +76,7 @@ export const EmailBlock = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 8px;
 `;
 
 export const EmailItem = styled.input`
@@ -88,6 +93,7 @@ export const EmailItem = styled.input`
     }
     ::placeholder{
       color: #BEA597;
+      font-size: 16px;
     }
 `;
 
@@ -111,19 +117,27 @@ export const SelectAddress = styled.select`
   padding-left: 15px;
   color: #BEA597;
   cursor: pointer;
+  font-size: 16px;
 
   :focus{
     border: 2px solid #BEA597;
     outline: none;
+    font-size: 16px;
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 
   option {
     background-color: #FEF8F2;
     color: #BEA597;
+    
   }
+`;
+
+export const AddressOption = styled.option`
+  font-size: 16px;
 `;
 
 export const CheckEmailBlock = styled.div`
@@ -133,8 +147,7 @@ export const CheckEmailBlock = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 8px;
 `;
 
 export const AvailableEmail = styled.p`
@@ -164,8 +177,7 @@ export const VerificationCodeTitle = styled.div`
   height: 21px;
   font-size: 18px;
   font-weight: 600;
-  margin-top: 30px;
-  margin-left: 20px;
+  margin-top: 24px;
 `;
 
 export const VerificationCodeBlock = styled.div`
@@ -175,12 +187,11 @@ export const VerificationCodeBlock = styled.div`
   border: 3px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
-  margin-top: 10px;
-  margin-left: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 8px;
 `;
 
 export const VerificationCodeItem = styled.input`
@@ -192,12 +203,12 @@ export const VerificationCodeItem = styled.input`
   padding-left: 1px;
 
   :focus{
-   
     outline: none;
   }
   
   ::placeholder{
-    color: #BEA597
+    color: #BEA597;
+    font-size: 16px;
   }
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button,
@@ -224,9 +235,8 @@ export const RetryVerification = styled.div`
   height: 17px;
   font-size: 12px;
   color: #C6C6C6;
-  margin-top: 10px;
-  margin-left: 20px;
   cursor: pointer;
+  margin-top: 20px;
 `;
 
 export const NextButtonBlock = styled.div`
@@ -236,6 +246,7 @@ export const NextButtonBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 183px;
 `;
 
 export const NextButtonItem = styled.button`

@@ -1,13 +1,14 @@
 import { useRouter } from "next/router";
-import SignUpUI01 from "./Signup01.presenter";
+import SignUpCompleteUI from "./Complete.presenter";
 
-export default function SignUp01() {
+export default function SignUpComplete() {
   const router = useRouter();
 
   const navigateTo = (path) => () => router.push(path);
+
   return (
     <>
-      <SignUpUI01
+      <SignUpCompleteUI
         navigateTo={navigateTo}
       />
     </>

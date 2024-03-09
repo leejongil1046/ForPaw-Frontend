@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState } from 'react';
 import SignUpUI02 from "./Signup02.presenter";
 
-export default function SignUp02(){
+export default function SignUp02() {
   const router = useRouter();
 
   const navigateTo = (path) => () => router.push(path);
@@ -41,12 +41,12 @@ export default function SignUp02(){
     setTimerId(id); // 타이머 인터벌 ID 저장
   };
 
-  return(
+  return (
     <>
       <SignUpUI02
         navigateTo={navigateTo}
-        emailIdValue = {emailIdValue}
-        handleEmailIdValueChange = {handleEmailIdValueChange}
+        emailIdValue={emailIdValue}
+        handleEmailIdValueChange={handleEmailIdValueChange}
         selectedOption={selectedOption}
         handleSelectOptionChange={handleSelectOptionChange}
         isEmailAvailable={isEmailAvailable}

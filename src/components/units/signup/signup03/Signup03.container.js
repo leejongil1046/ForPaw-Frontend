@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import SignUpUI03 from "./Signup03.presenter";
 import { useState } from 'react';
 
-export default function SignUp03(){
+export default function SignUp03() {
   const router = useRouter();
 
   const navigateTo = (path) => () => router.push(path);
@@ -25,9 +25,9 @@ export default function SignUp03(){
     setIsvisible(true);
     setIsPasswordMatch(newConfirmPassword === password); // 비밀번호 확인 값과 비밀번호 값 비교하여 일치 여부 업데이트
   };
-  
 
-  return(
+
+  return (
     <>
       <SignUpUI03
         navigateTo={navigateTo}
