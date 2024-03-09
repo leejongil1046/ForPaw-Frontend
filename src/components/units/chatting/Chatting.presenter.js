@@ -1,9 +1,195 @@
 import * as S from "./Chatting.styles";
+import Image from "next/image";
 
 export default function ChattingUI() {
   return (
     <>
-      <S.WrapperContents></S.WrapperContents>
+      <S.WrapperContents>
+        <S.ChattingTextContainer>
+          <S.ChattingText>함께하며 느끼는 즐거움-</S.ChattingText>
+        </S.ChattingTextContainer>
+        <S.ChattingSearchBlock>
+          <S.ChattingSearch type="text" placeholder="검색어를 입력해주세요" />
+          <S.ChattingSearchIcon>
+            <Image
+              src="/images/chatting/chatting_search_icon.svg"
+              alt="chatting_search_icon"
+              width={24}
+              height={24}
+            />
+          </S.ChattingSearchIcon>
+        </S.ChattingSearchBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+        <S.ChattingBlock>
+          <S.UserProfileImg>
+            <Image
+              src="/images/chatting/chatting_profile.svg"
+              alt="chatting_profile"
+              width={38}
+              height={38}
+            />
+          </S.UserProfileImg>
+          <S.ChattingInfoBlock>
+            <S.UserName>홍길동</S.UserName>
+            <S.ChattingDate>어제</S.ChattingDate>
+            <S.ChattingContent>
+              이번주 봉사활동은 쉰다고 하던데 들으셨어요?
+            </S.ChattingContent>
+          </S.ChattingInfoBlock>
+        </S.ChattingBlock>
+      </S.WrapperContents>
     </>
   );
 }
