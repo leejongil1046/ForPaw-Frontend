@@ -35,9 +35,22 @@ export const ProgressBar = styled.progress`
     }
 `;
 
-export const InfoBlock = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
-  height: 530px;
+  height: 651px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const InfoBlock = styled.div`
+  width: 344px;
+  height: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const InfoTitleItem = styled.div`
@@ -45,20 +58,17 @@ export const InfoTitleItem = styled.div`
   height: 29px;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: 20px;
 `;
 
 export const InfoContentsBlock = styled.div`
   width: 344px;
   height: 90px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 24px;
 `;
 
 export const InfoTitleEmail = styled.div`
   width: 100%;
-  height: 30px;
+  height: 21px;
   font-size: 18px;
   font-weight: 600;
 `;
@@ -72,6 +82,7 @@ export const CheckEmail = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
 `;
 
 export const ShowEmail = styled.div`
@@ -82,7 +93,7 @@ export const ShowEmail = styled.div`
 
 export const InfoTitlePassWord = styled.div`
   width: 100%;
-  height: 30px;
+  height: 21px;
   font-size: 18px;
   font-weight: 600;
 `;
@@ -98,6 +109,7 @@ export const SetPassWord = styled.input`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
 
   :focus{
     border: 2px solid #BEA597;
@@ -105,6 +117,7 @@ export const SetPassWord = styled.input`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 `;
 
@@ -114,13 +127,12 @@ export const InfoFormPassWord = styled.p`
   color: #C6C6C6;
   font-size: 12px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 8px;
 `;
 
 export const CheckPassWordTitle = styled.div`
   width: 100%;
-  height: 30px;
+  height: 21px;
   font-size: 18px;
   font-weight: 600;
 `;
@@ -136,6 +148,7 @@ export const CheckPassWord = styled.input`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
 
   :focus{
     border: 2px solid #BEA597;
@@ -143,6 +156,7 @@ export const CheckPassWord = styled.input`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 `;
 
@@ -152,8 +166,7 @@ export const PassWordCorrect = styled.p`
   color: #9AC8FF;
   font-size: 12px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 8px;
 `;
 
 export const NextButtonBlock = styled.div`
@@ -163,6 +176,7 @@ export const NextButtonBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 104px;
 `;
 
 export const NextButtonItem = styled.button`

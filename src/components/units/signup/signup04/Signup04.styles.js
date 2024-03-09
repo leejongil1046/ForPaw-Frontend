@@ -35,9 +35,22 @@ export const ProgressBar = styled.progress`
     }
 `;
 
-export const InfoBlock = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
-  height: 540px;
+  height: 719px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const InfoBlock = styled.div`
+  width: 344px;
+  height: 652px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const InfoTitleItem = styled.div`
@@ -45,15 +58,12 @@ export const InfoTitleItem = styled.div`
   height: 29px;
   font-size: 24px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-left: 20px;
 `;
 
 export const InfoContentProfileContainer = styled.div`
   width: 344px;
   height: 132px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 24px;
 `;
 
 export const InfoTitleProfile = styled.div`
@@ -84,8 +94,7 @@ export const SetProfileItem = styled.div`
 export const InfoNickNameContainer = styled.div`
   width: 342px;
   height: 90px;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 24px;
 `;
 
 export const InfoTitleNickName = styled.div`
@@ -96,13 +105,13 @@ export const InfoTitleNickName = styled.div`
 `;
 
 export const SetNickName = styled.input`
-  margin-top: 8px;
   width: 342px;
   height: 60px;
   border-radius: 10px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
   padding-left: 15px;
+  margin-top: 8px;
 
   :focus{
     border: 2px solid #BEA597;
@@ -110,6 +119,7 @@ export const SetNickName = styled.input`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 `;
 
@@ -120,8 +130,7 @@ export const CheckNickNameBlock = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: 8px;
 `;
 
 export const AvailableNickName = styled.p`
@@ -151,8 +160,7 @@ export const InfoActiveLocationContainer = styled.div`
   height: 160px;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 24px;
 `; 
 
 export const InfoTitleActiveLocation = styled.div`
@@ -165,6 +173,7 @@ export const InfoTitleActiveLocation = styled.div`
 export const SelectCity = styled.select`
   width: 100%;
   height: 60px;
+  font-size: 16px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -179,6 +188,7 @@ export const SelectCity = styled.select`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 
   option {
@@ -190,16 +200,18 @@ export const SelectCity = styled.select`
 export const SelectRegionBlock = styled.div`
   width: 100%;
   height: 60px;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 8px;
 `;
 
 export const SelectRegionItem1 = styled.select`
-  margin-top: 8px;
   width: 164px;
   height: 100%;
+  font-size: 16px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -214,6 +226,7 @@ export const SelectRegionItem1 = styled.select`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 
   option {
@@ -225,6 +238,7 @@ export const SelectRegionItem2 = styled.select`
   margin-top: 8px;
   width: 164px;
   height: 100%;
+  font-size: 16px;
   background-color: #FEF8F2;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -239,6 +253,7 @@ export const SelectRegionItem2 = styled.select`
   }
   ::placeholder{
     color: #BEA597;
+    font-size: 16px;
   }
 
   option {
@@ -255,6 +270,7 @@ export const NextButtonBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 60px;
 `;
 
 export const NextButtonItem = styled.button`

@@ -1,5 +1,5 @@
 import * as S from "./Signup02.styles";
-import SignupHeaderUI from "../SignupHeader/SignupHeader.presenter";
+import SignupHeaderUI from "../signupHeader/SignupHeader.presenter";
 import Progress from "../component/Progress";
 
 export default function SignUpUI02(props) {
@@ -20,12 +20,12 @@ export default function SignUpUI02(props) {
                 이메일
               </S.EmailTitle>
               <S.EmailBlock>
-                <S.EmailItem placeholder="이메일" type="email" value={props.emailIdValue} onChange={props.handleEmailIdValueChange}/>
+                <S.EmailItem placeholder="이메일" type="email" value={props.emailIdValue} onChange={props.handleEmailIdValueChange} />
                 <S.address>@</S.address>
                 <S.SelectAddress value={props.selectedOption} onChange={props.handleSelectOptionChange}>
-                  <option value="">직접입력</option>
-                  <option value="gmail.com">gmail.com</option>
-                  <option value="naver.com">naver.com</option>
+                  <S.AddressOption value="">직접입력</S.AddressOption>
+                  <S.AddressOption value="gmail.com">gmail.com</S.AddressOption>
+                  <S.AddressOption value="naver.com">naver.com</S.AddressOption>
                 </S.SelectAddress>
               </S.EmailBlock>
               <S.CheckEmailBlock>
@@ -51,12 +51,12 @@ export default function SignUpUI02(props) {
               <S.RetryVerification>
                 인증번호가 오지 않아요...
               </S.RetryVerification>
-            </S.InfoBlock>
-            <S.NextButtonBlock>
+              <S.NextButtonBlock>
               <S.NextButtonItem onClick={props.navigateTo("/login/signup/03")}>
                 다음
               </S.NextButtonItem>
             </S.NextButtonBlock>
+            </S.InfoBlock>
           </S.InfoContainer>
         </S.Container>
       </S.WrapperContainer>
