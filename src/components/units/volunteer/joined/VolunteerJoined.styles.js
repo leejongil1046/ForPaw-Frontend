@@ -124,6 +124,7 @@ export const VolunteerAddIcon = styled.div`
   height: 60px;
   background-color: #ff6636;
   border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: row;
   justify-content: center;
