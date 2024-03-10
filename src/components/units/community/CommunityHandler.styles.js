@@ -9,8 +9,6 @@ export const WrapperCommunityHandler = styled.div`
   align-items: center;
   margin: 0 auto;
   background-color: white;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 `;
 
 export const CommunityMenuContainer = styled.div`

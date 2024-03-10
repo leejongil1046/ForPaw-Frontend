@@ -10,9 +10,6 @@ export const WrapperHeader = styled.div`
   margin: 0 auto;
   z-index: 1;
   background-color: white;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
   /* opacity: 0; */
 `;
 
@@ -58,9 +55,6 @@ export const WrapperPetDetail = styled.div`
   padding-bottom: 10px;
   overflow-y: auto;
   background-color: white;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {

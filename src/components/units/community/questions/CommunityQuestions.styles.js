@@ -12,8 +12,6 @@ export const WrapperContents = styled.div`
   padding-bottom: 10px;
   overflow-y: auto;
   background-color: white;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {
