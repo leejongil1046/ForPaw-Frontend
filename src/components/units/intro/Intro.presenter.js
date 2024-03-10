@@ -79,7 +79,7 @@ export default function IntroUI(props) {
               유기동물의 손을 잡아주세요.
             </S.ConcludingWords>
           </S.IntroContainer>
-          <S.NextButtonBlock onClick={props.navigateTo('/home')}>
+          <S.NextButtonBlock onClick={props.navigateTo('/login')}>
             <S.NextButtonItem>시작하기</S.NextButtonItem>
           </S.NextButtonBlock>
         </S.Container>

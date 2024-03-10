@@ -1,20 +1,20 @@
-import * as S from "./Signup02.styles";
-import SignupHeaderUI from "../signupHeader/SignupHeader.presenter";
-import Progress from "../component/Progress";
+import * as S from "./Find_Account01.styles";
+import SignupHeaderUI from "../../signup/signupHeader/SignupHeader.presenter";
+import Progress from "../../signup/component/Progress";
 
-export default function SignUpUI02(props) {
+export default function FindAccount01UI(props) {
   return (
     <>
       <S.WrapperContainer>
         <S.Container>
           <SignupHeaderUI />
           <S.ProgressBarBlock>
-            <S.ProgressBar value={Progress({ startValue: 20, max: 40, interval: 10 })} max={40} />
+            <S.ProgressBar value={Progress({ startValue: 0, max: 50, interval: 10 })} max={50} />
           </S.ProgressBarBlock>
           <S.InfoContainer>
             <S.InfoBlock>
               <S.InfoTitleItem>
-                정보를 입력해주세요
+                계정찾기
               </S.InfoTitleItem>
               <S.EmailTitle>
                 이메일
@@ -34,24 +34,24 @@ export default function SignUpUI02(props) {
                     사용가능한 이메일입니다.
                   </S.AvailableEmail>
                 ) : (
-                  <S.AvailableEmail style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>사용 불가능한 이메일입니다.</S.AvailableEmail>
+                  <S.AvailableEmail style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>가입되지 않은 이메일입니다.</S.AvailableEmail>
                 )}
                 <S.CheckEmailBtn type="button" onClick={props.handleCheckEmailAndStartTimer}>
-                  중복확인
+                  코드전송
                 </S.CheckEmailBtn>
               </S.CheckEmailBlock>
-              <S.VerificationCodeTitle>
-                인증번호를 입력해주세요
-              </S.VerificationCodeTitle>
-              <S.VerificationCodeBlock>
-                <S.VerificationCodeItem placeholder="1234" type="number" />
+              <S.GetCodeTitle>
+                코드입력
+              </S.GetCodeTitle>
+              <S.GetCodeBlock>
+                <S.GetCodeItem placeholder="1234" type="number" />
                 <S.TimerItem>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
-              </S.VerificationCodeBlock>
-              <S.RetryVerification>
-                인증번호가 오지 않아요...
-              </S.RetryVerification>
+              </S.GetCodeBlock>
+              <S.CorretCode>
+                코드가 일치합니다
+              </S.CorretCode>
               <S.NextButtonBlock>
-                <S.NextButtonItem onClick={props.navigateTo("/login/signup/03")}>
+                <S.NextButtonItem onClick={props.navigateTo("/login/find_account/02")}>
                   다음
                 </S.NextButtonItem>
               </S.NextButtonBlock>

@@ -34,7 +34,7 @@ export default function LogInUI(props) {
               </S.IdAndPassWordContainer>
               <S.LoginContainer>
                 <S.LoginButton type="submit"
-                  onClick={props.navigateTo("/login/signup/intro")}
+                  onClick={props.navigateTo("/home")}
                 >
                   로그인
                 </S.LoginButton>
@@ -68,7 +68,7 @@ export default function LogInUI(props) {
                 </S.NaverButton>
               </S.KakaoAndNaverBlock>
               <S.AccoutAndInfoContainer>
-                <S.AccoutFind>
+                <S.AccoutFind onClick={props.navigateTo(`/login/find_account/01`)}>
                   계정을 잃어버리셨나요?
                 </S.AccoutFind>
                 <S.InfoPaw>

@@ -48,10 +48,10 @@ export default function SignUpUI03(props) {
                 <S.PassWordCorrect style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>비밀번호가 일치하지 않습니다.</S.PassWordCorrect>
               )}
               <S.NextButtonBlock>
-              <S.NextButtonItem onClick={props.navigateTo('/login/signup/04')}>
-                다음
-              </S.NextButtonItem>
-            </S.NextButtonBlock>
+                <S.NextButtonItem onClick={props.navigateTo("/login/signup/04")}>
+                  다음
+                </S.NextButtonItem>
+              </S.NextButtonBlock>
             </S.InfoBlock>
           </S.InfoContainer>
         </S.Container>
