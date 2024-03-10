@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const WrapperContents = styled.div`
   width: 390px;
-  height: calc(100vh - 349px);
+  height: calc(100vh - 334px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,8 +11,6 @@ export const WrapperContents = styled.div`
   overflow-y: auto;
   background-color: white;
   padding-bottom: 10px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {
@@ -31,7 +29,7 @@ export const AdoptPetMenuBlock = styled.div`
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 18px;
   margin-right: 100px;
   margin-bottom: 3px;
 `;

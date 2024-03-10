@@ -2,15 +2,13 @@ import styled from "@emotion/styled";
 
 export const WrapperAdoptHandler = styled.div`
   width: 390px;
-  height: 170px;
+  height: 155px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin: 0 auto;
   background-color: white;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 `;
 
 export const AdoptTextContainer = styled.div`

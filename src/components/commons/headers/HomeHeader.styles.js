@@ -10,9 +10,6 @@ export const WrapperHeader = styled.div`
   margin: 0 auto;
   z-index: 1;
   background-color: white;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
   /* opacity: 0; */
 `;
 

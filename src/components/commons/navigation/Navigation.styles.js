@@ -8,17 +8,17 @@ export const WrapperNavigation = styled.div`
   justify-content: space-evenly;
   align-items: flex-start;
   margin: 0 auto;
-  z-index: 1;
-  border: 1px solid black;
   border-top: 1px solid #dbdbdb;
   background-color: white;
-  /* opacity: 0; */
+  position: relative;
+  z-index: 10;
 `;
 
 export const NavigationIconContainer = styled.div`
   width: 44px;
   height: 44px;
   padding-top: 10px;
+  z-index: 10;
 
   :hover {
     cursor: pointer;
