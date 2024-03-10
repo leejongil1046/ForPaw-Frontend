@@ -1,7 +1,7 @@
 import * as S from "./AdoptPets.styles";
 import Image from "next/image";
 
-export default function AdpotPetsUI() {
+export default function AdpotPetsUI(props) {
   return (
     <>
       <S.WrapperContents>
@@ -10,7 +10,7 @@ export default function AdpotPetsUI() {
           <S.AdoptPetMenuDogs>개</S.AdoptPetMenuDogs>
           <S.AdoptPetMenuCats>고양이</S.AdoptPetMenuCats>
         </S.AdoptPetMenuBlock>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/pets/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"
@@ -63,7 +63,7 @@ export default function AdpotPetsUI() {
             </S.AdoptViewBlock>
           </S.AdoptInfoBlock>
         </S.AdoptPet>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/pets/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"
@@ -116,7 +116,7 @@ export default function AdpotPetsUI() {
             </S.AdoptViewBlock>
           </S.AdoptInfoBlock>
         </S.AdoptPet>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/pets/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"
@@ -169,7 +169,7 @@ export default function AdpotPetsUI() {
             </S.AdoptViewBlock>
           </S.AdoptInfoBlock>
         </S.AdoptPet>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/pets/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"

@@ -1,7 +1,7 @@
 import * as S from "./AdoptFavorites.styles";
 import Image from "next/image";
 
-export default function AdpotFavoritesUI() {
+export default function AdpotFavoritesUI(props) {
   return (
     <>
       <S.WrapperContents>
@@ -10,7 +10,7 @@ export default function AdpotFavoritesUI() {
           <S.AdoptPetMenuDogs>개</S.AdoptPetMenuDogs>
           <S.AdoptPetMenuCats>고양이</S.AdoptPetMenuCats>
         </S.AdoptPetMenuBlock>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/favorites/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"
@@ -63,7 +63,7 @@ export default function AdpotFavoritesUI() {
             </S.AdoptViewBlock>
           </S.AdoptInfoBlock>
         </S.AdoptPet>
-        <S.AdoptPet>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/favorites/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"

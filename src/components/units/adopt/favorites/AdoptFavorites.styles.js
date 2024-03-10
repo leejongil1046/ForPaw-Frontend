@@ -72,14 +72,18 @@ export const AdoptPet = styled.div`
   flex-shrink: 0;
   position: relative;
   margin-top: 12px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const AdoptLikeToggle = styled.div`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7);
+  /* backdrop-filter: blur(10px); */
   display: flex;
   flex-direction: row;
   justify-content: center;

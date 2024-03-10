@@ -72,6 +72,10 @@ export const AdoptPet = styled.div`
   flex-shrink: 0;
   position: relative;
   margin-top: 12px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const AdoptLikeToggle = styled.div`

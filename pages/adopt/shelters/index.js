@@ -1,6 +1,6 @@
 import AdpotShelters from "../../../src/components/units/adopt/shelters/AdoptShelters.container";
 
-export default function AdpotPetsPage() {
+export default function AdpotSheltersPage() {
   return (
     <>
       <AdpotShelters />
