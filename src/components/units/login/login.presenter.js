@@ -33,7 +33,9 @@ export default function LogInUI(props) {
                 <S.PassWordInput placeholder="비밀번호" type="password" />
               </S.IdAndPassWordContainer>
               <S.LoginContainer>
-                <S.LoginButton type="submit">
+                <S.LoginButton type="submit"
+                  onClick={props.navigateTo("/login/signup/intro")}
+                >
                   로그인
                 </S.LoginButton>
                 <S.SignUpBtn

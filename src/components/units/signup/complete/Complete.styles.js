@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 export const CompleteHeaderWrapper = styled.div`
   width: 390px;
-  height: 262px;
+  height: 258px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +73,7 @@ export const BlurrBlock = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 100%); /* 그라데이션 설정 */
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* 그라데이션 설정 */
 `;
 
 /*css*/
