@@ -16,23 +16,23 @@ export const Container = styled.div`
 export const ProgressBarBlock = styled.div`
   width: 100%;
   height: 3px;
-  background-color: #DBDBDB;
+  background: #DBDBDB;
   display: flex;
   flex-direction: column;
 `;
 
 export const ProgressBar = styled.progress`
-    width: 50%;
-    height: 3px;
-    appearance: none;
+  width: 50%;
+  height: 3px;
+  appearance: none;
     
-    &::-webkit-progress-bar {
-      background-color: #DBDBDB; 
-    }
+  &::-webkit-progress-bar {
+    background-color: #DBDBDB; 
+  }
 
-    &::-webkit-progress-value {
-      background-color: #FF6636; 
-    }
+  &::-webkit-progress-value {
+    background-color: #FF6636; 
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -172,7 +172,7 @@ export const CheckEmailBtn = styled.button`
   cursor: pointer;
 `;
 
-export const VerificationCodeTitle = styled.div`
+export const GetCodeTitle = styled.div`
   width: 100%;
   height: 21px;
   font-size: 18px;
@@ -180,7 +180,7 @@ export const VerificationCodeTitle = styled.div`
   margin-top: 24px;
 `;
 
-export const VerificationCodeBlock = styled.div`
+export const GetCodeBlock = styled.div`
   width: 342px;
   height: 60px;
   background-color: #FEF8F2;
@@ -194,7 +194,7 @@ export const VerificationCodeBlock = styled.div`
   margin-top: 8px;
 `;
 
-export const VerificationCodeItem = styled.input`
+export const GetCodeItem = styled.input`
   width: 150px;
   height: 50px;
   background-color: #FEF8F2;
@@ -230,15 +230,16 @@ export const TimerItem = styled.div`
   margin-right: 20px;
 `;
 
-export const RetryVerification = styled.div`
+export const CorretCode = styled.div`
   width: 139px;
   height: 17px;
   font-size: 12px;
-  color: #C6C6C6;
+  color: #9AC8FF;
   cursor: pointer;
   margin-top: 20px;
 `;
 
+/*버튼 css*/
 export const NextButtonBlock = styled.div`
   width: 100%;
   height: 60px;
