@@ -29,6 +29,10 @@ export const LeftArrowBlock = styled.div`
   position: absolute;
   top: 12px;
   left: 23px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const AdoptMenu = styled.div`

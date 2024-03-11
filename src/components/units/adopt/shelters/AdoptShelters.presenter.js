@@ -31,7 +31,7 @@ export default function AdpotSheltersUI(props) {
           <S.MapInfoDragBlock id="map-info-drag-block">
             <S.MapInfoDragIcon></S.MapInfoDragIcon>
           </S.MapInfoDragBlock>
-          <S.MapInfoItem>
+          <S.MapInfoItem onClick={props.navigateTo("/adopt/shelters/detail")}>
             <S.MapInfoImg>
               <Image
                 src="/images/shelter/shelter_1.svg"
@@ -46,7 +46,7 @@ export default function AdpotSheltersUI(props) {
               <S.ShelterStatus>영업중</S.ShelterStatus>
             </S.MapInfoDetailBlock>
           </S.MapInfoItem>
-          <S.MapInfoItem>
+          <S.MapInfoItem onClick={props.navigateTo("/adopt/shelters/detail")}>
             <S.MapInfoImg>
               <Image
                 src="/images/shelter/shelter_1.svg"
@@ -61,7 +61,7 @@ export default function AdpotSheltersUI(props) {
               <S.ShelterStatus>영업중</S.ShelterStatus>
             </S.MapInfoDetailBlock>
           </S.MapInfoItem>
-          <S.MapInfoItem>
+          <S.MapInfoItem onClick={props.navigateTo("/adopt/shelters/detail")}>
             <S.MapInfoImg>
               <Image
                 src="/images/shelter/shelter_1.svg"
@@ -76,7 +76,7 @@ export default function AdpotSheltersUI(props) {
               <S.ShelterStatus>영업중</S.ShelterStatus>
             </S.MapInfoDetailBlock>
           </S.MapInfoItem>
-          <S.MapInfoItem>
+          <S.MapInfoItem onClick={props.navigateTo("/adopt/shelters/detail")}>
             <S.MapInfoImg>
               <Image
                 src="/images/shelter/shelter_1.svg"

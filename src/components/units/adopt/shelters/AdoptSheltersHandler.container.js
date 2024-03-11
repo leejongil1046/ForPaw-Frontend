@@ -15,12 +15,17 @@ export default function AdoptSheltersHandler() {
     rescues: "/adopt/shelters/rescues",
   };
 
+  const navigateBack = () => {
+    router.back();
+  };
+
   return (
     <>
       <AdoptSheltersHandlerUI
         isActive={isActive}
         navigateTo={navigateTo}
         paths={paths}
+        navigateBack={navigateBack}
       />
     </>
   );

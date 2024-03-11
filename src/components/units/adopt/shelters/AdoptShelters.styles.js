@@ -156,6 +156,10 @@ export const MapInfoItem = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const MapInfoImg = styled.div`

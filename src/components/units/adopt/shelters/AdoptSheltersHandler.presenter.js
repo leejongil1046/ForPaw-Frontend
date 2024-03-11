@@ -12,7 +12,7 @@ export default function AdoptSheltersHandlerUI(props) {
               alt="left_arrow_icon"
               width={15}
               height={25}
-              onClick={props.navigateTo("home")}
+              onClick={props.navigateTo("/adopt/shelters")}
             />
           </S.LeftArrowBlock>
           <S.AdoptMenu

@@ -3,8 +3,13 @@ import Headers from "../../../commons/headers/Headers.container";
 import Navigation from "../../../commons/navigation/Navigation.container";
 import AdoptHandler from "../AdoptHandler.container";
 import AdpotSheltersUI from "./AdoptShelters.presenter";
+import { useRouter } from "next/router";
 
 export default function AdpotShelters() {
+  const router = useRouter();
+
+  const navigateTo = (path) => () => router.push(path);
+
   const [topPosition, setTopPosition] = useState("0px"); // 초기 top 위치 설정
   const [topIconPosition, setTopIconPosition] = useState("0px");
 
@@ -68,6 +73,7 @@ export default function AdpotShelters() {
       <Headers />
       <AdoptHandler />
       <AdpotSheltersUI
+        navigateTo={navigateTo}
         topPosition={topPosition}
         topIconPosition={topIconPosition}
       />
