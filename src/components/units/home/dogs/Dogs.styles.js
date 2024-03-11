@@ -47,7 +47,7 @@ export const DogsMainTitle = styled.p`
   height: 66px;
   font-size: 28px;
   font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 `;
 
 export const DogsTitleContent = styled.p`

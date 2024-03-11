@@ -12,7 +12,7 @@ export default function Faq() {
   return (
     <>
       <Headers />
-      <FaqUI navigateBack={navigateBack} />;
+      <FaqUI navigateBack={navigateBack} />
     </>
   );
 }

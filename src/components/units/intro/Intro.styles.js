@@ -11,7 +11,7 @@ export const Container = styled.div`
   width: 390px;
   margin: 0 auto;
   background-color: white;
-`
+`;
 
 export const HeaderContainer = styled.div`
   width: 390px;
@@ -135,7 +135,7 @@ export const NextButtonBlock = styled.div`
   align-items: center;
   margin-left: 23px;
   position: fixed;
-  bottom: 40px;
+  bottom: 30px;
 `;
 
 export const NextButtonItem = styled.button`
