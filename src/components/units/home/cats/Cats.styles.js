@@ -9,6 +9,7 @@ export const WrapperCats = styled.div`
   align-items: center;
   margin: 0 auto;
   background-color: #FDFAF7;
+  overflow-y: auto;
 
   ::-webkit-scrollbar {
     display: none;
@@ -56,7 +57,7 @@ export const CatsTitleContent = styled.p`
   line-height: 24px;
   position: absolute;
   margin-top: 10px;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 `;
 
 export const CatsContentsContainer = styled.div`
@@ -78,6 +79,15 @@ export const CatsContentsDetail = styled.p`
   font-size: 16px;
   line-height: 24px;
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   letter-spacing: -0.4px;
-`
+`;
+
+export const ConcludingWords = styled.div`
+  width: 344px;
+  height: 266px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 60px;
+`;
