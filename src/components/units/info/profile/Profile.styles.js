@@ -20,7 +20,8 @@ export const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 20px 4px;
+  padding: 0 23px;
+  padding-bottom: 1px;
 `;
 
 export const LeftArrowTitleContainer = styled.div`

@@ -1,7 +1,7 @@
-import * as S from "./AdoptFavoritesDetail.styles";
+import * as S from "./AdoptPetDetail.styles";
 import Image from "next/image";
 
-export default function AdoptFavoritesDetailUI(props) {
+export default function AdoptPetDetailUI(props) {
   return (
     <>
       <S.WrapperHeader>
@@ -28,8 +28,8 @@ export default function AdoptFavoritesDetailUI(props) {
           />
           <S.AdoptLikeToggle>
             <Image
-              src="/images/pets/like_icon_big_active.svg"
-              alt="like_icon_big_active"
+              src="/images/pets/like_icon_big.svg"
+              alt="like_icon_big"
               width={32}
               height={32}
             />
@@ -72,7 +72,11 @@ export default function AdoptFavoritesDetailUI(props) {
           포리를 직접 만나보세요.
         </S.PetContentText>
         <S.PetAdoptionPeriod>2024.02.26-2024.03.04</S.PetAdoptionPeriod>
-        <S.PetAdoptionButton>입양 문의하기</S.PetAdoptionButton>
+        <S.PetAdoptionButton
+          onClick={props.navigateTo("/adopt/detail/inquire")}
+        >
+          입양 문의하기
+        </S.PetAdoptionButton>
       </S.WrapperPetDetail>
     </>
   );

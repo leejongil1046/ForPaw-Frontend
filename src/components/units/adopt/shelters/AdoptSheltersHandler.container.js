@@ -12,7 +12,7 @@ export default function AdoptSheltersHandler() {
 
   const paths = {
     detail: "/adopt/shelters/detail",
-    rescues: "/adopt/shelters/rescues",
+    rescues: "/adopt/shelters/detail/rescues",
   };
 
   const navigateBack = () => {

@@ -10,7 +10,7 @@ export default function AdpotFavoritesUI(props) {
           <S.AdoptPetMenuDogs>개</S.AdoptPetMenuDogs>
           <S.AdoptPetMenuCats>고양이</S.AdoptPetMenuCats>
         </S.AdoptPetMenuBlock>
-        <S.AdoptPet onClick={props.navigateTo("/adopt/favorites/detail")}>
+        <S.AdoptPet onClick={props.navigateTo("/adopt/detail")}>
           <Image
             src="/images/pets/dog_1.svg"
             alt="dog_1"

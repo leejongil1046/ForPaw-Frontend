@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import Navigation from "../../../../commons/navigation/Navigation.container";
-import AdoptSheltersHandler from "../AdoptSheltersHandler.container";
+import Navigation from "../../../../../commons/navigation/Navigation.container";
+import AdoptSheltersHandler from "../../AdoptSheltersHandler.container";
 import AdpotSheltersRescuesUI from "./AdoptSheltersRescues.presenter";
 
 export default function AdpotSheltersRescues() {
