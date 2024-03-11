@@ -39,7 +39,6 @@ export const HeaderTitle = styled.p`
 
 export const IntroContainer = styled.div`
   width: 390px;
-
   overflow-y: auto;
   bacground-color: white;
 
@@ -55,7 +54,6 @@ export const IntroduceBrandMainBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: brown;
   position: relative;
 `;
 
@@ -72,7 +70,7 @@ export const IntroMainTitleBlock = styled.div`
   height: 180px;
   position: absolute;
   margin-top: 180px;
-  margin-left: 10px;
+  margin-left: 20px;
 `; 
 
 export const IntroMainTitle = styled.p`
@@ -81,6 +79,7 @@ export const IntroMainTitle = styled.p`
   font-size: 28px;
   font-weight: bold;
   position: absolute;
+  letter-spacing: -2px;
 `;
 
 export const IntroTItleContent = styled.p`
@@ -90,6 +89,7 @@ export const IntroTItleContent = styled.p`
   line-height: 24px;
   position: absolute;
   top: 80px;
+  letter-spacing: -1px;
 `;
 
 export const IntroduceBrandBlock = styled.div`
