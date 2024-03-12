@@ -161,6 +161,7 @@ export const InfoActiveLocationContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 24px;
+  position: relative;
 `; 
 
 export const InfoTitleActiveLocation = styled.div`
@@ -195,7 +196,23 @@ export const SelectCity = styled.select`
     background-color: #FEF8F2;
     color: black;
   }
-`
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+`;
+
+export const SelectArrow = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 300px;
+  top: 53px;
+`;
 
 export const SelectRegionBlock = styled.div`
   width: 100%;
@@ -233,7 +250,12 @@ export const SelectRegionItem1 = styled.select`
     background-color: #FEF8F2;
     color: black;
   }
-`
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+`;
+
 export const SelectRegionItem2 = styled.select`
   margin-top: 8px;
   width: 164px;
@@ -260,7 +282,11 @@ export const SelectRegionItem2 = styled.select`
     background-color: #FEF8F2;
     color: black;
   }
-`
+  
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+`;
 
 /*버튼 css */
 export const NextButtonBlock = styled.div`

@@ -1,6 +1,7 @@
 import * as S from "./Signup02.styles";
 import SignupHeaderUI from "../signupHeader/SignupHeader.presenter";
 import Progress from "../component/Progress";
+import Image from "next/image";
 
 export default function SignUpUI02(props) {
   return (
@@ -23,16 +24,22 @@ export default function SignUpUI02(props) {
                 <S.EmailItem placeholder="이메일" type="email" value={props.emailIdValue} onChange={props.handleEmailIdValueChange} />
                 <S.AddressIcon>@</S.AddressIcon>
                 <S.SelectAddress value={props.selectedOption} onChange={props.handleSelectOptionChange}>
-                  <S.AddressOption value="">직접입력</S.AddressOption>
-                  <S.AddressOption value="gmail.com">gmail.com</S.AddressOption>
-                  <S.AddressOption value="naver.com">naver.com</S.AddressOption>
+                  <option value="">직접입력</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="naver.com">naver.com</option>
                 </S.SelectAddress>
+                <S.SmallSelectArrow>
+                  <Image
+                    src="/images/signup/small_select_arrow_icon.svg"
+                    alt="small_select"
+                    width={15}
+                    height={15}
+                  />
+                </S.SmallSelectArrow>
               </S.EmailBlock>
               <S.CheckEmailBlock>
                 {props.isEmailAvailable ? (
-                  <S.AvailableEmail style={{ visibility: props.isVisible ? 'visible' : 'hidden' }}>
-                    사용가능한 이메일입니다.
-                  </S.AvailableEmail>
+                  <S.AvailableEmail style={{ visibility: props.isVisible ? 'visible' : 'hidden' }}>사용가능한 이메일입니다.</S.AvailableEmail>
                 ) : (
                   <S.AvailableEmail style={{ color: '#FF9A9A', visibility: props.isVisible ? 'visible' : 'hidden' }}>사용 불가능한 이메일입니다.</S.AvailableEmail>
                 )}
@@ -45,7 +52,7 @@ export default function SignUpUI02(props) {
               </S.VerificationCodeTitle>
               <S.VerificationCodeBlock>
                 <S.VerificationCodeItem placeholder="1234" type="number" />
-                <S.TimerItem>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
+                <S.TimerItem style={{ visibility: props.isEmailAvailable ? 'visible' : 'hidden' }}>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
               </S.VerificationCodeBlock>
               <S.RetryVerification>
                 인증번호가 오지 않아요...

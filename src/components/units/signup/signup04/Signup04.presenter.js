@@ -41,13 +41,37 @@ export default function SignUpUI04(props) {
                 <S.SelectCity>
                   <option value="">시/도 선택</option>
                 </S.SelectCity>
+                <S.SelectArrow>
+                  <Image
+                    src="/images/info/select_arrow_icon.svg"
+                    alt="select_arrow_icon"
+                    width={22}
+                    height={12}
+                  />
+                </S.SelectArrow>
                 <S.SelectRegionBlock>
                   <S.SelectRegionItem1>
                     <option value="">구/군/시</option>
                   </S.SelectRegionItem1>
+                  <S.SelectArrow style={{top: "123px"}}>
+                  <Image
+                    src="/images/info/select_arrow_icon.svg"
+                    alt="select_arrow_icon"
+                    width={22}
+                    height={12}
+                  />
+                </S.SelectArrow>
                   <S.SelectRegionItem2>
                     <option value="">동/읍/면</option>
                   </S.SelectRegionItem2>
+                  <S.SelectArrow style={{left: "120px", top: "123px"}}>
+                  <Image
+                    src="/images/info/select_arrow_icon.svg"
+                    alt="select_arrow_icon"
+                    width={22}
+                    height={12}
+                  />
+                </S.SelectArrow>
                 </S.SelectRegionBlock>
               </S.InfoActiveLocationContainer>
               <S.NextButtonBlock>
