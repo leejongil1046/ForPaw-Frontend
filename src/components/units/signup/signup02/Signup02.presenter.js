@@ -1,5 +1,5 @@
 import * as S from "./Signup02.styles";
-import SignupHeaderUI from "../signupHeader/SignupHeader.presenter";
+import SignupHeader from "../signupHeader/SignupHeader.container";
 import Progress from "../component/Progress";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ export default function SignUpUI02(props) {
     <>
       <S.WrapperContainer>
         <S.Container>
-          <SignupHeaderUI />
+          <SignupHeader />
           <S.ProgressBarBlock>
             <S.ProgressBar value={Progress({ startValue: 20, max: 40, interval: 10 })} max={40} />
           </S.ProgressBarBlock>
