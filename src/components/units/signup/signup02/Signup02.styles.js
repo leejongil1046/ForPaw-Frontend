@@ -77,6 +77,7 @@ export const EmailBlock = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
+    position: relative;
 `;
 
 export const EmailItem = styled.input`
@@ -132,12 +133,24 @@ export const SelectAddress = styled.select`
   option {
     background-color: #FEF8F2;
     color: #BEA597;
-    
   }
+
+  -webkit-appearance: none; /* 크롬, 사파리 */
+  -moz-appearance: none; /* 파이어폭스 */
+  appearance: none; /* 표준 */
+
 `;
 
-export const AddressOption = styled.option`
-  font-size: 16px;
+export const SmallSelectArrow = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 300px;
+  z-index: 2;
 `;
 
 export const CheckEmailBlock = styled.div`
@@ -228,6 +241,7 @@ export const TimerItem = styled.div`
   color: black;
   background-color: #FEF8F2;
   margin-right: 20px;
+  visibility: hidden;
 `;
 
 export const RetryVerification = styled.div`

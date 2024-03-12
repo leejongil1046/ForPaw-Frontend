@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SignUpUI02 from "./Signup02.presenter";
 
 export default function SignUp02() {
@@ -11,7 +11,7 @@ export default function SignUp02() {
   const [selectedOption, setSelectedOption] = useState(""); // select의 값을 찾아내는 함수
   const [isEmailAvailable, setIsEmailAvailable] = useState(false);  //이메일 사용가능 여부
   const [isVisible, setIsvisible] = useState(false);
-  const [timer, setTimer] = useState(90); // 타이머 초 초기값
+  const [timer, setTimer] = useState(80); // 타이머 초 초기값
   const [timerId, setTimerId] = useState(null); // 타이머 인터벌 ID
 
   const handleEmailIdValueChange = (e) => {
@@ -25,21 +25,29 @@ export default function SignUp02() {
   const handleCheckEmailAndStartTimer = () => {
     setIsEmailAvailable(true);
     setIsvisible(true);
-    setTimer(90);
+    setTimer(80);
 
     clearInterval(timerId);
-
-    const id = setInterval(() => {
-      setTimer(prevTimer => {
-        if (prevTimer === 0) {
-          clearInterval(id);
-          return 0;
-        }
-        return prevTimer - 1;
-      });
-    }, 1000);
-    setTimerId(id); // 타이머 인터벌 ID 저장
   };
+
+  const StartTimer = () => {
+    if (isEmailAvailable) {
+      const id = setInterval(() => {
+        setTimer(prevTimer => {
+          if (prevTimer === 0) {
+            clearInterval(id);
+            return 0;
+          }
+          return prevTimer - 1;
+        });
+      }, 1000);
+      setTimerId(id); // 타이머 인터벌 ID 저장
+    }
+  };
+
+  useEffect(() => {
+    StartTimer();
+  }, [isEmailAvailable]);
 
   return (
     <>
