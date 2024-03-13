@@ -1,15 +1,7 @@
 import * as S from "./SignupHeader.styles";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
-export default function SignupHeaderUI() {
-
-  const router = useRouter();
-
-  const PrevPage = () => {
-    router.back();
-  }
-
+export default function SignupHeaderUI(props) {
   return (
     <>
       <S.WrapperHeader>
@@ -33,9 +25,9 @@ export default function SignupHeaderUI() {
             />
           </S.LogoBlock>
         </S.LogoContainer>
-        <S.LeftArrowContainer>
+        <S.LeftArrowContainer onClick={props.PrevPage}> 
           <S.LeftArrowBlock>
-            <Image onClick={PrevPage}
+            <Image 
               src="/images/header/arrow_left_icon.svg"
               alt="left_arrow"
               width={15}

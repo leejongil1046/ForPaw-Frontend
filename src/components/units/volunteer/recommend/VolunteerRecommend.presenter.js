@@ -1,11 +1,11 @@
 import * as S from "./VolunteerRecommend.styles";
 import Image from "next/image";
 
-export default function VolunteerRecommendUI() {
+export default function VolunteerRecommendUI(props) {
   return (
     <>
       <S.WrapperContents>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/recommend/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -34,7 +34,7 @@ export default function VolunteerRecommendUI() {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/recommend/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -63,7 +63,7 @@ export default function VolunteerRecommendUI() {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/recommend/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
