@@ -1,21 +1,53 @@
 import * as S from "./VolunteerDetail.styles";
+import Image from "next/image";
 
 export default function VolunteerDetailUI() {
-  return(
+  return (
     <>
       <S.WrapperContents>
-        <S.ContentsContainer>
-          
-        </S.ContentsContainer>
-        <S.ContentsContainer>
-
-        </S.ContentsContainer>
-        <S.ContentsContainer>
-
-        </S.ContentsContainer>
-        <S.ContentsContainer>
-          
-        </S.ContentsContainer>
+        <S.VolunteerIntroContainer>
+          <S.IntroMainImgBlock>
+            <Image
+              src="/images/volunteer/volunteerDetail/volunteer_main_image.svg"
+              alt="volunteer_main_image"
+              width={343}
+              height={160}
+            />
+          </S.IntroMainImgBlock>
+          <S.IntroTitle>모임을 소개하는 한마디</S.IntroTitle>
+          <S.IntroDetail>해당 모임에 어울리는 문장을 간단하게 적어주세요</S.IntroDetail>
+        </S.VolunteerIntroContainer>
+        <S.AnnouncementContainer>
+          <S.AnnouncementTitleBlock>
+            <S.AnnouncementTitle>공지사항</S.AnnouncementTitle>
+            <S.RightArrowImgBlock>
+              <Image
+                src="/images/volunteer/volunteerDetail/right_arrow.svg"
+                alt="right_arrow"
+                width={44}
+                height={44}
+              />
+            </S.RightArrowImgBlock>
+          </S.AnnouncementTitleBlock>
+          <S.AnnouncementDetailContainer>
+            <S.AnnouncementDetailBlock style={{backgroundColor: "#FEF8F2"}}>
+              <S.CheckBox>
+                <S.CheckImg>
+                  <Image
+                    src="/images/volunteer/volunteerDetail/check_icon.svg"
+                    alt="check_icon"
+                    width={22}
+                    height={15}
+                  />
+                </S.CheckImg>
+              </S.CheckBox>
+              <S.AnnouncementDetail>
+                이번주 봉사활동은 업체의 개인사정으로 인해 한 주<br />
+                쉬어가니 착오 없으시길 바랍니다.
+              </S.AnnouncementDetail>
+            </S.AnnouncementDetailBlock>
+          </S.AnnouncementDetailContainer>
+        </S.AnnouncementContainer>
         <S.NextButtonBlock>
           <S.NextButtonItem>가입하기</S.NextButtonItem>
         </S.NextButtonBlock>
