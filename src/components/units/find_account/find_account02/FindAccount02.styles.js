@@ -151,13 +151,14 @@ export const NextButtonBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 104px;
+  margin-top: 216px;
 `;
 
 export const NextButtonItem = styled.button`
   background-color: #FF6636;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 `;

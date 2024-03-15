@@ -302,7 +302,8 @@ export const NextButtonBlock = styled.div`
 export const NextButtonItem = styled.button`
   background-color: #FF6636;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 `;

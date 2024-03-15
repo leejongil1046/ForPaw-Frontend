@@ -1,5 +1,5 @@
 import * as S from "./FindAccount02.styles";
-import SignupHeaderUI from "../../signup/signupHeader/SignupHeader.presenter";
+import SignupHeader from "../../signup/SignupHeader/SignupHeader.container";
 import Progress from "../../signup/component/Progress";
 
 export default function FindAccount02UI(props) {
@@ -7,7 +7,7 @@ export default function FindAccount02UI(props) {
     <>
       <S.WrapperContainer>
         <S.Container>
-          <SignupHeaderUI />
+          <SignupHeader />
           <S.ProgressBarBlock>
             <S.ProgressBar value={Progress({ startValue: 50, max: 100, interval: 10 })} max={100} />
           </S.ProgressBarBlock>

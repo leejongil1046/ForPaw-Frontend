@@ -1,5 +1,5 @@
 import * as S from "./Signup02.styles";
-import SignupHeader from "../signupHeader/SignupHeader.container";
+import SignupHeader from "../SignupHeader/SignupHeader.container";
 import Progress from "../component/Progress";
 import Image from "next/image";
 
@@ -47,16 +47,18 @@ export default function SignUpUI02(props) {
                   중복확인
                 </S.CheckEmailBtn>
               </S.CheckEmailBlock>
-              <S.VerificationCodeTitle>
-                인증번호를 입력해주세요
-              </S.VerificationCodeTitle>
-              <S.VerificationCodeBlock>
-                <S.VerificationCodeItem placeholder="1234" type="number" />
-                <S.TimerItem style={{ visibility: props.isEmailAvailable ? 'visible' : 'hidden' }}>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
-              </S.VerificationCodeBlock>
-              <S.RetryVerification>
-                인증번호가 오지 않아요...
-              </S.RetryVerification>
+              <S.InputVerificationCodeContainer style={{ visibility: props.isVisible ? 'visible' : 'hidden' }}>
+                <S.VerificationCodeTitle>
+                  인증번호를 입력해주세요
+                </S.VerificationCodeTitle>
+                <S.VerificationCodeBlock>
+                  <S.VerificationCodeItem placeholder="1234" type="number" />
+                  <S.TimerItem style={{ visibility: props.isEmailAvailable ? 'visible' : 'hidden' }}>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
+                </S.VerificationCodeBlock>
+                <S.RetryVerification>
+                  인증번호가 오지 않아요...
+                </S.RetryVerification>
+              </S.InputVerificationCodeContainer>
               <S.NextButtonBlock>
                 <S.NextButtonItem onClick={props.navigateTo("/login/signup/03")}>
                   다음

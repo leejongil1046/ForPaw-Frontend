@@ -1,5 +1,5 @@
 import * as S from "./Signup03.styles";
-import SignupHeader from "../signupHeader/SignupHeader.container";
+import SignupHeader from "../SignupHeader/SignupHeader.container";
 // import PropTypes from 'prop-types';
 import Progress from "../component/Progress";
 

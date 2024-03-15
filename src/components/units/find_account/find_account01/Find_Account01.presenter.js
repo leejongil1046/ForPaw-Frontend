@@ -1,5 +1,5 @@
 import * as S from "./Find_Account01.styles";
-import SignupHeaderUI from "../../signup/signupHeader/SignupHeader.presenter";
+import SignupHeader from "../../signup/SignupHeader/SignupHeader.container";
 import Progress from "../../signup/component/Progress";
 
 export default function FindAccount01UI(props) {
@@ -7,7 +7,7 @@ export default function FindAccount01UI(props) {
     <>
       <S.WrapperContainer>
         <S.Container>
-          <SignupHeaderUI />
+          <SignupHeader />
           <S.ProgressBarBlock>
             <S.ProgressBar value={Progress({ startValue: 0, max: 50, interval: 10 })} max={50} />
           </S.ProgressBarBlock>
@@ -40,16 +40,18 @@ export default function FindAccount01UI(props) {
                   코드전송
                 </S.CheckEmailBtn>
               </S.CheckEmailBlock>
-              <S.GetCodeTitle>
-                코드입력
-              </S.GetCodeTitle>
-              <S.GetCodeBlock>
-                <S.GetCodeItem placeholder="1234" type="number" />
-                <S.TimerItem>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
-              </S.GetCodeBlock>
-              <S.CorretCode>
-                코드가 일치합니다
-              </S.CorretCode>
+              <S.InputCodeContainer style={{ visibility: props.isVisible ? 'visible' : 'hidden' }}>
+                <S.GetCodeTitle>
+                  코드입력
+                </S.GetCodeTitle>
+                <S.GetCodeBlock>
+                  <S.GetCodeItem placeholder="1234" type="number" />
+                  <S.TimerItem>{Math.floor(props.timer / 60)}:{(props.timer % 60).toString().padStart(2, '0')}</S.TimerItem>
+                </S.GetCodeBlock>
+                <S.CorretCode>
+                  코드가 일치합니다
+                </S.CorretCode>
+              </S.InputCodeContainer>
               <S.NextButtonBlock>
                 <S.NextButtonItem onClick={props.navigateTo("/login/find_account/02")}>
                   다음
