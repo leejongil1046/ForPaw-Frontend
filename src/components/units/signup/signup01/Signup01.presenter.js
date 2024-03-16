@@ -1,5 +1,5 @@
 import * as S from "./Signup01.styles";
-import SignupHeader from "../signupHeader/SignupHeader.container";
+import SignupHeader from "../SignupHeader/SignupHeader.container";
 import Progress from "../component/Progress";
 
 export default function SignUpUI01(props) {

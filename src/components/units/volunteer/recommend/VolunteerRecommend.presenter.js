@@ -5,7 +5,7 @@ export default function VolunteerRecommendUI(props) {
   return (
     <>
       <S.WrapperContents>
-        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/recommend/detail')}>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"

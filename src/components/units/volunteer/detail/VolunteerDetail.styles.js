@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const WrapperContents = styled.div`
   width: 390px;
-  height: calc(100vh - 231px);
+  height: calc(100vh - 179px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,22 +73,22 @@ export const RightArrowImgBlock = styled.div`
 
 export const AnnouncementDetailContainer = styled.div`
   width: 100%;
+  margin-top: 6px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 6px;
   gap: 8px;
 `;
 
 export const AnnouncementDetailBlock = styled.div`
   width: 343px;
   height: 57px;
-  background-color: #F6F6F6;
   border: 1px solid #F6F2EE;
   border-radius: 16px;
   cursor: pointer;
+  background-color: #F6F6F6;
 
   display: flex;
   flex-direction: row;
@@ -109,13 +109,14 @@ export const CheckBox = styled.div`
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background-color: #FF6636;
-
+  background-color: #D9D9D9;
+  
   /*display 영역*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 `;
 
 export const CheckImg = styled.div`
@@ -125,14 +126,12 @@ export const CheckImg = styled.div`
 
 export const AnnouncementDetail = styled.p`
   width: 267px;
-  height: 38px;
+  height: 36px;
   font-size: 14px;
   letter-spacing: -0.7px;
   margin-left: 10px;
 
-  /*텍스트 관련 영역 실패*/
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow:hidden;
 `;
 
 export const MeetingContainer = styled.div`
@@ -173,6 +172,8 @@ export const MeetingDetailContainer = styled.div`
   border: 1px solid #F6F2EE;
   border-radius: 20px;
 
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.10);
+
   /*display 설정*/
   display: flex;
   flex-direction: column;
@@ -208,7 +209,7 @@ export const DetailDate = styled.p`
   line-height: 24px;
 `;
 
-export const LeftDdayBox = styled.p`
+export const LeftDdayBox = styled.div`
   width: 57px;
   height: 24px;
   border: 2px solid #FF6636;
@@ -276,7 +277,7 @@ export const DetailInfoName = styled.p`
   color: #878787;
 `;
 
-export const DetailInfo = styled.p`
+export const DetailInfo = styled.div`
   width: 96px;
   height: 14px;
   font-size: 12px;
@@ -449,7 +450,7 @@ export const NextButtonBlock = styled.div`
 export const NextButtonItem = styled.button`
   background-color: #FF6636;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 24px;
   color: white;
   cursor: pointer;
 `;

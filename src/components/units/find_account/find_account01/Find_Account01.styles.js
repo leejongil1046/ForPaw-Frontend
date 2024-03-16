@@ -172,12 +172,18 @@ export const CheckEmailBtn = styled.button`
   cursor: pointer;
 `;
 
+export const InputCodeContainer = styled.div`
+  width: 344px;
+  height: 126px;
+  margin-top: 23px;
+  visibility: hidden;
+`;
+
 export const GetCodeTitle = styled.div`
   width: 100%;
   height: 21px;
   font-size: 18px;
   font-weight: 600;
-  margin-top: 24px;
 `;
 
 export const GetCodeBlock = styled.div`
@@ -253,7 +259,8 @@ export const NextButtonBlock = styled.div`
 export const NextButtonItem = styled.button`
   background-color: #FF6636;
   border-radius: 30px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 `;
