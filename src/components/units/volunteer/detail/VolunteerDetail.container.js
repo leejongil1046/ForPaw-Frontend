@@ -5,6 +5,11 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function VolunteerDetail() {
+
+  //라우팅 설정
+  const router = useRouter();
+  const navigateTo = (path) => () => router.push(path);
+
   // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
   const [isJoined, serIsJoined] = useState(false);
@@ -22,24 +27,15 @@ export default function VolunteerDetail() {
   const Announcements = [
     {
       id: 1,
-      text:
-        <>
-          이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다.
-        </>
+      text: "이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다."
     },
     {
       id: 2,
-      text:
-        <>
-          이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다.
-        </>
+      text: "이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다."
     },
     {
       id: 3,
-      text:
-        <>
-          이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다.
-        </>
+      text: "이번주 봉사활동은 업체의 개인사정으로 인해 한 주 쉬어가니 착오 없으시길 바랍니다."
     }
   ];
 
@@ -95,6 +91,7 @@ export default function VolunteerDetail() {
     <>
       <VolunteerDetailHeader />
       <VolunteerDetailUI
+        navigateTo={navigateTo}
         Announcements={Announcements}
         MeetingInfos={MeetingInfos}
         clickedIndex={clickedIndex}

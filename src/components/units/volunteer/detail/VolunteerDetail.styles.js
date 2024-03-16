@@ -97,8 +97,9 @@ export const AnnouncementDetailBlock = styled.div`
 `;
 
 export const AnnouncementItems = styled.div`
-  width: 306px;
+  width: 314px;
   height: 38px;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -120,13 +121,13 @@ export const CheckBox = styled.div`
 `;
 
 export const CheckImg = styled.div`
-  width: 22px;
-  height: 15px;
+  width: 27px;
+  height: 19px;
 `;
 
-export const AnnouncementDetail = styled.p`
+export const AnnouncementText = styled.p`
   width: 267px;
-  height: 36px;
+  height: 34px;
   font-size: 14px;
   letter-spacing: -0.7px;
   margin-left: 10px;
@@ -437,6 +438,7 @@ export const Blank = styled.div`
 export const NextButtonBlock = styled.div`
   width: 344px;
   height: 60px;
+  border-radius: 30px;
   position: fixed;
   bottom: 100px;
 

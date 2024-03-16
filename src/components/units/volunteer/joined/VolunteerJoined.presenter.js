@@ -1,11 +1,11 @@
 import * as S from "./VolunteerJoined.styles";
 import Image from "next/image";
 
-export default function VolunteerJoinedUI() {
+export default function VolunteerJoinedUI(props) {
   return (
     <>
       <S.WrapperContents>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -34,7 +34,7 @@ export default function VolunteerJoinedUI() {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -63,7 +63,7 @@ export default function VolunteerJoinedUI() {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
