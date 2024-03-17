@@ -22,7 +22,7 @@ export default function VolunteerDetailUI(props) {
           <S.AnnouncementTitleBlock>
             <S.AnnouncementTitle>공지사항</S.AnnouncementTitle>
             <S.RightArrowImgBlock>
-              <Image
+              <Image onClick={props.navigateTo('/volunteer/detail/announcements')}
                 src="/images/volunteer/volunteerDetail/right_arrow.svg"
                 alt="right_arrow"
                 width={44}
@@ -46,15 +46,15 @@ export default function VolunteerDetailUI(props) {
                       <Image
                         src="/images/volunteer/volunteerDetail/check_icon.svg"
                         alt="check_icon"
-                        width={22}
-                        height={15}
+                        width={27}
+                        height={19}
                         priority={true}
                       />
                     </S.CheckImg>
                   </S.CheckBox>
-                  <S.AnnouncementDetail>
-                    {announcement.text.length > 56 ? `${announcement.text.slice(0, 56)}...` : announcement.text}
-                  </S.AnnouncementDetail>
+                  <S.AnnouncementText>
+                    {announcement.text.length > 55 ? `${announcement.text.slice(0, 55)}...` : announcement.text}
+                  </S.AnnouncementText>
                 </S.AnnouncementItems>
               </S.AnnouncementDetailBlock>
             ))}
@@ -75,7 +75,7 @@ export default function VolunteerDetailUI(props) {
           </S.MeetingTitleBlock>
           <S.WrapperMeetingDetail>
             {props.MeetingInfos.map((infos, index) => (
-              <S.MeetingDetailContainer>
+              <S.MeetingDetailContainer key={infos.id}>
                 <S.MeetingDetailContentsBlock>
                   <S.DetailContentsDateBox>
                     <S.DetailDate>{infos.detailDate}</S.DetailDate>
@@ -226,12 +226,8 @@ export default function VolunteerDetailUI(props) {
           </S.MemberListContainer>
           <S.Blank />
         </S.MemberContainer>
-        <S.NextButtonBlock>
-          <S.NextButtonItem
-            style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}
-          >
+        <S.NextButtonBlock style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}>
             <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
-          </S.NextButtonItem>
         </S.NextButtonBlock>
       </S.WrapperContents>
     </>
