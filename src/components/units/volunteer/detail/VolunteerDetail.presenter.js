@@ -22,7 +22,7 @@ export default function VolunteerDetailUI(props) {
           <S.AnnouncementTitleBlock>
             <S.AnnouncementTitle>공지사항</S.AnnouncementTitle>
             <S.RightArrowImgBlock>
-              <Image onClick={props.navigateTo('/volunteer/detail/announcement')}
+              <Image onClick={props.navigateTo('/volunteer/detail/announcements')}
                 src="/images/volunteer/volunteerDetail/right_arrow.svg"
                 alt="right_arrow"
                 width={44}

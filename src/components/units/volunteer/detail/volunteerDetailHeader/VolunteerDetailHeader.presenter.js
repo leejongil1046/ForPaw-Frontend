@@ -13,7 +13,7 @@ export default function VolunteerDetailHeaderUI(props) {
               width={15}
               height={25}
             />
-            <S.Title>봉사모임 이름</S.Title>
+            <S.Title>{props.title}</S.Title>
           </S.LeftArrowTitleContainer>
           <S.MenuContainer>
             <Image
