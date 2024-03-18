@@ -157,11 +157,12 @@ export const MeetingTitle = styled.p`
 
 export const WrapperMeetingDetail = styled.div`
   width:100%; /*344px*/
+  margin-top: 6px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 6px;
   gap: 8px;
 `;
 
@@ -339,7 +340,6 @@ export const ParticipateBtn = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const MemberContainer = styled.div`

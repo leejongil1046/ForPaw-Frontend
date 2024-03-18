@@ -189,7 +189,7 @@ export default function HomeUI(props) {
             onClick={props.navigateTo(props.paths.volunteer)}
           />
         </S.HomeTitleBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -218,7 +218,7 @@ export default function HomeUI(props) {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"
@@ -247,7 +247,7 @@ export default function HomeUI(props) {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerBlock>
+        <S.VolunteerBlock onClick={props.navigateTo('/volunteer/detail')}>
           <S.VolunteerImg>
             <Image
               src="/images/volunteer/volunteer_1.svg"

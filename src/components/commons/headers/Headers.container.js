@@ -8,6 +8,10 @@ export default function Headers() {
   const getTitleByPath = (pathname) => {
     if (pathname.startsWith("/adopt")) {
       return "입양/임시보호";
+    } else if(pathname === "/volunteer/detail/regular_meetings/regular_meeting") {
+      return "모임명"
+    } else if (pathname === "/volunteer/detail/regular_meetings") {
+      return "정기모임"
     } else if (pathname.startsWith("/volunteer")) {
       return "봉사활동";
     } else if (pathname.startsWith("/community")) {
