@@ -22,7 +22,8 @@ export default function VolunteerDetailUI(props) {
           <S.AnnouncementTitleBlock>
             <S.AnnouncementTitle>공지사항</S.AnnouncementTitle>
             <S.RightArrowImgBlock>
-              <Image onClick={props.navigateTo('/volunteer/detail/announcements')}
+              <Image
+                onClick={props.navigateTo('/volunteer/detail/announcements')}
                 src="/images/volunteer/volunteerDetail/right_arrow.svg"
                 alt="right_arrow"
                 width={44}
@@ -34,6 +35,7 @@ export default function VolunteerDetailUI(props) {
           <S.AnnouncementDetailContainer>
             {props.Announcements.map((announcement, index) => (
               <S.AnnouncementDetailBlock
+                onClick={props.navigateTo('/volunteer/detail/announcements/announcement')}
                 key={announcement.id}
                 style={{ backgroundColor: props.clickedIndex === index ? "#FEF8F2" : "#F6F6F6" }}
                 onMouseDown={() => props.handleAnnouncementClick(index)} // 마우스를 눌렀을 때만 처리
@@ -65,6 +67,7 @@ export default function VolunteerDetailUI(props) {
             <S.MeetingTitle>정기모임</S.MeetingTitle>
             <S.RightArrowImgBlock>
               <Image
+                onClick={props.navigateTo('/volunteer/detail/regular_meetings')}
                 src="/images/volunteer/volunteerDetail/right_arrow.svg"
                 alt="right_arrow"
                 width={44}
@@ -145,7 +148,9 @@ export default function VolunteerDetailUI(props) {
                         />
                       </S.UserImg>
                     </S.UsersItems>
-                    <S.ParticipateBtn>참가하기</S.ParticipateBtn>
+                    <S.ParticipateBtn onClick={props.navigateTo("/volunteer/detail/regular_meetings/regular_meeting")}>
+                      참가하기
+                    </S.ParticipateBtn>
                   </S.UsersAndParticipateBox>
                 </S.MeetingDetailContentsBlock>
               </S.MeetingDetailContainer>
@@ -227,7 +232,7 @@ export default function VolunteerDetailUI(props) {
           <S.Blank />
         </S.MemberContainer>
         <S.NextButtonBlock style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}>
-            <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
+          <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
         </S.NextButtonBlock>
       </S.WrapperContents>
     </>

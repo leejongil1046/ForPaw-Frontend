@@ -8,6 +8,7 @@ export default function AnnouncementsUI(props) {
         <S.Container>
           {props.Announcements.map((announcement, index) => (
             <S.AnnouncementBlock
+              onClick={props.navigateTo('/volunteer/detail/announcements/announcement')}
               key={announcement.id}
               style={{ backgroundColor: props.clickedIndex === index ? "#FFF0EB" : "#F6F6F6" }}
               onMouseDown={() => props.handleAnnouncementClick(index)}
@@ -36,7 +37,7 @@ export default function AnnouncementsUI(props) {
               </S.AnnouncementItem>
             </S.AnnouncementBlock>
           ))}
-          <S.AddAnnouncement onClick={props.navigateTo('/volunteer/detail/announcements/announcement')}>
+          <S.AddAnnouncement>
             <Image
               src="/images/volunteer/volunteer_add_icon.svg"
               alt="volunteer_add_icon"

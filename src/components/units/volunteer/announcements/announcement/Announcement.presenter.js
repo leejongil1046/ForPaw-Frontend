@@ -126,14 +126,10 @@ export default function AnnouncementUI() {
               priority={true}
             />
           </S.OpenMenu>
-          <S.CommentInput placeholder="댓글을 입력해주세요!">
-
-          </S.CommentInput>
+          <S.CommentInput placeholder="댓글을 입력해주세요!" type="text" />
           <S.AddComment>
             <S.ArrowLine />
-            <S.ArrowBlock>
-
-            </S.ArrowBlock>
+            <S.ArrowBlock />
           </S.AddComment>
         </S.AddCommentBlock>
       </S.AddCommentContainer>
