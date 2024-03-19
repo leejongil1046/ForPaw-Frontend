@@ -8,20 +8,40 @@ export default function VolunteerDetail() {
 
   //라우팅 설정
   const router = useRouter();
-  const navigateTo = (path) => () => router.push(path);
 
   // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
-  const [isJoined, serIsJoined] = useState(false);
+  const [isJoined, setIsJoined] = useState(false);
+  const [isJoinedClikced, setIsJoinedClicked] = useState(false);
+
+  const navigateTo = (path) => () => {
+    if (isJoined === true) {
+      router.push(path);
+    } else {
+      setIsJoinedClicked(true);
+      setTimeout(() => {
+        setIsJoinedClicked(false);
+      }, 1000);
+    }
+  }
+
+  const handleJoined = () => {
+    setIsJoined(true)
+  }
+
 
   const handleAnnouncementClick = (index) => {
-    // 클릭된 공지사항의 인덱스를 설정
-    setClickedIndex(index === clickedIndex ? -1 : index);
+    if (isJoined === true) {
+      // 클릭된 공지사항의 인덱스를 설정
+      setClickedIndex(index === clickedIndex ? -1 : index);
 
-    // 2초 후에 클릭된 상태를 초기화하여 원래 색으로 돌아가도록 타이머 설정
-    setTimeout(() => {
-      setClickedIndex(-1);
-    }, 2000);
+      // 2초 후에 클릭된 상태를 초기화하여 원래 색으로 돌아가도록 타이머 설정
+      setTimeout(() => {
+        setClickedIndex(-1);
+      }, 2000);
+    } else {
+      
+    }
   };
 
   const Announcements = [
@@ -52,7 +72,7 @@ export default function VolunteerDetail() {
       infoName_cost: "비용",
       detail_cost: "2천원(신규 인원제외)",
       infoName_Participated: "인원",
-      detail_participated:"12",
+      detail_participated: "12",
       maximun_people: "12"
     },
     {
@@ -67,7 +87,7 @@ export default function VolunteerDetail() {
       infoName_cost: "비용",
       detail_cost: "2천원(신규 인원제외)",
       infoName_Participated: "인원",
-      detail_participated:"12",
+      detail_participated: "12",
       maximun_people: "12"
     },
     {
@@ -82,14 +102,16 @@ export default function VolunteerDetail() {
       infoName_cost: "비용",
       detail_cost: "2천원(신규 인원제외)",
       infoName_Participated: "인원",
-      detail_participated:"12",
+      detail_participated: "12",
       maximun_people: "12"
     },
   ];
 
   return (
     <>
-      <VolunteerDetailHeader />
+      <VolunteerDetailHeader 
+        isJoinedClikced={isJoinedClikced}
+      />
       <VolunteerDetailUI
         navigateTo={navigateTo}
         Announcements={Announcements}
@@ -97,8 +119,12 @@ export default function VolunteerDetail() {
         clickedIndex={clickedIndex}
         handleAnnouncementClick={handleAnnouncementClick}
         isJoined={isJoined}
+        isJoinedClikced={isJoinedClikced}
+        handleJoined={handleJoined}
       />
-      <Navigation />
+      <Navigation 
+        isJoinedClikced={isJoinedClikced}
+      />
     </>
   )
 }

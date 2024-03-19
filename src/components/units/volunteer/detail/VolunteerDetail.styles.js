@@ -11,6 +11,7 @@ export const WrapperContents = styled.div`
   overflow-y: auto;
   background-color: white;
   padding-bottom: 10px;
+  filter: ${(props) => (props.active ? "brightness(0.8)" : "brightness(1.0)")};
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {
@@ -441,6 +442,7 @@ export const NextButtonBlock = styled.div`
   border-radius: 30px;
   position: fixed;
   bottom: 100px;
+  right: calc(50% - 172px);
 
   /*display 설정*/
   display: flex;
@@ -450,9 +452,36 @@ export const NextButtonBlock = styled.div`
 `;
 
 export const NextButtonItem = styled.button`
-  background-color: #FF6636;
+  background-color: transparent;
   border-radius: 30px;
   font-size: 24px;
   color: white;
   cursor: pointer;
+`;
+
+/*가입안되었을 때*/
+export const Judge = styled.div`
+  margin-top: 240px;
+  width: 344px;
+  height: 72px;
+  border-radius: 16px;
+  background-color: white;
+  position: fixed;
+  right: calc(50% - 172px);
+  visibility: hidden;
+  z-index: 2;
+
+  /*display 설정*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const JudgeText = styled.p`
+  width: 239px;
+  height: 24px; 
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.6px;
 `;

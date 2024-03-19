@@ -4,7 +4,14 @@ import Image from "next/image";
 export default function VolunteerDetailUI(props) {
   return (
     <>
-      <S.WrapperContents>
+      <S.Judge
+        style={{ visibility: props.isJoinedClikced ? "visible" : "hidden" }}
+      >
+        <S.JudgeText>가입 멤버만 확인할 수 있습니다.</S.JudgeText>
+      </S.Judge>
+      <S.WrapperContents
+        active={props.isJoinedClikced}
+      >
         <S.VolunteerIntroContainer>
           <S.IntroMainImgBlock>
             <Image
@@ -148,7 +155,8 @@ export default function VolunteerDetailUI(props) {
                         />
                       </S.UserImg>
                     </S.UsersItems>
-                    <S.ParticipateBtn onClick={props.navigateTo("/volunteer/detail/regular_meetings/regular_meeting")}>
+                    <S.ParticipateBtn
+                      onClick={props.navigateTo("/volunteer/detail/regular_meetings/regular_meeting")}>
                       참가하기
                     </S.ParticipateBtn>
                   </S.UsersAndParticipateBox>
@@ -231,10 +239,13 @@ export default function VolunteerDetailUI(props) {
           </S.MemberListContainer>
           <S.Blank />
         </S.MemberContainer>
-        <S.NextButtonBlock style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}>
-          <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
-        </S.NextButtonBlock>
       </S.WrapperContents>
+      <S.NextButtonBlock
+        style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}
+        onClick={props.handleJoined}
+      >
+        <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
+      </S.NextButtonBlock>
     </>
   )
 }

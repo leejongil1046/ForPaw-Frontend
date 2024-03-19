@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function NavigationUI(props) {
   return (
-    <S.WrapperNavigation>
+    <S.WrapperNavigation active={props.isJoinedClikced}>
       {Object.keys(props.paths).map((iconName) => (
         <S.NavigationIconContainer
           key={iconName}

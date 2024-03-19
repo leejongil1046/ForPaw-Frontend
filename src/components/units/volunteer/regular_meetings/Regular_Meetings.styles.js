@@ -218,4 +218,19 @@ export const ParticipateBtn = styled.button`
   align-items: center;
 `;
 
+export const AddMeeting = styled.div`
+width: 60px;
+  height: 60px;
+  background-color: #ff6636;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 105px;
+  right: calc(50% - 172px);
+`;
