@@ -92,7 +92,7 @@ export default function VolunteerJoinedUI(props) {
             <S.VolunteerRegion>부산 금정구</S.VolunteerRegion>
           </S.VolunteerInfoBlock>
         </S.VolunteerBlock>
-        <S.VolunteerAddIcon>
+        <S.VolunteerAddIcon onClick={props.navigateTo('/volunteer/create_volunteer')}>
           <Image
             src="/images/volunteer/volunteer_add_icon.svg"
             alt="volunteer_add_icon"

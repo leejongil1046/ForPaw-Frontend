@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const WrapperContents = styled.div`
   width: 390px;
-  height: 717px;
+  height: auto;
 
   margin: 0 auto;
 `;
@@ -112,6 +112,12 @@ export const NextButtonBlock = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 61px;
+`;
+
+export const Blank = styled.div`
+  width: 390px;
+  height: 70px;
+  background-color: white;
 `;
 
 export const NextButtonItem = styled.button`

@@ -187,10 +187,6 @@ export const SelectCity = styled.select`
     border: 2px solid #BEA597;
     outline: none;
   }
-  ::placeholder{
-    color: #BEA597;
-    font-size: 16px;
-  }
 
   option {
     background-color: #FEF8F2;

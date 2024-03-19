@@ -52,6 +52,7 @@ export default function RegularMeetingUI() {
             </S.NextButtonBlock>
           </S.MeetingInfoContainer>
         </S.WrapperMeetingInfo>
+        <S.Blank />
       </S.WrapperContents>
     </>
   )
