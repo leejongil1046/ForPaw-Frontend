@@ -12,6 +12,7 @@ export const WrapperNavigation = styled.div`
   background-color: white;
   position: relative;
   z-index: 10;
+  filter: ${(props) => (props.active ? "brightness(0.8)" : "brightness(1.0)")};
 `;
 
 export const NavigationIconContainer = styled.div`

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import VolunteerDetailHeaderUI from "./VolunteerDetailHeader.presenter"
 
-export default function VolunteerDetailHeader() {
+export default function VolunteerDetailHeader(props) {
   const router = useRouter();
 
   const PrevPage = () => {
@@ -15,14 +15,18 @@ export default function VolunteerDetailHeader() {
       return "공지사항"
     } else {
       return ""; // 기본값 혹은 다른 경로에 대한 타이틀 설정
-    } 
+    }
   };
 
   const title = getTitleByPath(router.pathname);
 
-  return(
+  return (
     <>
-      <VolunteerDetailHeaderUI title={title} PrevPage={PrevPage} />
+      <VolunteerDetailHeaderUI
+        isJoinedClikced={props.isJoinedClikced}
+        title={title}
+        PrevPage={PrevPage}
+      />
     </>
   )
 }

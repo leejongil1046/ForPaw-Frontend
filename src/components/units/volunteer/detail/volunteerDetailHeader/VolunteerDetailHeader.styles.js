@@ -5,6 +5,7 @@ export const WrapperHeader = styled.div`
   height: 95px;
   background-color: white;
   margin: 0 auto;
+  filter: ${(props) => (props.active ? "brightness(0.8)" : "brightness(1.0)")};
 `;
 
 export const Header = styled.div`

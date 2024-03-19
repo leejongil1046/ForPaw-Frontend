@@ -85,6 +85,15 @@ export default function RegularMeetingsUI(props) {
               </S.MeetingDetailContainer>
             ))}
           </S.WrapperMeetingDetail>
+          <S.AddMeeting>
+            <Image
+              src="/images/volunteer/volunteer_add_icon.svg"
+              alt="volunteer_add_icon"
+              width={28}
+              height={28}
+              priority={true}
+            />
+          </S.AddMeeting>
         </S.Container>
       </S.WrapperContents>
     </>

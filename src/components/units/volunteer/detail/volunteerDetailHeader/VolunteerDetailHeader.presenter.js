@@ -4,7 +4,9 @@ import Image from "next/image";
 export default function VolunteerDetailHeaderUI(props) {
   return (
     <>
-      <S.WrapperHeader>
+      <S.WrapperHeader
+        active={props.isJoinedClikced}
+      >
         <S.Header>
           <S.LeftArrowTitleContainer onClick={props.PrevPage}>
             <Image

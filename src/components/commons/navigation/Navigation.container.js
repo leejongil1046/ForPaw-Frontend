@@ -2,7 +2,7 @@
 import NavigationUI from "./Navigation.present";
 import { useRouter } from "next/router";
 
-export default function Navigation() {
+export default function Navigation(props) {
   const router = useRouter();
 
   // 페이지 이동을 처리하는 함수
@@ -14,9 +14,8 @@ export default function Navigation() {
     // 아이콘 활성화 조건을 정확한 경로 일치로 변경
     const isActive = router.pathname.startsWith(`/${iconName}`) ? true : false;
 
-    return `/images/navigation/${iconName}_icon${
-      isActive ? "_active" : ""
-    }.svg`;
+    return `/images/navigation/${iconName}_icon${isActive ? "_active" : ""
+      }.svg`;
   };
 
   // 각 아이콘에 해당하는 경로
@@ -31,6 +30,7 @@ export default function Navigation() {
   // NavigationUI 컴포넌트로 props를 통해 함수 전달
   return (
     <NavigationUI
+      isJoinedClikced={props.isJoinedClikced}
       navigateTo={navigateTo}
       getIconSrc={getIconSrc}
       paths={paths}
