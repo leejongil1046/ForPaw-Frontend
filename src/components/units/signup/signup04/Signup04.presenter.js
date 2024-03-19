@@ -23,7 +23,7 @@ export default function SignUpUI04(props) {
                       src="/images/signup/add_profile.svg"
                       alt="add_profile"
                       width={28}
-                      height={25}
+                      height={28}
                     />
                   </S.SetProfileItem>
                 </S.SetProfileBlock>
