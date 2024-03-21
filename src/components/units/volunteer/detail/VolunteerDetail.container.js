@@ -11,12 +11,21 @@ export default function VolunteerDetail() {
 
   // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
-  const [isJoined, setIsJoined] = useState(false);
+  //가입 여부에서 클릭 상태 확인
   const [isJoinedClikced, setIsJoinedClicked] = useState(false);
 
+  //추천모임에서 온 사람인지 아니면 내 모임에서 온사람인지 판단
+  const status = router.query.name;
+
+  //클릭을 하였을 떄 멤버가 아닌 회원은 막는 기능
   const navigateTo = (path) => () => {
-    if (isJoined === true) {
-      router.push(path);
+    if (status === 'member') {
+      router.push({
+        pathname: path,
+        query: {
+          name: 'member'
+        }
+      });
     } else {
       setIsJoinedClicked(true);
       setTimeout(() => {
@@ -25,13 +34,18 @@ export default function VolunteerDetail() {
     }
   }
 
-  const handleJoined = () => {
-    setIsJoined(true)
-  }
-
+  //일반유저 status를 member로 바꿔주는 기능
+  const ChangeStatus = (path) => () => {
+    router.push({
+      pathname: path,
+      query: {
+        name: 'member'
+      }
+    });
+  };
 
   const handleAnnouncementClick = (index) => {
-    if (isJoined === true) {
+    if (status === 'member') {
       // 클릭된 공지사항의 인덱스를 설정
       setClickedIndex(index === clickedIndex ? -1 : index);
 
@@ -39,9 +53,7 @@ export default function VolunteerDetail() {
       setTimeout(() => {
         setClickedIndex(-1);
       }, 2000);
-    } else {
-      
-    }
+    } 
   };
 
   const Announcements = [
@@ -109,7 +121,7 @@ export default function VolunteerDetail() {
 
   return (
     <>
-      <VolunteerDetailHeader 
+      <VolunteerDetailHeader
         isJoinedClikced={isJoinedClikced}
       />
       <VolunteerDetailUI
@@ -118,11 +130,11 @@ export default function VolunteerDetail() {
         MeetingInfos={MeetingInfos}
         clickedIndex={clickedIndex}
         handleAnnouncementClick={handleAnnouncementClick}
-        isJoined={isJoined}
         isJoinedClikced={isJoinedClikced}
-        handleJoined={handleJoined}
+        ChangeStatus={ChangeStatus}
+        status={status}
       />
-      <Navigation 
+      <Navigation
         isJoinedClikced={isJoinedClikced}
       />
     </>

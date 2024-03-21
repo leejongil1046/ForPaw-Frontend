@@ -7,7 +7,15 @@ import { useRouter } from "next/router";
 export default function VolunteerJoined() {
   const router = useRouter();
 
-  const navigateTo = (path) => () => router.push(path);
+  const navigateTo = (path) => () => {
+    router.push({
+      pathname: path,
+      query: {
+        name: 'member'
+      }
+    });
+  };
+
   return (
     <>
       <Headers />

@@ -9,6 +9,8 @@ export default function Announcements() {
   const router = useRouter();
   const navigateTo = (path) => () => router.push(path);
 
+  const status = router.query.name;
+
   // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
 
@@ -87,6 +89,7 @@ export default function Announcements() {
         Announcements={Announcements}
         clickedIndex={clickedIndex}
         handleAnnouncementClick={handleAnnouncementClick}
+        status={status}
       />
       <Navigation />
     </>
