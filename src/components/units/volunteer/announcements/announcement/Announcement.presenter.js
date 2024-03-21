@@ -1,7 +1,7 @@
 import * as S from "./Announcement.styles";
 import Image from "next/image";
 
-export default function AnnouncementUI() {
+export default function AnnouncementUI(props) {
   return (
     <>
       <S.WrapperContents>
@@ -56,14 +56,7 @@ export default function AnnouncementUI() {
                 </S.CommentMenuImg>
               </S.CommentText>
               <S.LikeBlock>
-                <S.LikeImg>
-                  <Image
-                    src="/images/volunteer/announcement/comment_like_icon.svg"
-                    alt="comment_like_icon"
-                    width={30}
-                    height={30}
-                  />
-                </S.LikeImg>
+                <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                 <S.LikeText>
                   좋아요
                 </S.LikeText>
@@ -98,14 +91,7 @@ export default function AnnouncementUI() {
                 </S.ReplyMenuImg>
               </S.CommentText>
               <S.LikeBlock>
-                <S.LikeImg>
-                  <Image
-                    src="/images/volunteer/announcement/comment_active_like_icon.svg"
-                    alt="comment_like_icon"
-                    width={30}
-                    height={30}
-                  />
-                </S.LikeImg>
+                <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                 <S.LikeText>
                   좋아요
                 </S.LikeText>
