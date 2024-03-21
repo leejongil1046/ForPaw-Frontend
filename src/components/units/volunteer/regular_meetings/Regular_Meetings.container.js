@@ -9,6 +9,7 @@ export default function RegularMeetings() {
   const router = useRouter();
   const navigateTo = (path) => () => router.push(path);
 
+  const status = router.query.name;
 
   const MeetingInfos = [
     {
@@ -94,6 +95,7 @@ export default function RegularMeetings() {
       <RegularMeetingsUI
         navigateTo={navigateTo}
         MeetingInfos={MeetingInfos}
+        status={status}
       />
       <Navigation />
     </>

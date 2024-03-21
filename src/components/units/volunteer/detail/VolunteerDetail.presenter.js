@@ -241,10 +241,9 @@ export default function VolunteerDetailUI(props) {
         </S.MemberContainer>
       </S.WrapperContents>
       <S.NextButtonBlock
-        style={{ backgroundColor: props.isJoined ? "#240D05" : "#FF6636" }}
-        onClick={props.handleJoined}
+        style={{ backgroundColor: props.status == 'member' ? "#240D05" : "#FF6636" }}
       >
-        <S.NextButtonItem>{props.isJoined ? "채팅방 바로가기" : "가입하기"}</S.NextButtonItem>
+        <S.NextButtonItem onClick={props.ChangeStatus('/volunteer/detail')}>{props.status === "member" ? "채팅방 입장하기" : "가입하기"}</S.NextButtonItem>
       </S.NextButtonBlock>
     </>
   )

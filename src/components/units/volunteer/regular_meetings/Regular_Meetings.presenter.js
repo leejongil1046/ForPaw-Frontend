@@ -85,7 +85,7 @@ export default function RegularMeetingsUI(props) {
               </S.MeetingDetailContainer>
             ))}
           </S.WrapperMeetingDetail>
-          <S.AddMeeting>
+          <S.AddMeeting style={{visibility: props.status == 'member' ? "hidden" : "visible"}}>
             <Image
               src="/images/volunteer/volunteer_add_icon.svg"
               alt="volunteer_add_icon"

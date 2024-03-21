@@ -128,6 +128,7 @@ export const AddAnnouncement = styled.div`
   border-radius: 50%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  visibility: hidden;
 
   display: flex;
   flex-direction: row;

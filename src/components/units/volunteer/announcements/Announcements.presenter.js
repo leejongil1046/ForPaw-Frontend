@@ -37,7 +37,7 @@ export default function AnnouncementsUI(props) {
               </S.AnnouncementItem>
             </S.AnnouncementBlock>
           ))}
-          <S.AddAnnouncement>
+          <S.AddAnnouncement style={{visibility: props.status == 'member' ? "hidden" : "visible"}}>
             <Image
               src="/images/volunteer/volunteer_add_icon.svg"
               alt="volunteer_add_icon"
