@@ -13,9 +13,18 @@ export default function VolunteerDetail() {
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
   //가입 여부에서 클릭 상태 확인
   const [isJoinedClikced, setIsJoinedClicked] = useState(false);
-
   //추천모임에서 온 사람인지 아니면 내 모임에서 온사람인지 판단
   const status = router.query.name;
+  //메뉴를 클릭했는가 판단
+  const [isMenuClicked, setIsMenuClicked] =useState(false);
+
+  const handleMenuClick = () => {
+    setIsMenuClicked(true);
+  };
+
+  const handleOutsideMenuClick = () => {
+    setIsMenuClicked(false);
+  };
 
   //클릭을 하였을 떄 멤버가 아닌 회원은 막는 기능
   const navigateTo = (path) => () => {
@@ -119,10 +128,41 @@ export default function VolunteerDetail() {
     },
   ];
 
+  const members = [
+    {
+      id: 1,
+      name: "김포포",
+      status: "관리자"
+    },
+    {
+      id: 2,
+      name: "가나다라마바사",
+      status: "매니저"
+    },
+    {
+      id: 3,
+      name: "프로봉사러",
+      status: "회원"
+    },
+    {
+      id: 4,
+      name: "김포포",
+      status: "회원"
+    },
+    {
+      id: 5,
+      name: "김포포",
+      status: "회원"
+    },
+  ];
+
   return (
-    <>
+    <div style={{zIndex: "0", position: "relative"}}>
       <VolunteerDetailHeader
         isJoinedClikced={isJoinedClikced}
+        isMenuClicked={isMenuClicked}
+        handleMenuClick={handleMenuClick}
+        handleOutsideMenuClick={handleOutsideMenuClick}
       />
       <VolunteerDetailUI
         navigateTo={navigateTo}
@@ -133,10 +173,12 @@ export default function VolunteerDetail() {
         isJoinedClikced={isJoinedClikced}
         ChangeStatus={ChangeStatus}
         status={status}
+        members={members}
+        handleOutsideMenuClick={handleOutsideMenuClick}
       />
       <Navigation
         isJoinedClikced={isJoinedClikced}
       />
-    </>
+    </div>
   )
 }

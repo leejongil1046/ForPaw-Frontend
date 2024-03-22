@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AnnouncementUI(props) {
   return (
     <>
-      <S.WrapperContents>
+      <S.WrapperContents onClick={props.handleOutsideMenuClick}>
         <S.AnnouncementContainer>
           <S.AnnouncementTitle>
             공지사항 타이틀을 입력해주세요 최대 두줄 정도로 넘으면..처리
@@ -26,78 +26,82 @@ export default function AnnouncementUI(props) {
         </S.AnnouncementContainer>
         <S.Boundary />
         <S.CommentContainer>
-          <S.Comments>
-            <S.CommentBlock>
-              <S.UserInfoItems>
-                <S.UserImgbox>
-                  <Image
-                    src="/images/volunteer/announcement/user_icon.svg"
-                    alt="member_icon"
-                    width={40}
-                    height={40}
-                    priority={true}
-                  />
-                </S.UserImgbox>
-                <S.CommentUser>
-                  <S.UserName>닉네임</S.UserName>
-                  <S.CommentTime>지역  4시간전</S.CommentTime>
-                </S.CommentUser>
-              </S.UserInfoItems>
-              <S.CommentText>
-                <S.Comment>댓글 내용을 입력해주세요.</S.Comment>
-                <S.CommentMenuImg>
-                  <Image
-                    src="/images/header/menu_icon.svg"
-                    alt="menu_icon"
-                    width={30}
-                    height={30}
-                    priority={true}
-                  />
-                </S.CommentMenuImg>
-              </S.CommentText>
-              <S.LikeBlock>
-                <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
-                <S.LikeText>
-                  좋아요
-                </S.LikeText>
-              </S.LikeBlock>
-            </S.CommentBlock>
-            <S.ReplyBlock>
-              <S.UserInfoItems>
-                <S.UserImgbox>
-                  <Image
-                    src="/images/volunteer/announcement/user_icon.svg"
-                    alt="member_icon"
-                    width={40}
-                    height={40}
-                    priority={true}
-                  />
-                </S.UserImgbox>
-                <S.ReplyUser>
-                  <S.UserName>닉네임</S.UserName>
-                  <S.CommentTime>지역  4시간전</S.CommentTime>
-                </S.ReplyUser>
-              </S.UserInfoItems>
-              <S.CommentText>
-                <S.Reply>댓글 내용을 입력해주세요.</S.Reply>
-                <S.ReplyMenuImg>
-                  <Image
-                    src="/images/header/menu_icon.svg"
-                    alt="menu_icon"
-                    width={30}
-                    height={30}
-                    priority={true}
-                  />
-                </S.ReplyMenuImg>
-              </S.CommentText>
-              <S.LikeBlock>
-                <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
-                <S.LikeText>
-                  좋아요
-                </S.LikeText>
-              </S.LikeBlock>
-            </S.ReplyBlock>
-          </S.Comments>
+          {props.initialComments.map((coment, index) => (
+            <S.Comments key={coment.id}>
+              <S.CommentBlock>
+                <S.UserInfoItems>
+                  <S.UserImgbox>
+                    <Image
+                      src="/images/volunteer/announcement/user_icon.svg"
+                      alt="member_icon"
+                      width={40}
+                      height={40}
+                      priority={true}
+                    />
+                  </S.UserImgbox>
+                  <S.CommentUser>
+                    <S.UserName>{coment.name}</S.UserName>
+                    <S.CommentTime>{coment.region} {coment.hours}</S.CommentTime>
+                  </S.CommentUser>
+                </S.UserInfoItems>
+                <S.CommentText>
+                  <S.Comment>{coment.text}</S.Comment>
+                  <S.CommentMenuImg>
+                    <Image
+                      src="/images/header/menu_icon.svg"
+                      alt="menu_icon"
+                      width={30}
+                      height={30}
+                      priority={true}
+                    />
+                  </S.CommentMenuImg>
+                </S.CommentText>
+                <S.LikeBlock>
+                  <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
+                  <S.LikeText>
+                    좋아요 
+                  </S.LikeText>
+                </S.LikeBlock>
+              </S.CommentBlock>
+              {coment.replys.map((reply, replyIndex) => (
+                <S.ReplyBlock key={reply.id}>
+                  <S.UserInfoItems>
+                    <S.UserImgbox>
+                      <Image
+                        src="/images/volunteer/announcement/user_icon.svg"
+                        alt="member_icon"
+                        width={40}
+                        height={40}
+                        priority={true}
+                      />
+                    </S.UserImgbox>
+                    <S.ReplyUser>
+                      <S.UserName>{reply.name}</S.UserName>
+                      <S.CommentTime>{reply.region}  {reply.hours}</S.CommentTime>
+                    </S.ReplyUser>
+                  </S.UserInfoItems>
+                  <S.CommentText>
+                    <S.Reply>{reply.text}</S.Reply>
+                    <S.ReplyMenuImg>
+                      <Image
+                        src="/images/header/menu_icon.svg"
+                        alt="menu_icon"
+                        width={30}
+                        height={30}
+                        priority={true}
+                      />
+                    </S.ReplyMenuImg>
+                  </S.CommentText>
+                  <S.LikeBlock>
+                    <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
+                    <S.LikeText>
+                      좋아요
+                    </S.LikeText>
+                  </S.LikeBlock>
+                </S.ReplyBlock>
+              ))}
+            </S.Comments>
+          ))}
         </S.CommentContainer>
         <S.Blank />
       </S.WrapperContents>

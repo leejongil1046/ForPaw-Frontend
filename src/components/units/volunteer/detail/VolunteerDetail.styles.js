@@ -381,6 +381,7 @@ export const MemberBox = styled.div`
   border: 1px solid #F6F2EE;
   border-radius: 28.5px;
   padding: 4px;
+  cursor: pointer;
 
   display: flex;
   flex-direction: row;
@@ -414,6 +415,7 @@ export const StatusBlock = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  visibility: visible;
 `;
 
 export const Status = styled.div`

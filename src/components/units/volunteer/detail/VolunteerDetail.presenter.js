@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function VolunteerDetailUI(props) {
   return (
-    <>
+    <div style={{zIndex: "1", position: "relative"}}>
       <S.Judge
         style={{ visibility: props.isJoinedClikced ? "visible" : "hidden" }}
       >
@@ -11,13 +11,14 @@ export default function VolunteerDetailUI(props) {
       </S.Judge>
       <S.WrapperContents
         active={props.isJoinedClikced}
+        onClick={props.handleOutsideMenuClick}
       >
         <S.VolunteerIntroContainer>
           <S.IntroMainImgBlock>
             <Image
               src="/images/volunteer/volunteerDetail/volunteer_main_image.svg"
               alt="volunteer_main_image"
-              width={343}
+              width={344}
               height={160}
               priority={true}
             />
@@ -85,7 +86,9 @@ export default function VolunteerDetailUI(props) {
           </S.MeetingTitleBlock>
           <S.WrapperMeetingDetail>
             {props.MeetingInfos.map((infos, index) => (
-              <S.MeetingDetailContainer key={infos.id}>
+              <S.MeetingDetailContainer
+                key={infos.id}
+              >
                 <S.MeetingDetailContentsBlock>
                   <S.DetailContentsDateBox>
                     <S.DetailDate>{infos.detailDate}</S.DetailDate>
@@ -169,74 +172,29 @@ export default function VolunteerDetailUI(props) {
           <S.MemberTitleBlock>
             <S.MemberTitle>회원목록</S.MemberTitle>
           </S.MemberTitleBlock>
-          <S.MemberListContainer>
-            <S.MemberBox>
-              <S.MemberIcon>
-                <Image
-                  src="/images/volunteer/volunteerDetail/member_icon.svg"
-                  alt="member_icon"
-                  width={49}
-                  height={49}
-                  priority={true}
-                />
-              </S.MemberIcon>
-              <S.MemberName>김포포</S.MemberName>
-              <S.StatusBlock>
-                <S.Status>관리자</S.Status>
-              </S.StatusBlock>
-            </S.MemberBox>
-            <S.MemberBox>
-              <S.MemberIcon>
-                <Image
-                  src="/images/volunteer/volunteerDetail/member_icon.svg"
-                  alt="member_icon"
-                  width={49}
-                  height={49}
-                  priority={true}
-                />
-              </S.MemberIcon>
-              <S.MemberName>가나다라마바사</S.MemberName>
-              <S.StatusBlock>
-                <S.Status style={{ backgroundColor: "#240D05" }}>매니저</S.Status>
-              </S.StatusBlock>
-            </S.MemberBox>
-            <S.MemberBox>
-              <S.MemberIcon>
-                <Image
-                  src="/images/volunteer/volunteerDetail/member_icon.svg"
-                  alt="member_icon"
-                  width={49}
-                  height={49}
-                  priority={true}
-                />
-              </S.MemberIcon>
-              <S.MemberName>프로 봉사러</S.MemberName>
-            </S.MemberBox>
-            <S.MemberBox>
-              <S.MemberIcon>
-                <Image
-                  src="/images/volunteer/volunteerDetail/member_icon.svg"
-                  alt="member_icon"
-                  width={49}
-                  height={49}
-                  priority={true}
-                />
-              </S.MemberIcon>
-              <S.MemberName>김포포</S.MemberName>
-            </S.MemberBox>
-            <S.MemberBox>
-              <S.MemberIcon>
-                <Image
-                  src="/images/volunteer/volunteerDetail/member_icon.svg"
-                  alt="member_icon"
-                  width={49}
-                  height={49}
-                  priority={true}
-                />
-              </S.MemberIcon>
-              <S.MemberName>김포포</S.MemberName>
-            </S.MemberBox>
-          </S.MemberListContainer>
+          {props.members.map((infos, index) => (
+            <S.MemberListContainer
+              key={infos.id}
+            >
+              <S.MemberBox
+                onClick={props.navigateTo('/volunteer/detail/regular_meetings/regular_meeting')}
+              >
+                <S.MemberIcon>
+                  <Image
+                    src="/images/volunteer/volunteerDetail/member_icon.svg"
+                    alt="member_icon"
+                    width={49}
+                    height={49}
+                    priority={true}
+                  />
+                </S.MemberIcon>
+                <S.MemberName>{infos.name}</S.MemberName>
+                <S.StatusBlock style={{visibility: infos.status == "회원" ? "hidden" : "visible"}}>
+                  <S.Status style={{backgroundColor: infos.status == "관리자" ? "#FF6636" : "#240D05"}}>{infos.status}</S.Status>
+                </S.StatusBlock>
+              </S.MemberBox>
+            </S.MemberListContainer>
+          ))}
           <S.Blank />
         </S.MemberContainer>
       </S.WrapperContents>
@@ -245,6 +203,6 @@ export default function VolunteerDetailUI(props) {
       >
         <S.NextButtonItem onClick={props.ChangeStatus('/volunteer/detail')}>{props.status === "member" ? "채팅방 입장하기" : "가입하기"}</S.NextButtonItem>
       </S.NextButtonBlock>
-    </>
+    </div>
   )
 }
