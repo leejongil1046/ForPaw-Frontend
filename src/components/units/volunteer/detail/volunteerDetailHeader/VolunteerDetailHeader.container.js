@@ -1,11 +1,17 @@
 import { useRouter } from "next/router"
 import VolunteerDetailHeaderUI from "./VolunteerDetailHeader.presenter"
+import { useState } from "react";
 
 export default function VolunteerDetailHeader(props) {
   const router = useRouter();
+  const status = router.query.name;
 
   const PrevPage = () => {
-    router.back();
+    if (status == 'member' && router.pathname === "/volunteer/detail") {
+      router.push("/volunteer/joined");
+    } else {
+      router.back();
+    }
   }
 
   const getTitleByPath = (pathname) => {
@@ -26,6 +32,9 @@ export default function VolunteerDetailHeader(props) {
         isJoinedClikced={props.isJoinedClikced}
         title={title}
         PrevPage={PrevPage}
+        isMenuClicked={props.isMenuClicked}
+        handleMenuClick={props.handleMenuClick}
+        handleOutsideMenuClick={props.handleOutsideMenuClick}
       />
     </>
   )
