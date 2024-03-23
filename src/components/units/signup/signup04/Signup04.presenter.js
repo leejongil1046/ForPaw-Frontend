@@ -30,11 +30,19 @@ export default function SignUpUI04(props) {
               </S.InfoContentProfileContainer>
               <S.InfoNickNameContainer>
                 <S.InfoTitleNickName>닉네임</S.InfoTitleNickName>
-                <S.SetNickName placeholder="닉네임" type="text" />
+                <S.SetNickName
+                  placeholder="닉네임"
+                  type="text"
+                  value={props.nickNameValue}
+                  onChange={props.handleNicknameValueChange}
+                />
               </S.InfoNickNameContainer>
               <S.CheckNickNameBlock>
-                <S.AvailableNickName>사용가능한 닉네임입니다.</S.AvailableNickName>
-                <S.CheckNickNameBtn>중복확인</S.CheckNickNameBtn>
+                <S.AvailableNickName
+                  active={props.isVisible}>
+                  사용가능한 닉네임입니다.
+                </S.AvailableNickName>
+                <S.CheckNickNameBtn onClick={props.handleCheckNickname}>중복확인</S.CheckNickNameBtn>
               </S.CheckNickNameBlock>
               <S.InfoActiveLocationContainer>
                 <S.InfoTitleActiveLocation>활동 지역 선택</S.InfoTitleActiveLocation>
@@ -53,25 +61,25 @@ export default function SignUpUI04(props) {
                   <S.SelectRegionItem1>
                     <option value="">구/군/시</option>
                   </S.SelectRegionItem1>
-                  <S.SelectArrow style={{top: "123px"}}>
-                  <Image
-                    src="/images/info/select_arrow_icon.svg"
-                    alt="select_arrow_icon"
-                    width={22}
-                    height={12}
-                  />
-                </S.SelectArrow>
+                  <S.SelectArrow style={{ top: "123px" }}>
+                    <Image
+                      src="/images/info/select_arrow_icon.svg"
+                      alt="select_arrow_icon"
+                      width={22}
+                      height={12}
+                    />
+                  </S.SelectArrow>
                   <S.SelectRegionItem2>
                     <option value="">동/읍/면</option>
                   </S.SelectRegionItem2>
-                  <S.SelectArrow style={{left: "120px", top: "123px"}}>
-                  <Image
-                    src="/images/info/select_arrow_icon.svg"
-                    alt="select_arrow_icon"
-                    width={22}
-                    height={12}
-                  />
-                </S.SelectArrow>
+                  <S.SelectArrow style={{ left: "120px", top: "123px" }}>
+                    <Image
+                      src="/images/info/select_arrow_icon.svg"
+                      alt="select_arrow_icon"
+                      width={22}
+                      height={12}
+                    />
+                  </S.SelectArrow>
                 </S.SelectRegionBlock>
               </S.InfoActiveLocationContainer>
               <S.NextButtonBlock>
