@@ -138,7 +138,7 @@ export const AvailableNickName = styled.p`
   height: 17px;
   font-size: 12px;
   color: #C6C6C6;
-  visibility: hidden;
+  visibility: ${(props) => (props.active ? "visible" : "hidden")}
 `;
 
 export const CheckNickNameBtn = styled.button`

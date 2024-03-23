@@ -11,6 +11,7 @@ export default function SignUp03() {
   const [confirmPassword, setConfirmPassword] = useState(""); // 비밀번호 확인 상태 추가
   const [isPasswordMatch, setIsPasswordMatch] = useState(false); // 비밀번호 일치 여부 상태 추가
   const [isVisible, setIsvisible] = useState(false); //비밀번호 input 여부 상태
+  const email = router.query.email;
 
   // 비밀번호 입력 시 상태 업데이트
   const handlePasswordChange = (e) => {
@@ -31,6 +32,7 @@ export default function SignUp03() {
     <>
       <SignUpUI03
         navigateTo={navigateTo}
+        email={email}
         password={password}
         confirmPassword={confirmPassword}
         isPasswordMatch={isPasswordMatch}

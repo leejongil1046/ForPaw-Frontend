@@ -5,14 +5,13 @@ import SignUpUI02 from "./Signup02.presenter";
 export default function SignUp02() {
   const router = useRouter();
 
-  const navigateTo = (path) => () => router.push(path);
-
   const [emailIdValue, setEmailIdValue] = useState(""); //이메일 id입력을 받을 값
   const [selectedOption, setSelectedOption] = useState(""); // select의 값을 찾아내는 함수
   const [isEmailAvailable, setIsEmailAvailable] = useState(false);  //이메일 사용가능 여부
   const [isVisible, setIsvisible] = useState(false);
   const [timer, setTimer] = useState(80); // 타이머 초 초기값
   const [timerId, setTimerId] = useState(null); // 타이머 인터벌 ID
+  const fullId = `${emailIdValue}@${selectedOption}`;
 
   const handleEmailIdValueChange = (e) => {
     setEmailIdValue(e.target.value);
@@ -48,6 +47,17 @@ export default function SignUp02() {
   useEffect(() => {
     StartTimer();
   }, [isEmailAvailable]);
+
+  const navigateTo = (path) => () => {
+    router.push({
+      pathname: path,
+      query: {
+        email: `${fullId}` 
+      },
+    },
+      `${path}`
+    );
+  };
 
   return (
     <>

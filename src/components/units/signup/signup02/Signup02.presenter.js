@@ -21,7 +21,12 @@ export default function SignUpUI02(props) {
                 이메일
               </S.EmailTitle>
               <S.EmailBlock>
-                <S.EmailItem placeholder="이메일" type="email" value={props.emailIdValue} onChange={props.handleEmailIdValueChange} />
+                <S.EmailItem
+                  placeholder="이메일"
+                  type="email"
+                  value={props.emailIdValue}
+                  onChange={props.handleEmailIdValueChange}
+                />
                 <S.AddressIcon>@</S.AddressIcon>
                 <S.SelectAddress value={props.selectedOption} onChange={props.handleSelectOptionChange}>
                   <option value="">직접입력</option>

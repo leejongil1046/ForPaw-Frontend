@@ -16,7 +16,12 @@ export default function SignUpUI01(props) {
               <S.InfoTitleItem>
                 이름을 입력해주세요
               </S.InfoTitleItem>
-              <S.InfoNameItem type="text" placeholder="홍길동" />
+              <S.InfoNameItem
+                type="text"
+                placeholder="홍길동"
+                value={props.nameValue}
+                onChange={props.handleNameValueChange}
+              />
               <S.NextButtonBlock>
                 <S.NextButtonItem onClick={props.navigateTo("/login/signup/02")}>
                   다음

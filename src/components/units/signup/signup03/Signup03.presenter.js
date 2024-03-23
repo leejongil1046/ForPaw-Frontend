@@ -18,7 +18,7 @@ export default function SignUpUI03(props) {
               <S.InfoContentsBlock>
                 <S.InfoTitleEmail>이메일</S.InfoTitleEmail>
                 <S.CheckEmail>
-                  <S.ShowEmail>sadadaw@gmail.com</S.ShowEmail>
+                  <S.ShowEmail>{props.email}</S.ShowEmail>
                 </S.CheckEmail>
               </S.InfoContentsBlock>
               <S.InfoContentsBlock>
