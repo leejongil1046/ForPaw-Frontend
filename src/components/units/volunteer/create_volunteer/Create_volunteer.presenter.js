@@ -43,26 +43,26 @@ export default function CreateVolunteerUI() {
                 <option value="">구/군/시</option>
               </S.Select>
               <S.Arrow2Img>
-              <Image
-                src="/images/info/select_arrow_icon.svg"
-                alt="select_arrow_icon"
-                width={22}
-                height={12}
-              />
-            </S.Arrow2Img>
+                <Image
+                  src="/images/info/select_arrow_icon.svg"
+                  alt="select_arrow_icon"
+                  width={22}
+                  height={12}
+                />
+              </S.Arrow2Img>
             </S.SmallSelectBlock>
             <S.SmallSelectBlock>
               <S.Select title="build" defaultValue="">
                 <option value="">동/읍/면</option>
               </S.Select>
               <S.Arrow2Img>
-              <Image
-                src="/images/info/select_arrow_icon.svg"
-                alt="select_arrow_icon"
-                width={22}
-                height={12}
-              />
-            </S.Arrow2Img>
+                <Image
+                  src="/images/info/select_arrow_icon.svg"
+                  alt="select_arrow_icon"
+                  width={22}
+                  height={12}
+                />
+              </S.Arrow2Img>
             </S.SmallSelectBlock>
           </S.SmallSelectWrap>
           <S.TitleBlock>

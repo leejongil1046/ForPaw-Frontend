@@ -109,36 +109,48 @@ export const AddressIcon = styled.span`
     align-items: center;
 `;
 
-export const SelectAddress = styled.select`
+export const SelectAddressBlock = styled.div`
   width: 144px;
   height: 60px;
+  border-radius: 10px; 
   background-color: #FEF8F2;
+
+  position: relative;
+
+  z-index: 1;
+`;
+
+export const SelectAddress = styled.select`
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
   border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
   color: #BEA597;
   cursor: pointer;
   font-size: 16px;
+  position: absolute;
+
+  z-index: 1;
 
   :focus{
     border: 2px solid #BEA597;
     outline: none;
-    font-size: 16px;
-  }
-  ::placeholder{
-    color: #BEA597;
-    font-size: 16px;
   }
 
   option {
     background-color: #FEF8F2;
-    color: #BEA597;
+    color: black;
+  }
+
+  ::-ms-expand{
+    display:none;/*for IE10,11*/
   }
 
   -webkit-appearance: none; /* 크롬, 사파리 */
   -moz-appearance: none; /* 파이어폭스 */
   appearance: none; /* 표준 */
-
 `;
 
 export const SmallSelectArrow = styled.div`
@@ -149,8 +161,9 @@ export const SmallSelectArrow = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 300px;
-  z-index: 2;
+  left: 105px;
+  top: 18px;
+  z-index: 0;
 `;
 
 export const CheckEmailBlock = styled.div`

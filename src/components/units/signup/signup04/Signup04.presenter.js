@@ -46,40 +46,46 @@ export default function SignUpUI04(props) {
               </S.CheckNickNameBlock>
               <S.InfoActiveLocationContainer>
                 <S.InfoTitleActiveLocation>활동 지역 선택</S.InfoTitleActiveLocation>
-                <S.SelectCity>
-                  <option value="">시/도 선택</option>
-                </S.SelectCity>
-                <S.SelectArrow>
-                  <Image
-                    src="/images/info/select_arrow_icon.svg"
-                    alt="select_arrow_icon"
-                    width={22}
-                    height={12}
-                  />
-                </S.SelectArrow>
+                <S.BigSelectWrap>
+                  <S.Select title="town" defaultValue="">
+                    <option value="">시/도 선택</option>
+                  </S.Select>
+                  <S.SelectArrow>
+                    <Image
+                      src="/images/info/select_arrow_icon.svg"
+                      alt="select_arrow_icon"
+                      width={22}
+                      height={12}
+                    />
+                  </S.SelectArrow>
+                </S.BigSelectWrap>
                 <S.SelectRegionBlock>
-                  <S.SelectRegionItem1>
-                    <option value="">구/군/시</option>
-                  </S.SelectRegionItem1>
-                  <S.SelectArrow style={{ top: "123px" }}>
-                    <Image
-                      src="/images/info/select_arrow_icon.svg"
-                      alt="select_arrow_icon"
-                      width={22}
-                      height={12}
-                    />
-                  </S.SelectArrow>
-                  <S.SelectRegionItem2>
-                    <option value="">동/읍/면</option>
-                  </S.SelectRegionItem2>
-                  <S.SelectArrow style={{ left: "120px", top: "123px" }}>
-                    <Image
-                      src="/images/info/select_arrow_icon.svg"
-                      alt="select_arrow_icon"
-                      width={22}
-                      height={12}
-                    />
-                  </S.SelectArrow>
+                  <S.SmallSelectBlock>
+                    <S.Select title="town" defaultValue="">
+                      <option value="">구/군/시</option>
+                    </S.Select>
+                    <S.Arrow2Img>
+                      <Image
+                        src="/images/info/select_arrow_icon.svg"
+                        alt="select_arrow_icon"
+                        width={22}
+                        height={12}
+                      />
+                    </S.Arrow2Img>
+                  </S.SmallSelectBlock>
+                  <S.SmallSelectBlock>
+                    <S.Select title="bilud" defaultValue="">
+                      <option value="">동/읍/면</option>
+                    </S.Select>
+                    <S.Arrow2Img>
+                      <Image
+                        src="/images/info/select_arrow_icon.svg"
+                        alt="select_arrow_icon"
+                        width={22}
+                        height={12}
+                      />
+                    </S.Arrow2Img>
+                  </S.SmallSelectBlock>
                 </S.SelectRegionBlock>
               </S.InfoActiveLocationContainer>
               <S.NextButtonBlock>
