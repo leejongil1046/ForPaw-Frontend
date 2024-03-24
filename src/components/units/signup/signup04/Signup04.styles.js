@@ -171,17 +171,29 @@ export const InfoTitleActiveLocation = styled.div`
   font-weight: 600; 
 `;
 
-export const SelectCity = styled.select`
-  width: 100%;
+export const BigSelectWrap = styled.div`
+  width: 344px;
   height: 60px;
-  font-size: 16px;
   background-color: #FEF8F2;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 8px;
+`;
+
+export const Select = styled.select`
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: transparent;
   border: 2px solid transparent;
   border-radius: 10px;
   padding-left: 15px;
   color: #BEA597;
   cursor: pointer;
-  margin-top: 8px;
+  position: absolute;
+
+  z-index: 1;
+  
 
   :focus{
     border: 2px solid #BEA597;
@@ -206,84 +218,47 @@ export const SelectArrow = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 300px;
-  top: 53px;
+  left: 305px;
+  top: 18px;
+
+  position: absolute;
+  z-index: 0;
 `;
 
 export const SelectRegionBlock = styled.div`
-  width: 100%;
+  margin-top: 8px;
+  width: 344px;
   height: 60px;
-  font-size: 16px;
+  
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 16px;
+`;
+
+export const SmallSelectBlock = styled.div`
+  width: 164px;
+  height: 60px;
+
+  background-color: #FEF8F2;
+  border-radius: 10px;
+  position: relative;
+
+  z-index: 1;
+`;
+
+export const Arrow2Img = styled.div`
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-top: 8px;
-`;
-
-export const SelectRegionItem1 = styled.select`
-  width: 164px;
-  height: 100%;
-  font-size: 16px;
-  background-color: #FEF8F2;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  padding-left: 15px;
-  color: #BEA597;
-  cursor: pointer;
-  margin-top: 8px;
-
-  :focus{
-    border: 2px solid #BEA597;
-    outline: none;
-  }
-  ::placeholder{
-    color: #BEA597;
-    font-size: 16px;
-  }
-
-  option {
-    background-color: #FEF8F2;
-    color: black;
-  }
-
-  -webkit-appearance: none; /* 크롬, 사파리 */
-  -moz-appearance: none; /* 파이어폭스 */
-  appearance: none; /* 표준 */
-`;
-
-export const SelectRegionItem2 = styled.select`
-  margin-top: 8px;
-  width: 164px;
-  height: 100%;
-  font-size: 16px;
-  background-color: #FEF8F2;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  padding-left: 15px;
-  color: #BEA597;
-  cursor: pointer;
-  margin-top: 8px;
-
-  :focus{
-    border: 2px solid #BEA597;
-    outline: none;
-  }
-  ::placeholder{
-    color: #BEA597;
-    font-size: 16px;
-  }
-
-  option {
-    background-color: #FEF8F2;
-    color: black;
-  }
+  position: absolute;
+  left: 125px;
+  top: 19px;
   
-  -webkit-appearance: none; /* 크롬, 사파리 */
-  -moz-appearance: none; /* 파이어폭스 */
-  appearance: none; /* 표준 */
+  z-index: 0;
 `;
-
 /*버튼 css */
 export const NextButtonBlock = styled.div`
   width: 100%;
