@@ -78,15 +78,14 @@ export const BigSelectWrap = styled.div`
 export const Select = styled.select`
   width: 100%;
   height: 100%;
-  border: 0;
   background: transparent;
   font-size: 16px;
+  border: 2px solid transparent;
   border-radius: 10px;
   color: #BEA597;
   cursor: pointer;
   padding-left: 15px;
   position: absolute;
-  border: 2px solid transparent;
 
   z-index: 1;
  
@@ -113,6 +112,7 @@ export const Select = styled.select`
 export const Arrow1Img = styled.div`
   width: 25px;
   height: 25px;
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -152,7 +152,7 @@ export const Arrow2Img = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 130px;
+  left: 125px;
   top: 19px;
   
   z-index: 0;

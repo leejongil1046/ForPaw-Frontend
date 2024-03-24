@@ -28,19 +28,21 @@ export default function SignUpUI02(props) {
                   onChange={props.handleEmailIdValueChange}
                 />
                 <S.AddressIcon>@</S.AddressIcon>
-                <S.SelectAddress value={props.selectedOption} onChange={props.handleSelectOptionChange}>
-                  <option value="">직접입력</option>
-                  <option value="gmail.com">gmail.com</option>
-                  <option value="naver.com">naver.com</option>
-                </S.SelectAddress>
-                <S.SmallSelectArrow>
-                  <Image
-                    src="/images/signup/small_select_arrow_icon.svg"
-                    alt="small_select"
-                    width={15}
-                    height={15}
-                  />
-                </S.SmallSelectArrow>
+                <S.SelectAddressBlock>
+                  <S.SelectAddress value={props.selectedOption} onChange={props.handleSelectOptionChange}>
+                    <option value="">직접입력</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="naver.com">naver.com</option>
+                  </S.SelectAddress>
+                  <S.SmallSelectArrow>
+                    <Image
+                      src="/images/signup/small_select_arrow_icon.svg"
+                      alt="small_select"
+                      width={15}
+                      height={15}
+                    />
+                  </S.SmallSelectArrow>
+                </S.SelectAddressBlock>
               </S.EmailBlock>
               <S.CheckEmailBlock>
                 {props.isEmailAvailable ? (
