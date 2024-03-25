@@ -26,8 +26,8 @@ export default function AnnouncementUI(props) {
         </S.AnnouncementContainer>
         <S.Boundary />
         <S.CommentContainer>
-          {props.initialComments.map((coment, index) => (
-            <S.Comments key={coment.id}>
+          {props.comments.map((comment, index) => (
+            <S.Comments key={comment.id}>
               <S.CommentBlock>
                 <S.UserInfoItems>
                   <S.UserImgbox>
@@ -40,12 +40,12 @@ export default function AnnouncementUI(props) {
                     />
                   </S.UserImgbox>
                   <S.CommentUser>
-                    <S.UserName>{coment.name}</S.UserName>
-                    <S.CommentTime>{coment.region} {coment.hours}</S.CommentTime>
+                    <S.UserName>{comment.name}</S.UserName>
+                    <S.CommentTime>{comment.region} {comment.hours}</S.CommentTime>
                   </S.CommentUser>
                 </S.UserInfoItems>
                 <S.CommentText>
-                  <S.Comment>{coment.text}</S.Comment>
+                  <S.Comment>{comment.text}</S.Comment>
                   <S.CommentMenuImg>
                     <Image
                       src="/images/header/menu_icon.svg"
@@ -59,11 +59,14 @@ export default function AnnouncementUI(props) {
                 <S.LikeBlock>
                   <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                   <S.LikeText>
-                    좋아요 
+                    좋아요
                   </S.LikeText>
+                  <S.AddReplyText>
+                    답글 달기
+                  </S.AddReplyText>
                 </S.LikeBlock>
               </S.CommentBlock>
-              {coment.replys.map((reply, replyIndex) => (
+              {comment.replies.map((reply, replyIndex) => (
                 <S.ReplyBlock key={reply.id}>
                   <S.UserInfoItems>
                     <S.UserImgbox>
@@ -100,6 +103,7 @@ export default function AnnouncementUI(props) {
                   </S.LikeBlock>
                 </S.ReplyBlock>
               ))}
+              <S.ReplyInput placeholder="답글을 입력해주세요" type="text" />
             </S.Comments>
           ))}
         </S.CommentContainer>
@@ -116,7 +120,14 @@ export default function AnnouncementUI(props) {
               priority={true}
             />
           </S.OpenMenu>
-          <S.CommentInput placeholder="댓글을 입력해주세요!" type="text" />
+          <S.CommentInput
+            placeholder="댓글을 입력해주세요!"
+            type="text"
+            autoFocus
+            value={props.newComment}
+            onKeyDown={props.handleCommentSubmit}
+            onChange={props.handleCommentValue}
+          />
           <S.AddComment>
             <S.ArrowLine />
             <S.ArrowBlock />

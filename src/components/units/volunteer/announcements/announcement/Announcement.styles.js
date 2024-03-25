@@ -203,6 +203,38 @@ export const LikeText = styled.p`
   padding-top: 3px;
 `;
 
+export const AddReplyText = styled.p`
+  width: 44px;
+  height: 14px;
+  font-size: 12px;
+  letter-spacing: -0.4px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  padding-top: 3px;
+`;
+
+export const ReplyInput = styled.input`
+  width: 296px;
+  height: 30px;
+  background-color: black;
+  border: none;
+  border-radius: 22px;
+  background-color: #F6F6F6;
+  padding-left: 15px;
+  margin-top: 5px;
+ 
+
+  :focus{
+    outline: none;
+  }
+
+  ::placeholder{
+    color: #888888;
+    font-size: 14px;
+  }
+`;
+
 export const ReplyBlock = styled.div`
   margin-top: 24px;
   
