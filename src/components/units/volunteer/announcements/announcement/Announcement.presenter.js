@@ -4,7 +4,9 @@ import Image from "next/image";
 export default function AnnouncementUI(props) {
   return (
     <>
-      <S.WrapperContents onClick={props.handleOutsideMenuClick}>
+      <S.WrapperContents
+        onClick={props.handleOutsideMenuClick}
+      >
         <S.AnnouncementContainer>
           <S.AnnouncementTitle>
             공지사항 타이틀을 입력해주세요 최대 두줄 정도로 넘으면..처리
@@ -61,7 +63,7 @@ export default function AnnouncementUI(props) {
                   <S.LikeText>
                     좋아요
                   </S.LikeText>
-                  <S.AddReplyText>
+                  <S.AddReplyText onClick={props.handleJudegeReplyBtn}>
                     답글 달기
                   </S.AddReplyText>
                 </S.LikeBlock>
@@ -103,7 +105,6 @@ export default function AnnouncementUI(props) {
                   </S.LikeBlock>
                 </S.ReplyBlock>
               ))}
-              <S.ReplyInput placeholder="답글을 입력해주세요" type="text" />
             </S.Comments>
           ))}
         </S.CommentContainer>
@@ -120,15 +121,24 @@ export default function AnnouncementUI(props) {
               priority={true}
             />
           </S.OpenMenu>
-          <S.CommentInput
-            placeholder="댓글을 입력해주세요!"
-            type="text"
-            autoFocus
-            value={props.newComment}
-            onKeyDown={props.handleCommentSubmit}
-            onChange={props.handleCommentValue}
-          />
-          <S.AddComment>
+          <S.div style={{zIndex: props.isClickedReply ? "1" : "2"}}>
+            <S.CommentInput
+              autoFocus
+              placeholder="댓글을 입력해주세요"
+              type="text"
+              value={props.newComment}
+              onKeyDown={props.handleCommentSubmit}
+              onChange={props.handleCommentValue}
+            />
+          </S.div>
+          <S.div style={{zIndex: props.isClickedReply ? "2" : "1"}}>
+            <S.ReplyInput
+              autoFocus
+              placeholder="답글을 입력해주세요"
+              type="text"
+             /> 
+          </S.div>
+          <S.AddComment onClick={props.activeBtn}>
             <S.ArrowLine />
             <S.ArrowBlock />
           </S.AddComment>
