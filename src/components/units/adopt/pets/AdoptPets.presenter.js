@@ -6,11 +6,13 @@ export default function AdpotPetsUI(props) {
   return (
     <>
       <S.WrapperContents>
+        <S.AdoptPetMenuBlock>
+          <S.AdoptPetMenuDate>최근 날짜</S.AdoptPetMenuDate>
+          <S.AdoptPetMenuDogs>개</S.AdoptPetMenuDogs>
+          <S.AdoptPetMenuCats>고양이</S.AdoptPetMenuCats>
+        </S.AdoptPetMenuBlock>
         {props.pets.map((pet) => (
-          <S.AdoptPet
-            key={pet.id}
-            onClick={props.navigateTo(`/adopt/pets/detail`)}
-          >
+          <S.AdoptPet key={pet.id} onClick={props.navigateTo(`/adopt/detail`)}>
             <Image src={pet.imageSrc} alt={pet.name} width={344} height={344} />
             <S.AdoptLikeToggle>
               <Image
