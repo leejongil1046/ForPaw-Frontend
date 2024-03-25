@@ -13,10 +13,20 @@ export default function AdpotPetsUI(props) {
         </S.AdoptPetMenuBlock>
         {props.pets.map((pet) => (
           <S.AdoptPet key={pet.id} onClick={props.navigateTo(`/adopt/detail`)}>
-            <Image src={pet.imageSrc} alt={pet.name} width={344} height={344} />
+            <Image
+              src={pet.profileURL}
+              alt={pet.name}
+              width={344}
+              height={344}
+              priority
+            />
             <S.AdoptLikeToggle>
               <Image
-                src="/images/pets/like_icon_big.svg"
+                src={
+                  pet.isLike === true
+                    ? "/images/pets/like_icon_big_active.svg"
+                    : "/images/pets/like_icon_big.svg"
+                }
                 alt="like_icon_big"
                 width={32}
                 height={32}
@@ -26,16 +36,18 @@ export default function AdpotPetsUI(props) {
               <S.AdoptNameGender>
                 {pet.name}
                 <Image
-                  src={pet.genderIcon}
+                  src={
+                    pet.gender === "M"
+                      ? "/images/pets/male_icon_big.svg"
+                      : "/images/pets/female_icon_big.svg"
+                  }
                   alt="gender_icon"
                   width={24}
                   height={24}
                 />
               </S.AdoptNameGender>
-              <S.AdoptText>
-                {`사람을 좋아하는 사교성, 친화력 최고 ${pet.name}`}
-              </S.AdoptText>
-              <S.AdoptBirthAddress>{`${pet.age} ${pet.location}`}</S.AdoptBirthAddress>
+              <S.AdoptText>{`${pet.specialMark} ${pet.name}`}</S.AdoptText>
+              <S.AdoptBirthAddress>{`${pet.age} ${pet.region}`}</S.AdoptBirthAddress>
               <S.AdoptLikeBlock>
                 <S.AdoptLike>
                   <Image
@@ -45,7 +57,7 @@ export default function AdpotPetsUI(props) {
                     height={20}
                   />
                 </S.AdoptLike>
-                {pet.likeCount}
+                {pet.likeNum}
               </S.AdoptLikeBlock>
               <S.AdoptViewBlock>
                 <S.AdoptView>
@@ -56,7 +68,7 @@ export default function AdpotPetsUI(props) {
                     height={16}
                   />
                 </S.AdoptView>
-                {pet.commentCount}
+                {pet.inquiryNum}
               </S.AdoptViewBlock>
             </S.AdoptInfoBlock>
           </S.AdoptPet>
