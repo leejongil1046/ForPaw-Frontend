@@ -66,6 +66,8 @@ export const Boundary = styled.div`
 export const CommentContainer = styled.div`
   width: 390px;
   height: auto;
+  position: relative;
+  z-index: 0;
 
   display: flex;
   flex-direction: column;
@@ -178,6 +180,8 @@ export const LikeBlock = styled.div`
   margin-top: 3px;
   width: 100%; /*344px*/
   height: 30px;
+  position: relative;
+  z-index: 1;
 
   display: flex;
   flex-direction: row;
@@ -202,6 +206,18 @@ export const LikeText = styled.p`
 
   padding-top: 3px;
 `;
+
+export const AddReplyText = styled.p`
+  width: 44px;
+  height: 14px;
+  font-size: 12px;
+  letter-spacing: -0.4px;
+  margin-left: 5px;
+  cursor: pointer;
+
+  padding-top: 3px;
+`;
+
 
 export const ReplyBlock = styled.div`
   margin-top: 24px;
@@ -264,6 +280,8 @@ export const AddCommentBlock = styled.div`
   display: flex;
   flex-direction: row;
   gap: 12px;
+
+  position: relative;
 `;
 
 export const OpenMenu = styled.div`
@@ -279,12 +297,42 @@ export const OpenMenu = styled.div`
   align-items: center;
 `;
 
-export const CommentInput = styled.input`
+export const div = styled.div`
   width: 232px;
   height: 44px;
   border: none;
   border-radius: 22px;
   background-color: #F6F6F6;
+
+  left: 55px;
+
+  position: absolute;
+`;
+
+export const CommentInput = styled.input`
+  width: 232px;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  background-color: transparent;
+  padding-left: 15px;
+
+  :focus{
+    outline: none;
+  }
+
+  ::placeholder{
+    color: #888888;
+    font-size: 14px;
+  }
+`;
+
+export const ReplyInput = styled.input`
+  width: 232px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+  border-radius: 22px;
   padding-left: 15px;
 
   :focus{
@@ -303,7 +351,8 @@ export const AddComment = styled.div`
   border-radius: 50%;
   background-color: #240D05;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  left: 297px;
 
   display: flex;
   flex-direction: row;

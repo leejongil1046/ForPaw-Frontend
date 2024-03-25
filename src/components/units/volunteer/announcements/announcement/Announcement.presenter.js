@@ -4,7 +4,9 @@ import Image from "next/image";
 export default function AnnouncementUI(props) {
   return (
     <>
-      <S.WrapperContents onClick={props.handleOutsideMenuClick}>
+      <S.WrapperContents
+        onClick={props.handleOutsideMenuClick}
+      >
         <S.AnnouncementContainer>
           <S.AnnouncementTitle>
             공지사항 타이틀을 입력해주세요 최대 두줄 정도로 넘으면..처리
@@ -26,8 +28,8 @@ export default function AnnouncementUI(props) {
         </S.AnnouncementContainer>
         <S.Boundary />
         <S.CommentContainer>
-          {props.initialComments.map((coment, index) => (
-            <S.Comments key={coment.id}>
+          {props.comments.map((comment, index) => (
+            <S.Comments key={comment.id}>
               <S.CommentBlock>
                 <S.UserInfoItems>
                   <S.UserImgbox>
@@ -40,12 +42,12 @@ export default function AnnouncementUI(props) {
                     />
                   </S.UserImgbox>
                   <S.CommentUser>
-                    <S.UserName>{coment.name}</S.UserName>
-                    <S.CommentTime>{coment.region} {coment.hours}</S.CommentTime>
+                    <S.UserName>{comment.name}</S.UserName>
+                    <S.CommentTime>{comment.region} {comment.hours}</S.CommentTime>
                   </S.CommentUser>
                 </S.UserInfoItems>
                 <S.CommentText>
-                  <S.Comment>{coment.text}</S.Comment>
+                  <S.Comment>{comment.text}</S.Comment>
                   <S.CommentMenuImg>
                     <Image
                       src="/images/header/menu_icon.svg"
@@ -59,11 +61,14 @@ export default function AnnouncementUI(props) {
                 <S.LikeBlock>
                   <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                   <S.LikeText>
-                    좋아요 
+                    좋아요
                   </S.LikeText>
+                  <S.AddReplyText onClick={props.handleJudegeReplyBtn}>
+                    답글 달기
+                  </S.AddReplyText>
                 </S.LikeBlock>
               </S.CommentBlock>
-              {coment.replys.map((reply, replyIndex) => (
+              {comment.replies.map((reply, replyIndex) => (
                 <S.ReplyBlock key={reply.id}>
                   <S.UserInfoItems>
                     <S.UserImgbox>
@@ -116,8 +121,24 @@ export default function AnnouncementUI(props) {
               priority={true}
             />
           </S.OpenMenu>
-          <S.CommentInput placeholder="댓글을 입력해주세요!" type="text" />
-          <S.AddComment>
+          <S.div style={{zIndex: props.isClickedReply ? "1" : "2"}}>
+            <S.CommentInput
+              autoFocus
+              placeholder="댓글을 입력해주세요"
+              type="text"
+              value={props.newComment}
+              onKeyDown={props.handleCommentSubmit}
+              onChange={props.handleCommentValue}
+            />
+          </S.div>
+          <S.div style={{zIndex: props.isClickedReply ? "2" : "1"}}>
+            <S.ReplyInput
+              autoFocus
+              placeholder="답글을 입력해주세요"
+              type="text"
+             /> 
+          </S.div>
+          <S.AddComment onClick={props.activeBtn}>
             <S.ArrowLine />
             <S.ArrowBlock />
           </S.AddComment>
