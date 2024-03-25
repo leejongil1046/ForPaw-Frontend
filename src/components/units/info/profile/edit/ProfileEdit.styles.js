@@ -178,26 +178,22 @@ export const AreaSelectContainer = styled.div`
   position: relative;
 `;
 
-export const ProvinceCitySelect = styled.select`
+export const ProvinceSelect = styled.div`
   width: 342px;
   height: 60px;
+  line-height: 60px;
   background-color: #fef8f2;
-  border: 2px solid transparent;
+  border: ${(props) =>
+    props.isFocused ? "2px solid #bea597" : "2px solid transparent"};
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   padding-left: 12px;
   margin-top: 10px;
-  color: #bea597;
+  color: ${(props) => (props.isFocused ? "#bea597" : "#bea597")};
+  position: relative;
 
-  -webkit-appearance: none; /* 크롬, 사파리 */
-  -moz-appearance: none; /* 파이어폭스 */
-  appearance: none; /* 표준 */
-
-  :focus {
-    border: 2px solid #bea597;
-    color: #bea597;
-  }
+  /* :focus 스타일 대신 클릭 시 스타일 적용 */
 `;
 
 export const ProvinceArrowBlock = styled.div`
@@ -210,6 +206,41 @@ export const ProvinceArrowBlock = styled.div`
   position: absolute;
   top: 83px;
   left: 305px;
+`;
+
+export const ProvinceDropdown = styled.div`
+  position: absolute;
+  height: 120px;
+  top: 122px;
+  left: 4px;
+  width: 342px;
+  background-color: #fef8f2;
+  border: 2px solid #bea597;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  z-index: 10;
+  overflow-y: auto;
+
+  /* 스크롤 바 숨기기 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none; /* Firefox */
+`;
+
+export const ProvinceOption = styled.div`
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 12px;
+  font-size: 16px;
+  color: #bea597;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  :hover {
+    opacity: 0.5;
+  }
 `;
 
 export const DistrictSelectBlock = styled.div`

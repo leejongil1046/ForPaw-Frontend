@@ -54,10 +54,16 @@ export default function ProfileEditUI(props) {
             <S.EditTextBlock>
               <S.ProfileInfoLabel>활동 지역</S.ProfileInfoLabel>
             </S.EditTextBlock>
-            <S.ProvinceCitySelect>
-              <option>시/도 선택</option>
-            </S.ProvinceCitySelect>
-            <S.ProvinceArrowBlock>
+            <S.ProvinceSelect
+              isFocused={props.isFocused}
+              onClick={props.toggleProvinceDropdown}
+            >
+              {props.selectedProvince}
+            </S.ProvinceSelect>
+            <S.ProvinceArrowBlock
+              isFocused={props.isFocused}
+              onClick={props.toggleProvinceDropdown}
+            >
               <Image
                 src="/images/info/select_arrow_icon.svg"
                 alt="select_arrow_icon"
@@ -65,6 +71,18 @@ export default function ProfileEditUI(props) {
                 height={12}
               />
             </S.ProvinceArrowBlock>
+            {props.isProvinceDropdownOpen && (
+              <S.ProvinceDropdown>
+                {props.provinces.map((province, index) => (
+                  <S.ProvinceOption
+                    key={index}
+                    onClick={() => props.handleProvinceSelect(province)}
+                  >
+                    {province}
+                  </S.ProvinceOption>
+                ))}
+              </S.ProvinceDropdown>
+            )}
             <S.DistrictSelectBlock>
               <S.DistrictSelect>
                 <option>구/군/시</option>
