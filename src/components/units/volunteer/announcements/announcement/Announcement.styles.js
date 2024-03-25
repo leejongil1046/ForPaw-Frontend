@@ -10,6 +10,7 @@ export const WrapperContents = styled.div`
   margin: 0 auto;
   overflow-y: auto;
   background-color: white;
+  flex-shrink: 0;
 
   /* 스크롤 바 숨기기 */
   ::-webkit-scrollbar {
@@ -158,7 +159,7 @@ export const CommentText = styled.div`
 `;
 
 export const Comment = styled.p`
-  width: 230px;
+  width: 265px;
   height: auto;
   font-size: 16px;
   font-weight: 500;
@@ -172,7 +173,6 @@ export const Comment = styled.p`
 export const CommentMenuImg = styled.div`
   width: 30px;
   height: 30px;
-  margin-left: 36px;
   cursor: pointer;
 `;
 
@@ -233,7 +233,7 @@ export const ReplyUser = styled.div`
 `;
 
 export const Reply = styled.p`
-  width: 190px;
+  width: 215px;
   height: auto;
   font-size: 16px;
   font-weight: 500;
@@ -247,7 +247,7 @@ export const Reply = styled.p`
 export const ReplyMenuImg = styled.div`
   width: 30px;
   height: 30px;
-  margin-left: 28px;
+ 
   cursor: pointer;
 `;
 
@@ -381,4 +381,49 @@ export const ArrowLine = styled.div`
 
   position: absolute;
   right: 15px;
+`;
+
+//댓글 혹은 답글의 메뉴를 클릭했을 떄 수정하기 삭제하기가 나오게끔 하는 ui
+
+export const MenuBlock = styled.div`
+  width: 110px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  font-size: 17px;
+  right: 80px;
+  visibility: hidden;
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.10);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Edit = styled.p`
+  width: 100%;
+  height: 56px;
+  font-weight: 500;
+  color: black;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Delete = styled.p`
+  width: 100%;
+  height: 56px;
+  font-weight: 500;
+  color: #FF6636;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

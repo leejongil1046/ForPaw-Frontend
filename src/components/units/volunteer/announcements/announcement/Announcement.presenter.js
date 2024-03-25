@@ -4,9 +4,7 @@ import Image from "next/image";
 export default function AnnouncementUI(props) {
   return (
     <>
-      <S.WrapperContents
-        onClick={props.handleOutsideMenuClick}
-      >
+      <S.WrapperContents>
         <S.AnnouncementContainer>
           <S.AnnouncementTitle>
             공지사항 타이틀을 입력해주세요 최대 두줄 정도로 넘으면..처리
@@ -48,14 +46,21 @@ export default function AnnouncementUI(props) {
                 </S.UserInfoItems>
                 <S.CommentText>
                   <S.Comment>{comment.text}</S.Comment>
-                  <S.CommentMenuImg>
+                  <S.CommentMenuImg onClick={() => props.handleCommentMenuClick(comment.id)}>
                     <Image
+                      onClick={props.handleOutReplyMenu}
                       src="/images/header/menu_icon.svg"
                       alt="menu_icon"
                       width={30}
                       height={30}
                       priority={true}
                     />
+                    <S.MenuBlock
+                      style={{ visibility: props.isCommentMenuClicked && props.clickedCommentID === comment.id ? "visible" : "hidden" }}
+                    >
+                      <S.Edit>수정하기</S.Edit>
+                      <S.Delete>삭제하기</S.Delete>
+                    </S.MenuBlock>
                   </S.CommentMenuImg>
                 </S.CommentText>
                 <S.LikeBlock>
@@ -63,7 +68,7 @@ export default function AnnouncementUI(props) {
                   <S.LikeText>
                     좋아요
                   </S.LikeText>
-                  <S.AddReplyText onClick={props.handleJudegeReplyBtn}>
+                  <S.AddReplyText onClick={() => props.handleJudegeReplyBtn(comment.id, null)}>
                     답글 달기
                   </S.AddReplyText>
                 </S.LikeBlock>
@@ -87,14 +92,21 @@ export default function AnnouncementUI(props) {
                   </S.UserInfoItems>
                   <S.CommentText>
                     <S.Reply>{reply.text}</S.Reply>
-                    <S.ReplyMenuImg>
+                    <S.ReplyMenuImg onClick={() => props.handleReplyMenuClick(comment.id, reply.id)}>
                       <Image
+                        onClick={props.handleOutCommentMenu}
                         src="/images/header/menu_icon.svg"
                         alt="menu_icon"
                         width={30}
                         height={30}
                         priority={true}
                       />
+                      <S.MenuBlock
+                        style={{ visibility: props.isReplyMenuClicked && props.clickedReplyID === reply.id && props.selectedCommentID === comment.id ? "visible" : "hidden" }}
+                      >
+                        <S.Edit>수정하기</S.Edit>
+                        <S.Delete>삭제하기</S.Delete>
+                      </S.MenuBlock>
                     </S.ReplyMenuImg>
                   </S.CommentText>
                   <S.LikeBlock>
@@ -121,7 +133,7 @@ export default function AnnouncementUI(props) {
               priority={true}
             />
           </S.OpenMenu>
-          <S.div style={{zIndex: props.isClickedReply ? "1" : "2"}}>
+          <S.div style={{ zIndex: props.isClickedReply ? "1" : "2" }}>
             <S.CommentInput
               autoFocus
               placeholder="댓글을 입력해주세요"
@@ -131,12 +143,15 @@ export default function AnnouncementUI(props) {
               onChange={props.handleCommentValue}
             />
           </S.div>
-          <S.div style={{zIndex: props.isClickedReply ? "2" : "1"}}>
+          <S.div style={{ zIndex: props.isClickedReply ? "2" : "1" }}>
             <S.ReplyInput
               autoFocus
               placeholder="답글을 입력해주세요"
               type="text"
-             /> 
+              value={props.newReply}
+              onKeyDown={(e) => props.handleReplySubmit(e)}
+              onChange={props.handleReplyValue}
+            />
           </S.div>
           <S.AddComment onClick={props.activeBtn}>
             <S.ArrowLine />
