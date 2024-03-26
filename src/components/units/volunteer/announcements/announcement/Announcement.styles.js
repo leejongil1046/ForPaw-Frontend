@@ -178,7 +178,7 @@ export const CommentMenuImg = styled.div`
 
 export const LikeBlock = styled.div`
   margin-top: 3px;
-  width: 100%; /*344px*/
+  width: 230px; /*344px*/
   height: 30px;
   position: relative;
   z-index: 1;
@@ -437,7 +437,7 @@ export const MenuBlock = styled.div`
   position: relative;
   font-size: 17px;
   right: 80px;
-  visibility: hidden;
+  
 
   box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.10);
 
@@ -452,7 +452,6 @@ export const Edit = styled.p`
   height: 56px;
   font-weight: 500;
   color: black;
-
 
   display: flex;
   flex-direction: column;

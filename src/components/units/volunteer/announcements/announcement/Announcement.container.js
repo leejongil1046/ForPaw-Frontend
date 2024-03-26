@@ -9,8 +9,8 @@ export default function Announcement() {
   const [isCommentMenuClicked, setIsCommentMenuClicked] = useState(false);
   const [clickedCommentID, setClickedCommentID] = useState(null); // 클릭된 댓글의 ID를 관리합니다.
   const [isReplyMenuClicked, setIsReplyMenuClicked] = useState(false);
-  const [clickedReplyID, setClickedReplyID] = useState(null);
   const [selectedCommentID, setSelectedCommentID] = useState(null); // 클릭된 댓글의 ID를 관리합니다.
+  const [clickedReplyID, setClickedReplyID] = useState(null); // 클릭된 답글의 ID를 관리한다. 메뉴보이게끔 하는 용도
 
   //매뉴를 눌렀을 때 메뉴창이 나오도록 하는 기능
   const handleMenuClick = () => {
@@ -35,7 +35,11 @@ export default function Announcement() {
     setClickedReplyID(replyID);
     setSelectedCommentID(commentID); 
   }
-
+  
+  const handleOutCommentMenuClick = () => {
+    setIsCommentMenuClicked(false);
+    setIsReplyMenuClicked(false);
+  }
 
   //input에서 입력한 값을 배열로서 받을 것이고 presenter에서 map 함수를 이용하여 사용할 것이다.
   const [comments, setComments] = useState([]);
@@ -61,6 +65,7 @@ export default function Announcement() {
 
   //답글달기를 눌렀는지 판단하는 기능 
   const handleJudegeReplyBtn = (commentID, userName) => {
+    setIsCommentMenuClicked(false);
     setIsClickedReply(true);
     setNewComment('');
     setNewReply('');
@@ -70,6 +75,8 @@ export default function Announcement() {
 
   const handleJudegeXClick = () => {
     setIsClickedReply(false);
+    setIsCommentMenuClicked(false);
+    setIsReplyMenuClicked(false);
   }
 
   //input창에 enter을 입력하면 나오게 하는 것
@@ -154,7 +161,31 @@ export default function Announcement() {
       setComments(updatedComments);
       setNewReply('');
     }
-  }
+  };
+
+  const handleDelete = (commentID, replyID) => {
+    setIsClickedReply(false);
+    if (replyID === null) {
+      // 답글이 아닌 댓글 삭제
+      const updatedComments = comments.filter(comment => comment.id !== commentID);
+      setComments(updatedComments);
+    } else {
+      // 답글 삭제
+      const updatedComments = comments.map(comment => {
+        if (comment.id === commentID) {
+          // 현재 댓글의 replies 배열에서 해당 답글 제외
+          const updatedReplies = comment.replies.filter(reply => reply.id !== replyID);
+          return {
+            ...comment,
+            replies: updatedReplies
+          };
+        }
+        return comment;
+      });
+      setComments(updatedComments);
+    }
+  };
+  
   return (
     <>
       <VolunteerDetailHeader
@@ -188,6 +219,9 @@ export default function Announcement() {
 
         name={name} //답글달기를 클릭하였을 때 유저 닉네임을 가져오기 위한 변수
         handleJudegeXClick={handleJudegeXClick}
+        handleOutCommentMenuClick={handleOutCommentMenuClick}
+
+        handleDelete={handleDelete}
       />
     </>
   );
