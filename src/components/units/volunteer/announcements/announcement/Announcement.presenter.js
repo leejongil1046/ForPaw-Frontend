@@ -68,7 +68,7 @@ export default function AnnouncementUI(props) {
                   <S.LikeText>
                     좋아요
                   </S.LikeText>
-                  <S.AddReplyText onClick={() => props.handleJudegeReplyBtn(comment.id, null)}>
+                  <S.AddReplyText onClick={() => props.handleJudegeReplyBtn(comment.id, comment.name)}>
                     답글 달기
                   </S.AddReplyText>
                 </S.LikeBlock>
@@ -114,14 +114,28 @@ export default function AnnouncementUI(props) {
                     <S.LikeText>
                       좋아요
                     </S.LikeText>
+                    <S.AddReplyText onClick={() => props.handleJudegeReplyBtn(comment.id, reply.name)}>
+                      답글 달기
+                    </S.AddReplyText>
                   </S.LikeBlock>
                 </S.ReplyBlock>
               ))}
             </S.Comments>
           ))}
         </S.CommentContainer>
-        <S.Blank />
       </S.WrapperContents>
+      {props.isClickedReply ? (
+        <S.ToReplyBlock>
+          <S.ToReply>
+            {`${props.name}에게 답장합니다`}
+          </S.ToReply>
+          <S.ToReplyClose onClick={props.handleJudegeXClick}>
+            X
+          </S.ToReplyClose>
+        </S.ToReplyBlock>
+      ) : (
+        <S.Blank/>
+      )}
       <S.AddCommentContainer>
         <S.AddCommentBlock>
           <S.OpenMenu>
@@ -146,7 +160,7 @@ export default function AnnouncementUI(props) {
           <S.div style={{ zIndex: props.isClickedReply ? "2" : "1" }}>
             <S.ReplyInput
               autoFocus
-              placeholder="답글을 입력해주세요"
+              placeholder={`${props.name}에게 답글 입력하기`}
               type="text"
               value={props.newReply}
               onKeyDown={(e) => props.handleReplySubmit(e)}

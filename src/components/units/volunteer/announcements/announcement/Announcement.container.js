@@ -36,14 +36,15 @@ export default function Announcement() {
     setSelectedCommentID(commentID); 
   }
 
-  
+
   //input에서 입력한 값을 배열로서 받을 것이고 presenter에서 map 함수를 이용하여 사용할 것이다.
   const [comments, setComments] = useState([]);
-
   //input안의 내용을 onChange로 받아줄 함수이다.
   const [newComment, setNewComment] = useState('');
   const [newReply, setNewReply] = useState('');
   const [targetCommentID, setTargetCommentID] = useState(null); // 추가된 부분
+  //답글달기를 클릭한 유저닉네임을 판단하는 방법
+  const [name, setName] = useState('');
 
   //Comment input값을 받아오는 기능
   const handleCommentValue = (e) => {
@@ -59,20 +60,24 @@ export default function Announcement() {
   const [isClickedReply, setIsClickedReply] = useState(false);
 
   //답글달기를 눌렀는지 판단하는 기능 
-  const handleJudegeReplyBtn = (commentID) => {
+  const handleJudegeReplyBtn = (commentID, userName) => {
     setIsClickedReply(true);
     setNewComment('');
     setNewReply('');
     setTargetCommentID(commentID)
+    setName(userName)
   }
 
+  const handleJudegeXClick = () => {
+    setIsClickedReply(false);
+  }
 
   //input창에 enter을 입력하면 나오게 하는 것
   const handleCommentSubmit = (e) => {
     if (e.key === 'Enter' && newComment.trim() !== "") {
       const newCommentObject = { //배열에 추가되는 정보들
         id: comments.length + 1,
-        name: '닉네임',
+        name: `닉네임${comments.length + 1}`,
         region: '지역',
         hours: '몇 시간전',
         text: newComment,
@@ -94,7 +99,7 @@ export default function Announcement() {
               ...comment.replies,
               {
                 id: comment.replies.length + 1,
-                name: '닉네임',
+                name: `답글 닉네임${comment.replies.length + 1}`,
                 region: '지역',
                 hours: '몇 시간전',
                 text: newReply
@@ -116,7 +121,7 @@ export default function Announcement() {
     if (isClickedReply == false) {
       const newCommentObject = { //배열에 추가되는 정보들
         id: comments.length + 1,
-        name: '닉네임',
+        name: `닉네임${comments.length + 1}`,
         region: '지역',
         hours: '몇 시간전',
         text: newComment,
@@ -134,7 +139,7 @@ export default function Announcement() {
               ...comment.replies,
               {
                 id: comment.replies.length + 1,
-                name: '닉네임',
+                name: `답글 닉네임${comment.replies.length + 1}`,
                 region: '지역',
                 hours: '몇 시간전',
                 text: newReply
@@ -150,22 +155,6 @@ export default function Announcement() {
       setNewReply('');
     }
   }
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setIsClickedReply(false);
-        setNewReply('');
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isClickedReply]);
-
   return (
     <>
       <VolunteerDetailHeader
@@ -196,6 +185,9 @@ export default function Announcement() {
         clickedReplyID={clickedReplyID}
        
         selectedCommentID={selectedCommentID}
+
+        name={name} //답글달기를 클릭하였을 때 유저 닉네임을 가져오기 위한 변수
+        handleJudegeXClick={handleJudegeXClick}
       />
     </>
   );
