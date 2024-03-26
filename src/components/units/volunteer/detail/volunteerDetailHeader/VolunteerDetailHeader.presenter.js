@@ -5,10 +5,9 @@ export default function VolunteerDetailHeaderUI(props) {
   return (
     <div style={{ zIndex: "2", position: "relative" }}>
       <S.WrapperHeader
-
         active={props.isJoinedClikced}
       >
-        <S.Blank />
+        <S.Blank onClick={props.handleOutsideMenuClick}/>
         <S.Header>
           <S.LeftArrowTitleContainer onClick={props.handleOutsideMenuClick}>
             <S.LeftArrowImg onClick={props.PrevPage}>
