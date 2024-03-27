@@ -55,13 +55,13 @@ export default function ProfileEditUI(props) {
               <S.ProfileInfoLabel>활동 지역</S.ProfileInfoLabel>
             </S.EditTextBlock>
             <S.ProvinceSelect
-              isFocused={props.isFocused}
+              isProvinceFocused={props.isProvinceFocused}
               onClick={props.toggleProvinceDropdown}
             >
               {props.selectedProvince}
             </S.ProvinceSelect>
             <S.ProvinceArrowBlock
-              isFocused={props.isFocused}
+              isProvinceFocused={props.isProvinceFocused}
               onClick={props.toggleProvinceDropdown}
             >
               <Image
@@ -73,7 +73,7 @@ export default function ProfileEditUI(props) {
             </S.ProvinceArrowBlock>
             {props.isProvinceDropdownOpen && (
               <S.ProvinceDropdown>
-                {props.provinces.map((province, index) => (
+                {Object.keys(props.regions).map((province, index) => (
                   <S.ProvinceOption
                     key={index}
                     onClick={() => props.handleProvinceSelect(province)}
@@ -84,10 +84,16 @@ export default function ProfileEditUI(props) {
               </S.ProvinceDropdown>
             )}
             <S.DistrictSelectBlock>
-              <S.DistrictSelect>
-                <option>구/군/시</option>
+              <S.DistrictSelect
+                isDistrictFocused={props.isDistrictFocused}
+                onClick={props.toggleDistrictDropdown}
+              >
+                {props.selectedDistrict}
               </S.DistrictSelect>
-              <S.DistrictArrowBlock>
+              <S.DistrictArrowBlock
+                isDistrictFocused={props.isDistrictFocused}
+                onClick={props.toggleDistrictDropdown}
+              >
                 <Image
                   src="/images/info/select_arrow_icon.svg"
                   alt="select_arrow_icon"
@@ -95,10 +101,31 @@ export default function ProfileEditUI(props) {
                   height={12}
                 />
               </S.DistrictArrowBlock>
-              <S.SubdistrictSelect>
-                <option>동/읍/면</option>
+              {props.selectedProvince !== "시/도 선택" &&
+                props.isDistrictDropdownOpen && (
+                  <S.DistrictDropdown>
+                    {Object.keys(props.regions[props.selectedProvince]).map(
+                      (district, index) => (
+                        <S.DistrictOption
+                          key={index}
+                          onClick={() => props.handleDistrictSelect(district)}
+                        >
+                          {district}
+                        </S.DistrictOption>
+                      )
+                    )}
+                  </S.DistrictDropdown>
+                )}
+              <S.SubdistrictSelect
+                isSubdistrictFocused={props.isSubdistrictFocused}
+                onClick={props.toggleSubdistrictDropdown}
+              >
+                {props.selectedSubdistrict}
               </S.SubdistrictSelect>
-              <S.SubdistrictArrowBlock>
+              <S.SubdistrictArrowBlock
+                isSubdistrictFocused={props.isSubdistrictFocused}
+                onClick={props.toggleSubdistrictDropdown}
+              >
                 <Image
                   src="/images/info/select_arrow_icon.svg"
                   alt="select_arrow_icon"
@@ -106,6 +133,24 @@ export default function ProfileEditUI(props) {
                   height={12}
                 />
               </S.SubdistrictArrowBlock>
+              {props.selectedProvince !== "시/도 선택" &&
+                props.selectedDistrict !== "구/군/시" &&
+                props.isSubdistrictDropdownOpen && (
+                  <S.SubdistrictDropdown>
+                    {props.regions[props.selectedProvince][
+                      props.selectedDistrict
+                    ].map((subdistrict, index) => (
+                      <S.SubdistrictOption
+                        key={index}
+                        onClick={() =>
+                          props.handleSubdistrictSelect(subdistrict)
+                        }
+                      >
+                        {subdistrict}
+                      </S.SubdistrictOption>
+                    ))}
+                  </S.SubdistrictDropdown>
+                )}
             </S.DistrictSelectBlock>
           </S.AreaSelectContainer>
         </S.ProfileEditContainer>

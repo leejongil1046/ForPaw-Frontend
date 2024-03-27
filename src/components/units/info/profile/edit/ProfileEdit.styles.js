@@ -184,16 +184,14 @@ export const ProvinceSelect = styled.div`
   line-height: 60px;
   background-color: #fef8f2;
   border: ${(props) =>
-    props.isFocused ? "2px solid #bea597" : "2px solid transparent"};
+    props.isProvinceFocused ? "2px solid #bea597" : "2px solid transparent"};
+  color: ${(props) => (props.isProvinceFocused ? "#bea597" : "#bea597")};
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   padding-left: 12px;
   margin-top: 10px;
-  color: ${(props) => (props.isFocused ? "#bea597" : "#bea597")};
   position: relative;
-
-  /* :focus 스타일 대신 클릭 시 스타일 적용 */
 `;
 
 export const ProvinceArrowBlock = styled.div`
@@ -211,7 +209,7 @@ export const ProvinceArrowBlock = styled.div`
 export const ProvinceDropdown = styled.div`
   position: absolute;
   height: 120px;
-  top: 122px;
+  top: 130px;
   left: 4px;
   width: 342px;
   background-color: #fef8f2;
@@ -252,27 +250,20 @@ export const DistrictSelectBlock = styled.div`
   position: relative;
 `;
 
-export const DistrictSelect = styled.select`
+export const DistrictSelect = styled.div`
   width: 164px;
   height: 60px;
+  line-height: 60px;
   background-color: #fef8f2;
-  border: 2px solid transparent;
+  border: ${(props) =>
+    props.isDistrictFocused ? "2px solid #bea597" : "2px solid transparent"};
+  color: ${(props) => (props.isDistrictFocused ? "#bea597" : "#bea597")};
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   padding-left: 12px;
   margin-top: 10px;
   margin-right: 4px;
-  color: #bea597;
-
-  -webkit-appearance: none; /* 크롬, 사파리 */
-  -moz-appearance: none; /* 파이어폭스 */
-  appearance: none; /* 표준 */
-
-  :focus {
-    border: 2px solid #bea597;
-    color: #bea597;
-  }
 `;
 
 export const DistrictArrowBlock = styled.div`
@@ -287,18 +278,55 @@ export const DistrictArrowBlock = styled.div`
   left: 128px;
 `;
 
-export const SubdistrictSelect = styled.select`
+export const DistrictDropdown = styled.div`
+  position: absolute;
+  height: 86px;
+  top: 76px;
+  left: 5px;
+  width: 164px;
+  background-color: #fef8f2;
+  border: 2px solid #bea597;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  z-index: 10;
+  overflow-y: auto;
+
+  /* 스크롤 바 숨기기 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none; /* Firefox */
+`;
+
+export const DistrictOption = styled.div`
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 12px;
+  font-size: 16px;
+  color: #bea597;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  :hover {
+    opacity: 0.5;
+  }
+`;
+
+export const SubdistrictSelect = styled.div`
   width: 164px;
   height: 60px;
+  line-height: 60px;
   background-color: #fef8f2;
-  border: 2px solid transparent;
+  border: ${(props) =>
+    props.isSubdistrictFocused ? "2px solid #bea597" : "2px solid transparent"};
+  color: ${(props) => (props.isSubdistrictFocused ? "#bea597" : "#bea597")};
   outline: none;
   border-radius: 10px;
   font-size: 16px;
   padding-left: 12px;
   margin-top: 10px;
   margin-left: 4px;
-  color: #bea597;
 
   -webkit-appearance: none; /* 크롬, 사파리 */
   -moz-appearance: none; /* 파이어폭스 */
@@ -320,6 +348,41 @@ export const SubdistrictArrowBlock = styled.div`
   position: absolute;
   top: 28px;
   left: 305px;
+`;
+
+export const SubdistrictDropdown = styled.div`
+  position: absolute;
+  height: 86px;
+  top: 76px;
+  left: 181px;
+  width: 164px;
+  background-color: #fef8f2;
+  border: 2px solid #bea597;
+  border-radius: 10px;
+  padding-bottom: 15px;
+  z-index: 10;
+  overflow-y: auto;
+
+  /* 스크롤 바 숨기기 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none; /* Firefox */
+`;
+
+export const SubdistrictOption = styled.div`
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 12px;
+  font-size: 16px;
+  color: #bea597;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  :hover {
+    opacity: 0.5;
+  }
 `;
 
 export const ProfileEditButton = styled.button`
