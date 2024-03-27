@@ -6,7 +6,7 @@ export default function AnnouncementUI(props) {
     <>
       <S.WrapperContents
         onClick={props.handleOutsideMenuClick}
-        style={{ height: props.isClickedReply ? "calc(100vh - 219px)" : "calc(100vh - 179px)" }}
+        style={{ height: props.isClickedReply || props.isClickedEdit ? "calc(100vh - 219px)" : "calc(100vh - 179px)" }}
       >
         <S.AnnouncementContainer
           onClick={props.handleOutCommentMenuClick}
@@ -62,13 +62,16 @@ export default function AnnouncementUI(props) {
                     />
                     {props.isCommentMenuClicked && props.clickedCommentID === comment.id && (
                       <S.MenuBlock>
-                        <S.Edit>신고하기</S.Edit>
+                        <S.Edit onClick={() => props.handleEdit(comment.id, null)}>수정하기</S.Edit>
                         <S.Delete onClick={() => props.handleDelete(comment.id, null)}>삭제하기</S.Delete>
                       </S.MenuBlock>
                     )}
                   </S.CommentMenuImg>
                 </S.CommentText>
-                <S.LikeBlock onClick={props.handleOutCommentMenuClick}>
+                <S.LikeBlock
+                  onClick={props.handleOutCommentMenuClick}
+                  
+                >
                   <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                   <S.LikeText>
                     좋아요
@@ -108,7 +111,7 @@ export default function AnnouncementUI(props) {
                       />
                       {props.isReplyMenuClicked && props.clickedReplyID === reply.id && props.selectedCommentID === comment.id && (
                         <S.MenuBlock>
-                          <S.Edit>신고하기</S.Edit>
+                          <S.Edit onClick={() => props.handleEdit(comment.id, reply.id)}>수정하기</S.Edit>
                           <S.Delete onClick={() => props.handleDelete(comment.id, reply.id)}>삭제하기</S.Delete>
                         </S.MenuBlock>
                       )}
@@ -116,7 +119,7 @@ export default function AnnouncementUI(props) {
                   </S.CommentText>
                   <S.LikeBlock
                     onClick={props.handleOutCommentMenuClick}
-                    style={{width: props.isReplyMenuClicked && props.isCommentMenuClicked ? "230px" : "100%"}}
+                   
                   >
                     <props.LikeImage initialSrc="/images/volunteer/announcement/comment_like_icon.svg" alt="comment_like_icon" />
                     <S.LikeText>
@@ -139,43 +142,79 @@ export default function AnnouncementUI(props) {
           </S.ToReplyClose>
         </S.ToReplyBlock>
       )}
+      {props.isClickedEdit && (
+        <S.ToReplyBlock>
+          <S.ToReply>
+            댓글 수정중..
+          </S.ToReply>
+          <S.ToReplyClose onClick={props.handleJudegeXClick}>
+            X
+          </S.ToReplyClose>
+        </S.ToReplyBlock>
+      )}
       <S.AddCommentContainer>
-        <S.AddCommentBlock>
-          <S.OpenMenu>
-            <Image
-              src="/images/volunteer/announcement/open_menu.svg"
-              alt="open_menu"
-              width={20}
-              height={20}
-              priority={true}
-            />
-          </S.OpenMenu>
-          <S.div style={{ zIndex: props.isClickedReply ? "1" : "2" }}>
-            <S.CommentInput
-              autoFocus
-              placeholder="댓글을 입력해주세요"
-              type="text"
-              value={props.newComment}
-              onKeyDown={props.handleCommentSubmit}
-              onChange={props.handleCommentValue}
-              onClick={props.handleOutCommentMenuClick}
-            />
-          </S.div>
-          <S.div style={{ zIndex: props.isClickedReply ? "2" : "1" }}>
-            <S.ReplyInput
-              autoFocus
-              placeholder="답글 입력하기"
-              type="text"
-              value={props.newReply}
-              onKeyDown={(e) => props.handleReplySubmit(e)}
-              onChange={props.handleReplyValue}
-            />
-          </S.div>
-          <S.AddComment onClick={props.activeBtn}>
-            <S.ArrowLine />
-            <S.ArrowBlock />
-          </S.AddComment>
-        </S.AddCommentBlock>
+        {props.isClickedEdit ? (
+          <S.AddCommentBlock>
+            <S.OpenMenu>
+              <Image
+                src="/images/volunteer/announcement/open_menu.svg"
+                alt="open_menu"
+                width={20}
+                height={20}
+                priority={true}
+              />
+            </S.OpenMenu>
+            <S.div>
+              <S.CommentInput
+                placeholder="댓글을 수정해주세요"
+                type="text"
+                value={props.editText}
+                onKeyDown={props.handleEditSubmit}
+                onChange={props.handleChangeEditText}
+                onClick={props.handleOutCommentMenuClick}
+              />
+            </S.div>
+            <S.AddComment onClick={props.activeBtn}>
+              <S.ArrowLine />
+              <S.ArrowBlock />
+            </S.AddComment>
+          </S.AddCommentBlock>
+        ) : (
+          <S.AddCommentBlock>
+            <S.OpenMenu>
+              <Image
+                src="/images/volunteer/announcement/open_menu.svg"
+                alt="open_menu"
+                width={20}
+                height={20}
+                priority={true}
+              />
+            </S.OpenMenu>
+            <S.div style={{ zIndex: props.isClickedReply ? "1" : "2" }}>
+              <S.CommentInput
+                placeholder="댓글을 입력해주세요"
+                type="text"
+                value={props.newComment}
+                onKeyDown={props.handleCommentSubmit}
+                onChange={props.handleCommentValue}
+                onClick={props.handleOutCommentMenuClick}
+              />
+            </S.div>
+            <S.div style={{ zIndex: props.isClickedReply ? "2" : "1" }}>
+              <S.ReplyInput
+                placeholder="답글 입력하기"
+                type="text"
+                value={props.newReply}
+                onKeyDown={(e) => props.handleReplySubmit(e)}
+                onChange={props.handleReplyValue}
+              />
+            </S.div>
+            <S.AddComment onClick={props.activeBtn}>
+              <S.ArrowLine />
+              <S.ArrowBlock />
+            </S.AddComment>
+          </S.AddCommentBlock>
+        )}
       </S.AddCommentContainer>
     </>
   )

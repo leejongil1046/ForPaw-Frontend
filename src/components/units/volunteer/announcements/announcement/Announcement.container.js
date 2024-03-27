@@ -26,16 +26,16 @@ export default function Announcement() {
     setIsCommentMenuClicked(true);
     setIsReplyMenuClicked(false);
     setClickedCommentID(commentID); // 클릭된 댓글의 ID를 설정합니다.
-    setSelectedCommentID(commentID); 
+    setSelectedCommentID(commentID);
   };
 
   const handleReplyMenuClick = (commentID, replyID) => {
     setIsCommentMenuClicked(false);
     setIsReplyMenuClicked(true);
     setClickedReplyID(replyID);
-    setSelectedCommentID(commentID); 
+    setSelectedCommentID(commentID);
   }
-  
+
   const handleOutCommentMenuClick = () => {
     setIsCommentMenuClicked(false);
     setIsReplyMenuClicked(false);
@@ -67,19 +67,22 @@ export default function Announcement() {
   const handleJudegeReplyBtn = (commentID, userName) => {
     setIsCommentMenuClicked(false);
     setIsClickedReply(true);
+    setIsClickedEidt(false);
     setNewComment('');
     setNewReply('');
     setTargetCommentID(commentID)
     setName(userName)
   }
 
+  //답글달기를 누르고 나오는 X div의 영역을 누르는지 판단
   const handleJudegeXClick = () => {
     setIsClickedReply(false);
     setIsCommentMenuClicked(false);
     setIsReplyMenuClicked(false);
+    setIsClickedEidt(false);
   }
 
-  //input창에 enter을 입력하면 나오게 하는 것
+  //input에 들어가 메세지를 댓글로 달게 하는 함수
   const handleCommentSubmit = (e) => {
     if (e.key === 'Enter' && newComment.trim() !== "") {
       const newCommentObject = { //배열에 추가되는 정보들
@@ -94,7 +97,7 @@ export default function Announcement() {
       setComments([...comments, newCommentObject]);
       setNewComment('');
     }
-  }
+  };
 
   const handleReplySubmit = (e) => {
     if (e.key === 'Enter' && newReply.trim() !== "") {
@@ -166,7 +169,7 @@ export default function Announcement() {
   const handleDelete = (commentID, replyID) => {
     setIsClickedReply(false);
     if (replyID === null) {
-      // 답글이 아닌 댓글 삭제
+      // 댓글 삭제기능
       const updatedComments = comments.filter(comment => comment.id !== commentID);
       setComments(updatedComments);
     } else {
@@ -185,7 +188,60 @@ export default function Announcement() {
       setComments(updatedComments);
     }
   };
-  
+
+  const [isClickedEdit, setIsClickedEidt] = useState(false);
+  const [editText, setEditText] = useState('');
+
+  const handleChangeEditText = (e) => {
+    setEditText(e.target.value);
+  }
+
+  const [editCommentId, setEditCommentId] = useState(null); // 수정할 댓글 ID 상태 추가
+  const [editedComment, setEditedComment] = useState(''); // 수정한 댓글 내용 상태 추가
+  const [editReplyId, setEditReplyId] = useState(null); // 수정할 답글 ID 상태 추가
+  const [editedReply, setEditedReply] = useState(''); // 수정한 답글 내용 상태 추가
+
+  const handleEdit = (commentId, replyId) => {
+    setIsClickedEidt(true); // 수정 모드 활성화
+    setIsClickedReply(false); // 답글 입력 모드 비활성화
+    setEditCommentId(commentId); // 수정할 댓글 ID 설정
+    setEditReplyId(replyId); // 수정할 답글 ID 설정
+  };
+
+  const handleEditSubmit = (e) => {
+    if (e.key === 'Enter' && editReplyId === null) {
+      // 댓글 수정
+      const updatedComments = comments.map(comment => {
+        editedComment = editText;
+        if (comment.id === editCommentId) {
+          return { ...comment, text: editedComment };
+        }
+        return comment;
+      });
+      setComments(updatedComments);
+      setEditCommentId(null);
+      setEditText('');
+
+    } else {
+      // 답글 수정
+      const updatedComments = comments.map(comment => {
+        if (e.key === 'Enter' && comment.id === editCommentId) {
+          const updatedReplies = comment.replies.map(reply => {
+            if (reply.id === editReplyId) {
+              return { ...reply, text: editedReply };
+            }
+            return reply;
+          });
+          return { ...comment, replies: updatedReplies };
+        }
+        return comment;
+      });
+      setComments(updatedComments);
+      setEditReplyId(null);
+      setEditedReply('');
+    }
+  };
+
   return (
     <>
       <VolunteerDetailHeader
@@ -214,14 +270,20 @@ export default function Announcement() {
         isReplyMenuClicked={isReplyMenuClicked}
         handleReplyMenuClick={handleReplyMenuClick}
         clickedReplyID={clickedReplyID}
-       
+
         selectedCommentID={selectedCommentID}
 
         name={name} //답글달기를 클릭하였을 때 유저 닉네임을 가져오기 위한 변수
         handleJudegeXClick={handleJudegeXClick}
         handleOutCommentMenuClick={handleOutCommentMenuClick}
 
-        handleDelete={handleDelete}
+        handleDelete={handleDelete} //댓글 삭제 기능
+
+        isClickedEdit={isClickedEdit} //수정하기를 클릭하였는지 판단
+        handleEdit={handleEdit} //수정하기 클릭을 ture로 만들어 주는 기능
+        editText={editText}
+        handleChangeEditText={handleChangeEditText} //수정내용을onChange로 다루는 기능
+        handleEditSubmit={handleEditSubmit}
       />
     </>
   );
