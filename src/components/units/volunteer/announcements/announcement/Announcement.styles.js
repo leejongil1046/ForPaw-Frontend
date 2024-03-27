@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const WrapperContents = styled.div`
   width: 390px;
-  height: calc(100vh - 179px);
+  height: calc(100vh - 219px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -178,7 +178,7 @@ export const CommentMenuImg = styled.div`
 
 export const LikeBlock = styled.div`
   margin-top: 3px;
-  width: 100%; /*344px*/
+  width: 230px; /*344px*/
   height: 30px;
   position: relative;
   z-index: 1;
@@ -251,10 +251,54 @@ export const ReplyMenuImg = styled.div`
   cursor: pointer;
 `;
 
-/*공간을 만들어주는 div*/
+/*답글 달기 판단여부가 사실 일 때 div*/
+export const ToReplyBlock = styled.div`
+  width: 390px;
+  height: 40px;
+  flex-shrink: 0;
+  font-size: 16px;
+  background-color: white;
+  color: #888888;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
+
+export const ToReply = styled.p`
+  width: 95%;
+  height: 100%;
+  background-color: #F6F6F6;
+  flex-shrink: 0;
+  padding-left: 15px;
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+`;
+
+export const ToReplyClose = styled.p`
+  width: 5%;
+  height: 100%;
+  background-color: #F6F6F6;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+/*답글 클릭여부가 거짓일 때 div*/
 export const Blank = styled.div`
   width: 390px;
   height: 40px;
+  background-color: white;
+  margin: 0 auto;
   flex-shrink: 0;
 `;
 
@@ -393,7 +437,7 @@ export const MenuBlock = styled.div`
   position: relative;
   font-size: 17px;
   right: 80px;
-  visibility: hidden;
+  
 
   box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.10);
 
@@ -408,7 +452,6 @@ export const Edit = styled.p`
   height: 56px;
   font-weight: 500;
   color: black;
-
 
   display: flex;
   flex-direction: column;

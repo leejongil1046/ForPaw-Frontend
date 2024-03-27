@@ -9,7 +9,7 @@ export default function VolunteerDetail() {
   //라우팅 설정
   const router = useRouter();
 
-  // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언
+  // 클릭 이벤트 처리를 위한 상태 변수와 상태 업데이트 함수 선언 공지사항에 쓰임
   const [clickedIndex, setClickedIndex] = useState(-1); // 선택된 공지사항 인덱스를 추적하는 상태
   //가입 여부에서 클릭 상태 확인
   const [isJoinedClikced, setIsJoinedClicked] = useState(false);
