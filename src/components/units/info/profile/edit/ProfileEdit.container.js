@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import ProfileUI from "./ProfileEdit.presenter";
 import { districtName } from "../../../../../../src/components/commons/district/districtName";
@@ -20,6 +20,8 @@ export default function ProfileEdit() {
   const router = useRouter();
 
   const regions = districtName;
+
+  const wrapperRef = useRef(null); // DOM 참조를 위한 ref 생성
 
   function updateSelectionStates(setStateFuncs, values) {
     setStateFuncs.forEach((setFunc, index) => {
@@ -75,12 +77,16 @@ export default function ProfileEdit() {
         setIsProvinceDropdownOpen(!isProvinceDropdownOpen);
         // province가 선택되면 항상 포커스 상태를 업데이트
         setIsProvinceFocused(!isProvinceFocused);
+        setIsDistrictFocused(false);
+        setIsSubdistrictFocused(false);
         break;
       case "district":
         if (selectedProvince !== "시/도 선택") {
           setIsDistrictDropdownOpen(!isDistrictDropdownOpen);
           // province가 선택되었을 때만 district의 포커스 상태를 업데이트
+          setIsProvinceFocused(false);
           setIsDistrictFocused(!isDistrictFocused);
+          setIsSubdistrictFocused(false);
         }
         break;
       case "subdistrict":
@@ -90,6 +96,8 @@ export default function ProfileEdit() {
         ) {
           setIsSubdistrictDropdownOpen(!isSubdistrictDropdownOpen);
           // province와 district가 모두 선택되었을 때만 subdistrict의 포커스 상태를 업데이트
+          setIsProvinceFocused(false);
+          setIsSubdistrictFocused(false);
           setIsSubdistrictFocused(!isSubdistrictFocused);
         }
         break;
@@ -98,6 +106,29 @@ export default function ProfileEdit() {
     }
   };
 
+  useEffect(() => {
+    // 외부 클릭을 감지하는 함수
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        // 모든 드랍다운을 닫는 로직
+        setIsProvinceDropdownOpen(false);
+        setIsProvinceFocused(false);
+        setIsDistrictDropdownOpen(false);
+        setIsDistrictFocused(false);
+        setIsSubdistrictDropdownOpen(false);
+        setIsSubdistrictFocused(false);
+      }
+    }
+
+    // 이벤트 리스너 등록
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []); // 빈 배열을 넘겨 컴포넌트 마운트 시에만 실행되도록 함
+
   const navigateBack = () => {
     router.back();
   };
@@ -105,6 +136,7 @@ export default function ProfileEdit() {
   return (
     <ProfileUI
       navigateBack={navigateBack}
+      wrapperRef={wrapperRef}
       regions={regions}
       selectedProvince={selectedProvince}
       isProvinceFocused={isProvinceFocused}

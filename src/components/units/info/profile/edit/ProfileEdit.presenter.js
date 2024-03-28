@@ -72,7 +72,7 @@ export default function ProfileEditUI(props) {
               />
             </S.ProvinceArrowBlock>
             {props.isProvinceDropdownOpen && (
-              <S.ProvinceDropdown>
+              <S.ProvinceDropdown ref={props.wrapperRef}>
                 {Object.keys(props.regions).map((province, index) => (
                   <S.ProvinceOption
                     key={index}
@@ -103,7 +103,7 @@ export default function ProfileEditUI(props) {
               </S.DistrictArrowBlock>
               {props.selectedProvince !== "시/도 선택" &&
                 props.isDistrictDropdownOpen && (
-                  <S.DistrictDropdown>
+                  <S.DistrictDropdown ref={props.wrapperRef}>
                     {Object.keys(props.regions[props.selectedProvince]).map(
                       (district, index) => (
                         <S.DistrictOption
@@ -136,7 +136,7 @@ export default function ProfileEditUI(props) {
               {props.selectedProvince !== "시/도 선택" &&
                 props.selectedDistrict !== "구/군/시" &&
                 props.isSubdistrictDropdownOpen && (
-                  <S.SubdistrictDropdown>
+                  <S.SubdistrictDropdown ref={props.wrapperRef}>
                     {props.regions[props.selectedProvince][
                       props.selectedDistrict
                     ].map((subdistrict, index) => (
