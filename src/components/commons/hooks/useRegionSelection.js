@@ -1,15 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 
-export const useRegionSelection = () => {
-  const [selectedProvince, setSelectedProvince] = useState("시/도 선택");
+export const useRegionSelection = (
+  currentProvince,
+  currentDistrict,
+  currentSubdistrict
+) => {
+  const [selectedProvince, setSelectedProvince] = useState(currentProvince);
   const [isProvinceDropdownOpen, setIsProvinceDropdownOpen] = useState(false);
   const [isProvinceFocused, setIsProvinceFocused] = useState(false);
 
-  const [selectedDistrict, setSelectedDistrict] = useState("구/군/시");
+  const [selectedDistrict, setSelectedDistrict] = useState(currentDistrict);
   const [isDistrictDropdownOpen, setIsDistrictDropdownOpen] = useState(false);
   const [isDistrictFocused, setIsDistrictFocused] = useState(false);
 
-  const [selectedSubdistrict, setSelectedSubdistrict] = useState("동/읍/면");
+  const [selectedSubdistrict, setSelectedSubdistrict] =
+    useState(currentSubdistrict);
   const [isSubdistrictDropdownOpen, setIsSubdistrictDropdownOpen] =
     useState(false);
   const [isSubdistrictFocused, setIsSubdistrictFocused] = useState(false);

@@ -140,6 +140,7 @@ export const NickNameInput = styled.input`
   font-size: 16px;
   padding-left: 12px;
   margin-top: 10px;
+  color: #bea597;
 
   ::placeholder {
     color: #bea597;
@@ -169,6 +170,22 @@ export const NickNameEditButton = styled.button`
   }
 `;
 
+export const NickNameMsg = styled.div`
+  font-size: 14px;
+  position: absolute;
+  top: 76px;
+  left: 5px;
+  color: ${(props) => {
+    if (props.isPossibleNickName === undefined) {
+      return "#c6c6c6"; // 디폴트 색상 (예: 검정)
+    } else if (props.isPossibleNickName) {
+      return "#9ac8ff"; // 가능할 때의 색상
+    } else {
+      return "#ff0000"; // 불가능할 때의 색상
+    }
+  }};
+`;
+
 export const AreaSelectContainer = styled.div`
   width: 100%;
   display: flex;
@@ -176,6 +193,7 @@ export const AreaSelectContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  margin-top: 20px;
 `;
 
 export const ProvinceSelect = styled.div`

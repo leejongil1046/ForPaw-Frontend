@@ -45,10 +45,10 @@ export default function AdpotPets() {
   const [pets, setPets] = useState(example.result.animals);
 
   useEffect(() => {
-    // async function fetchData() {
-    //   const petsData = await fetchPets();
-    //   setPets(petsData);
-    // }
+    async function fetchData() {
+      const petsData = await fetchPets();
+      setPets(petsData);
+    }
     // fetchData();
   }, []);
 

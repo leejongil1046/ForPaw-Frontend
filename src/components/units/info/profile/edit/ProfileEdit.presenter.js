@@ -47,8 +47,18 @@ export default function ProfileEditUI(props) {
             <S.ProfileInfoLabel>닉네임</S.ProfileInfoLabel>
           </S.EditTextBlock>
           <S.NickNameEditBlock>
-            <S.NickNameInput type="text" placeholder="기존 닉네임" />
-            <S.NickNameEditButton>변경</S.NickNameEditButton>
+            <S.NickNameInput
+              type="text"
+              placeholder={props.currentNickName}
+              value={props.nickName} // 입력 필드에 상태 값을 연결
+              onChange={props.handleNickNameChange} // 입력 변경 시 핸들러 호출
+            />
+            <S.NickNameEditButton onClick={props.verifyNickName}>
+              변경
+            </S.NickNameEditButton>
+            <S.NickNameMsg isPossibleNickName={props.isPossibleNickName}>
+              {props.nickNameMsg}
+            </S.NickNameMsg>
           </S.NickNameEditBlock>
           <S.AreaSelectContainer>
             <S.EditTextBlock>
